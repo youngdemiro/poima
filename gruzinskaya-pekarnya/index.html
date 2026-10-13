@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Грузинская пекарня</title>
 <link rel="stylesheet" href="fonts.css">
-<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{color-scheme:light}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 <style>
@@ -68,7 +68,7 @@ h1,h2,h3,blockquote,p{margin:0}
 .tone-say .rule{width:96px;height:1px;background:var(--accent);margin-bottom:22px}
 .tone-say .note{max-width:44ch;color:var(--ink-soft)}
 .tone{grid-template-columns:5fr 7fr}
-.tone-pics{display:grid;grid-template-columns:1fr 1fr;height:clamp(420px,46vw,720px)}
+.tone-pics{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr);min-height:clamp(420px,46vw,720px)}
 .tone-pics img{width:100%;height:100%;object-fit:cover;min-height:0}
 .tone-pics img+img{border-left:1px solid var(--line)}
 
@@ -100,7 +100,6 @@ h1,h2,h3,blockquote,p{margin:0}
 .q .stars{letter-spacing:.12em;color:var(--crust)}
 .q blockquote{font-family:var(--display);font-size:clamp(25px,2.5vw + 6px,46px);line-height:1.22;max-width:30ch}
 .q.wide blockquote{max-width:34ch}
-.q:nth-child(even) blockquote{margin-left:auto}
 
 /* VISIT */
 .visit{background:var(--graphite);color:var(--graphite-ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--line-dark)}
@@ -113,8 +112,9 @@ h1,h2,h3,blockquote,p{margin:0}
 .facts dd a{text-decoration-color:var(--graphite-soft);text-underline-offset:3px}
 .visit-map{border-left:1px solid var(--line-dark);display:flex;flex-direction:column}
 .visit-map img{width:100%;height:100%;min-height:300px;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.92) sepia(.12)}
-.maplinks{display:flex;flex-wrap:wrap;border-top:1px solid var(--line-dark)}
-.maplinks a{flex:1 1 50%;padding:16px var(--gutter);text-decoration:none;font-size:.92rem;border-right:1px solid var(--line-dark)}
+.maplinks{display:flex;flex-wrap:wrap}
+.maplinks a{flex:1 1 50%;padding:16px var(--gutter);text-decoration:none;font-size:.92rem;border-right:1px solid var(--line-dark);border-top:1px solid var(--line-dark);white-space:nowrap}
+
 .maplinks a:last-child{border-right:0}
 .maplinks a:hover{text-decoration:underline}
 
@@ -134,17 +134,22 @@ footer{border-top:1px solid var(--line);padding:22px var(--gutter) 28px;font-siz
   .hero .cta{margin-top:18px}
   .tone{grid-template-columns:1fr}
   .tone-say{border-right:0;border-bottom:1px solid var(--line)}
-  .tone-pics{height:clamp(260px,70vw,520px)}
+  .tone-pics{height:clamp(260px,70vw,520px);min-height:0}
+
   .menu{grid-template-columns:1fr}
   .q{grid-template-columns:1fr}
-  .q:nth-child(even) blockquote{margin-left:0}
+
   .visit{grid-template-columns:1fr}
   .visit-map{border-left:0;border-top:1px solid var(--line-dark)}
   .score{text-align:left}
 }
+@media (max-width:560px){
+  .maplinks a{flex-basis:100%;border-right:0}
+}
 @media (max-width:420px){
   .hero h1{font-size:44px}
 }
+
 
 /* MOTION: visible at rest */
 @supports (animation-timeline: view()){

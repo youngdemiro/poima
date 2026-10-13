@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Тот Самый Букет</title>
 <link rel="stylesheet" href="fonts.css">
-<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{color-scheme:light}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 <style>
@@ -104,11 +104,11 @@ p{margin:0}
 .visit-info h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.6vw,56px);line-height:1.05;margin:10px 0 30px}
 .dl{display:grid;grid-template-columns:110px minmax(0,1fr);border-top:1px solid var(--line)}
 .dl dt,.dl dd{margin:0;padding:12px 0;border-bottom:1px solid var(--line)}
-.dl dt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:15px}
+.dl dt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:15px;padding-right:14px}
 .dl dd a{text-decoration-thickness:1px;text-underline-offset:3px}
 .dl small{display:block;color:var(--muted);font-size:13px}
 .visit-map{margin:0;border-left:1px solid var(--line);background:var(--paper-2);display:flex;flex-direction:column}
-.visit-map img{width:100%;flex:1;object-fit:cover;min-height:320px;filter:grayscale(.55) sepia(.12) contrast(1.04)}
+.visit-map img{width:100%;flex:1;object-fit:cover;object-position:right bottom;min-height:320px;filter:grayscale(.55) sepia(.12) contrast(1.04)}
 .visit-map figcaption{display:flex;flex-wrap:wrap;gap:8px 24px;padding:14px var(--gut) 16px 20px;font-size:14px;border-top:1px solid var(--line)}
 
 /* final */
@@ -131,7 +131,7 @@ footer.note{border-top:1px solid var(--line);padding-block:22px 28px;font-size:1
   .hero h1{margin-bottom:16px}
   .hero h1 em{margin-top:10px}
   .hero .lead{margin-bottom:20px}
-  .hero-img{height:clamp(420px,72svh,620px);margin-left:var(--gut)}
+  .hero-img{height:clamp(420px,72svh,620px)}
   .hero-img img{object-position:62% 50%}
   .statement p,.statement .label{margin-right:0;margin-left:0}
   .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -152,7 +152,7 @@ footer.note{border-top:1px solid var(--line);padding-block:22px 28px;font-size:1
 }
 @media (max-width:420px){
   .hero-top .label:last-child{display:none}
-  .dl{grid-template-columns:86px minmax(0,1fr)}
+  .dl{grid-template-columns:104px minmax(0,1fr)}
   .q:nth-of-type(even){padding-left:8%}
 }
 </style>

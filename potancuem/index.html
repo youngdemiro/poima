@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Потанцуем?, школа танцев</title>
 <link rel="stylesheet" href="fonts.css">
-<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{color-scheme:light}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 <style>
@@ -98,7 +98,8 @@ a{color:inherit}
 /* reviews */
 .reviews{padding-top:clamp(80px,11vw,160px)}
 .q-item{padding:clamp(40px,6vw,88px) 0;border-top:1px solid var(--line);display:flex}
-.q-item:last-child{border-bottom:1px solid var(--line)}
+.q-item:last-child{border-bottom:0}
+.nw{white-space:nowrap}
 .q-item blockquote{max-width:min(100%,940px)}
 .q-item.r{justify-content:flex-end}
 .q-item.r blockquote{text-align:right}
@@ -228,7 +229,7 @@ a{color:inherit}
   <section class="wrap reviews" id="reviews">
     <div class="sec-head" style="padding-top:0">
       <h2>Что пишут ученицы</h2>
-      <p>5,0 на Яндекс Картах · 134 оценки, 95 отзывов</p>
+      <p>5,0 на Яндекс Картах · <span class="nw">134 оценки, 95 отзывов</span></p>
     </div>
 
     <div class="q-item reveal">
