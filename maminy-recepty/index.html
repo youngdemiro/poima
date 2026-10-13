@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мамины рецепты, кулинария</title>
+<link rel="stylesheet" href="fonts.css">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+:root{
+  color-scheme: light;
+  --paper:#F5EEE0;
+  --paper-2:#EDE2CC;
+  --butter:#E6D3A3;
+  --ink:#2A211A;
+  --ink-2:#5E4F42;
+  --line:#CDBFA6;
+  --accent:#A3352B;
+  --accent-ink:#FBF6EC;
+  --display:"Prata", Georgia, serif;
+  --text:"Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+  --gut:clamp(16px, 5vw, 72px);
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:clamp(16px,1.05vw + 11px,18px);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+h1,h2,h3,.display{font-family:var(--display);font-weight:400;letter-spacing:-.005em}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;font-size:14px}
+.top .mark{font-family:var(--display);font-size:18px}
+.top a{text-decoration:none;font-weight:600;white-space:nowrap}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(20px,5vw,72px) clamp(48px,7vw,96px)}
+.hero h1{font-size:clamp(46px,7.4vw,112px);line-height:.98;margin:14px 0 22px}
+.hero .lead{font-size:clamp(17px,1.4vw + 8px,21px);color:var(--ink-2);max-width:30ch;margin:0 0 28px}
+.call{display:inline-flex;flex-direction:column;gap:2px;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:16px 26px 15px;border-radius:2px;font-weight:700;font-size:clamp(18px,1vw + 12px,21px);letter-spacing:.01em}
+.call small{font-weight:400;font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.call:hover{background:#8A2A21}
+.hero .meta{margin:18px 0 0;font-size:15px;color:var(--ink-2)}
+.frame{border:1px solid var(--ink);padding:10px;background:var(--paper)}
+.frame img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:74% 45%}
+.frame figcaption{font-size:13px;color:var(--ink-2);padding:10px 2px 0;display:flex;justify-content:space-between;gap:12px}
+
+/* full-width food */
+.bleed{margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bleed img{width:100%;height:clamp(280px,52vw,720px);object-fit:cover;object-position:50% 55%}
+.bleed figcaption{max-width:var(--max);margin:0 auto;padding:12px var(--gut);font-size:13px;color:var(--ink-2)}
+
+/* menu list */
+.menu{padding-block:clamp(56px,8vw,120px)}
+.menu-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.menu-head h2{font-size:clamp(34px,4.4vw,64px);line-height:1.04;margin:10px 0 0}
+.menu-head p{margin:0;color:var(--ink-2);max-width:46ch}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.list li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr) 150px;gap:clamp(12px,3vw,40px);padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.list .n{font-family:var(--display);font-size:clamp(22px,1.6vw + 10px,30px);line-height:1.15}
+.list .d{color:var(--ink-2)}
+.list .t{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-align:right}
+.note{margin:22px 0 0;font-size:15px;color:var(--ink-2)}
+
+/* big sentence */
+.big{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.big p{font-family:var(--display);font-size:clamp(30px,4.6vw,68px);line-height:1.12;margin:0;padding-block:clamp(64px,10vw,150px);max-width:20ch}
+.big em{font-style:normal;color:var(--accent)}
+
+/* two columns */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,96px);padding-block:clamp(56px,8vw,120px);align-items:start}
+.two figure{margin:0}
+.two img{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line)}
+.two figcaption{font-size:13px;color:var(--ink-2);padding-top:10px}
+.two h2{font-size:clamp(30px,3.4vw,50px);line-height:1.08;margin:10px 0 24px}
+.facts{margin:28px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.facts li{padding:13px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.facts span:last-child{color:var(--ink-2);text-align:right}
+.inset{margin-top:36px}
+.inset img{aspect-ratio:3/4;max-width:340px}
+
+/* reviews */
+.reviews{padding:clamp(56px,8vw,120px) 0;border-top:1px solid var(--line)}
+.reviews h2{font-size:clamp(34px,4.4vw,64px);line-height:1.04;margin:10px 0 clamp(32px,5vw,64px)}
+.q{margin:0;padding:clamp(32px,5vw,64px) 0;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(16px,4vw,56px)}
+.q:last-child{border-bottom:1px solid var(--line)}
+.q blockquote{margin:0;font-family:var(--display);font-size:clamp(23px,2.4vw + 8px,40px);line-height:1.28}
+.q.lead-q blockquote{font-size:clamp(27px,3.2vw + 8px,54px);line-height:1.18}
+.q figcaption{font-size:15px;line-height:1.5}
+.q figcaption b{display:block;font-weight:700;font-size:17px}
+.q figcaption span{display:block;color:var(--ink-2)}
+.stars{letter-spacing:.12em;color:var(--ink)}
+.provenance{margin:24px 0 0;font-size:14px;color:var(--ink-2)}
+
+/* visit */
+.visit{padding-block:clamp(56px,8vw,120px)}
+.visit-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);border-top:1px solid var(--ink);padding-top:clamp(28px,4vw,48px)}
+.visit h2{font-size:clamp(34px,4.4vw,64px);line-height:1.02;margin:0 0 28px}
+.visit dl{margin:0}
+.visit dt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:600;margin-top:20px}
+.visit dd{margin:4px 0 0;font-size:clamp(18px,1vw + 12px,22px)}
+.visit dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.map img{width:100%;aspect-ratio:650/450;object-fit:cover;filter:grayscale(.9) sepia(.22) contrast(1.22) brightness(.96);border:1px solid var(--line)}
+.map-links{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:14px;font-size:15px;font-weight:600}
+.map-links a{text-decoration:none;border-bottom:1px solid var(--ink)}
+
+/* final */
+.final{border-top:1px solid var(--line);background:var(--paper-2);text-align:left}
+.final .wrap{padding-top:clamp(56px,8vw,110px);padding-bottom:clamp(56px,8vw,110px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:28px}
+.final p{font-family:var(--display);font-size:clamp(28px,3.6vw,54px);line-height:1.1;margin:0;max-width:18ch}
+.final .phones{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.final .alt{font-size:16px;color:var(--ink-2)}
+.final .alt a{text-decoration:none;border-bottom:1px solid var(--line);font-weight:600;color:var(--ink)}
+footer{border-top:1px solid var(--line);font-size:13px;color:var(--ink-2)}
+footer .wrap{padding-top:22px;padding-bottom:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+@media (max-width:820px){
+  .hero,.menu-head,.two,.visit-grid{grid-template-columns:minmax(0,1fr)}
+  .hero{padding-top:8px}
+  .list li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .list .t{text-align:left}
+  .q{grid-template-columns:minmax(0,1fr)}
+  .q figcaption{order:2}
+  .inset img{max-width:100%}
+}
+@media (max-width:480px){
+  .top .where{display:none}
+  .hero h1{margin:10px 0 14px}
+  .hero .lead{margin-bottom:20px}
+  .call{width:100%}
+}
+
+@supports (animation-timeline: view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal{animation:none !important}
+}
+</style>
+
+<header class="wrap top">
+  <span class="mark">Мамины рецепты</span>
+  <span class="where">Павшинский бульвар, 7</span>
+  <a href="tel:+74957469191">+7 (495) 746-91-91</a>
+</header>
+<hr class="rule">
+
+<main>
+<section class="wrap hero">
+  <div>
+    <div class="eyebrow">Кулинария и кондитерская · Павшинская пойма</div>
+    <h1>Мамины рецепты</h1>
+    <p class="lead">Супы, вторые блюда, салаты, блинчики и выпечка на витрине каждый день с утра до вечера: поесть в зале, забрать домой или заказать доставку.</p>
+    <a class="call" href="tel:+74957469191"><small>Позвонить</small>+7 (495) 746-91-91</a>
+    <p class="meta">Ежедневно 10:00–21:30 · Павшинский бульвар, 7</p>
+  </div>
+  <figure class="frame" style="margin:0">
+    <img src="hero.jpg" alt="Вход в кулинарию «Мамины рецепты» на Павшинском бульваре, 7" width="2400" height="1350">
+    <figcaption><span>Павшинский бульвар, 7</span><span>вывеска «Кулинария»</span></figcaption>
+  </figure>
+</section>
+
+<figure class="bleed reveal">
+  <img src="photo-3.jpg" alt="Овощное рагу из кабачков, баклажанов, перца и моркови на белой тарелке" loading="lazy">
+  <figcaption>Овощное рагу. Фото из карточки заведения на Яндекс Картах.</figcaption>
+</figure>
+
+<section class="wrap menu">
+  <div class="menu-head reveal">
+    <div>
+      <div class="eyebrow">Что на витрине</div>
+      <h2>Обед, ужин и завтрак на завтра</h2>
+    </div>
+    <p>Блюда стоят под стеклом, видно, что берёшь. Ниже то, что гости называют в отзывах сами. Ассортимент меняется, наличие и стоимость уточняйте по телефону.</p>
+  </div>
+  <ul class="list">
+    <li class="reveal"><span class="n">Первые блюда</span><span class="d">Борщ, щи, финская уха, рассольник, харчо</span><span class="t">в зале и с собой</span></li>
+    <li class="reveal"><span class="n">Вторые блюда</span><span class="d">Котлета по-киевски, голубцы, чахохбили, шашлык из курицы, котлеты из кабачка, гарниры</span><span class="t">в зале и с собой</span></li>
+    <li class="reveal"><span class="n">Салаты</span><span class="d">Витрина закусок и салатов, от «Столичного» до салата с авокадо</span><span class="t">на развес</span></li>
+    <li class="reveal"><span class="n">Завтраки</span><span class="d">Сырники, запеканка, каши</span><span class="t">с 10:00</span></li>
+    <li class="reveal"><span class="n">Блинчики и выпечка</span><span class="d">Блинчики с мясом, слойки, пирожки</span><span class="t">с собой</span></li>
+    <li class="reveal"><span class="n">Торты и десерты</span><span class="d">Тортики, эклеры, пудинг, печёночный мини-тортик; к ним кофе с собой</span><span class="t">кондитерская</span></li>
+    <li class="reveal"><span class="n">Специальное меню</span><span class="d">Постное, сезонное, диетическое</span><span class="t">уточняйте наличие</span></li>
+  </ul>
+  <p class="note">Средний чек по Яндекс Картам 270–330 ₽ · оплата картой и наличными · доставка еды</p>
+</section>
+
+<section class="big">
+  <div class="wrap">
+    <p class="reveal">Ужин на всю семью можно забрать по дороге домой: витрина открыта <em>до 21:30</em> каждый день.</p>
+  </div>
+</section>
+
+<section class="wrap two">
+  <figure class="reveal">
+    <img src="photo-1.jpg" alt="Витрина с готовыми блюдами и доска «Сегодня в меню»" loading="lazy">
+    <figcaption>Раздача и доска «Сегодня в меню»</figcaption>
+  </figure>
+  <div class="reveal">
+    <div class="eyebrow">Как здесь устроено</div>
+    <h2>Небольшой зал при кулинарии на первом этаже жилого дома</h2>
+    <p>Берёте поднос, выбираете на витрине, садитесь на диванчик у окна или на венский стул у круглого столика. Или просите упаковать с собой: многие соседи так и делают, забирая на вечер вторые блюда, салаты и блинчики.</p>
+    <ul class="facts">
+      <li><span>Формат</span><span>кулинария, кафе, кондитерская</span></li>
+      <li><span>Кухня</span><span>домашняя, русская, европейская</span></li>
+      <li><span>С собой</span><span>еда и кофе</span></li>
+      <li><span>Доставка</span><span>есть</span></li>
+      <li><span>В зале</span><span>Wi-Fi</span></li>
+    </ul>
+    <figure class="inset">
+      <img src="photo-2.jpg" alt="Зал кафе: терракотовые стены, белые подвесные лампы, диванчики" loading="lazy">
+      <figcaption>Зал с диванчиками и венскими стульями</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow reveal">Отзывы · Яндекс Карты 4,5 из 5, 532 оценки</div>
+    <h2 class="reveal">Что говорят те, кто ходит сюда обедать</h2>
+
+    <figure class="q lead-q reveal">
+      <figcaption><b>Марина Кузьмина</b><span class="stars">★★★★★</span><span>5 из 5 · Яндекс Карты</span></figcaption>
+      <blockquote>«Ассортимент огромный. Вкусно. Кухней вообще не пахнет, не знаю как им это удается? … Часто вижу, как люди просто пакетами набирают вторые блюда, выпечку, блинчики, салаты и т.п.»</blockquote>
+    </figure>
+
+    <figure class="q reveal">
+      <figcaption><b>Александр</b><span class="stars">★★★★★</span><span>5 из 5 · Яндекс Карты</span></figcaption>
+      <blockquote>«Очень часто забегаю на ужин и беру с собой на Завтрак сырники и запеканку. Видел что есть каши.»</blockquote>
+    </figure>
+
+    <figure class="q reveal">
+      <figcaption><b>Svetlana P</b><span class="stars">★★★★★</span><span>5 из 5 · Яндекс Карты</span></figcaption>
+      <blockquote>«Пришли на обед. Брали финскую уху, салатики, котлеты. Большой выбор готовых блюд на любой вкус. Всё очень свежее!»</blockquote>
+    </figure>
+
+    <figure class="q reveal">
+      <figcaption><b>Диана Д.</b><span class="stars">★★★★★</span><span>5 из 5 · Яндекс Карты</span></figcaption>
+      <blockquote>«…Особенно обалденные блинчики с мясом и печеночный мини - тортик»</blockquote>
+    </figure>
+
+    <figure class="q reveal">
+      <figcaption><b>Отзыв на Google Картах</b><span>фрагмент из карточки, имя автора не показано</span></figcaption>
+      <blockquote>«Очень вкусно, по-домашнему уютно, ребенок обожает и еду, и десерты.»</blockquote>
+    </figure>
+
+    <p class="provenance">Цитаты сокращены без изменения смысла, эмодзи убраны.</p>
+  </div>
+</section>
+
+<section class="wrap visit" id="visit">
+  <div class="visit-grid">
+    <div class="reveal">
+      <div class="eyebrow">Адрес и часы</div>
+      <h2>Павшинский бульвар, 7, Красногорск</h2>
+      <dl>
+        <dt>Адрес</dt><dd>Павшинский б-р, 7, Красногорск, Московская обл., 143401</dd>
+        <dt>Часы работы</dt><dd>Ежедневно, 10:00–21:30</dd>
+        <dt>Телефоны</dt><dd><a href="tel:+74957469191">+7 (495) 746-91-91</a><br><a href="tel:+79295152020">+7 (929) 515-20-20</a></dd>
+        <dt>Как добраться</dt><dd>Остановка «Павшинский бульвар», 280 м</dd>
+        <dt>ВКонтакте</dt><dd><a href="https://vk.ru/maminy_recepty_kulinariya" rel="noopener">vk.ru/maminy_recepty_kulinariya</a></dd>
+      </dl>
+    </div>
+    <div class="map reveal">
+      <img src="map.png" alt="Карта: Павшинский бульвар, 7, Красногорск" loading="lazy" width="650" height="450">
+      <div class="map-links">
+        <a href="https://yandex.ru/maps/org/maminy_retsepty/1048406935/" rel="noopener">Открыть в Яндекс Картах</a>
+        <a href="https://www.google.com/maps?cid=6887310904281269058" rel="noopener">Открыть в Google Картах</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <p class="reveal">Позвоните, чтобы узнать, что сегодня на витрине, и спросить про доставку.</p>
+    <div class="phones">
+      <a class="call" href="tel:+74957469191"><small>Позвонить</small>+7 (495) 746-91-91</a>
+      <span class="alt">или <a href="tel:+79295152020">+7 (929) 515-20-20</a></span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Мамины рецепты · кулинария и кондитерская · Павшинский бульвар, 7, Красногорск</span>
+    <span> Отзывы взяты из открытых карточек на Яндекс Картах и Google Картах.</span>
+  </div>
+</footer>
+</body>
+</html>

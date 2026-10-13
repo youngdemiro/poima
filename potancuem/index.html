@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Потанцуем?, школа танцев</title>
+<link rel="stylesheet" href="fonts.css">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#F4EEE6;
+  --bg-2:#EDE4D9;
+  --ink:#1D1B18;
+  --muted:#6B6259;
+  --line:#D6CBBD;
+  --accent:#1F4A3A;
+  --on-accent:#F4EEE6;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --text:"Wix Madefor Text", "Helvetica Neue", Arial, sans-serif;
+  --gutter:clamp(16px, 5vw, 72px);
+  --max:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--text);font-size:clamp(16px,1.05vw + 12px,18px);line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+
+/* top */
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:18px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.top a{text-decoration:none;color:var(--ink);letter-spacing:.02em;white-space:nowrap}
+
+/* hero */
+.hero{padding-top:clamp(20px,5vw,72px)}
+.hero h1{font-family:var(--display);font-style:italic;font-weight:400;font-size:min(15.2vw,200px);line-height:1;white-space:nowrap;letter-spacing:-.02em;margin-left:-.04em}
+.hero h1 .q{color:var(--accent)}
+.hero-row > *{min-width:0}
+.hero-row{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;margin-top:clamp(18px,3vw,40px)}
+.lead{font-size:clamp(18px,1.4vw + 10px,24px);line-height:1.42;max-width:34ch}
+.cta{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;background:var(--accent);color:var(--on-accent);text-decoration:none;padding:14px 22px 15px;border-radius:2px;font-weight:500}
+.cta small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;font-weight:400}
+.cta span{font-size:clamp(19px,1vw + 14px,23px);letter-spacing:.01em}
+.cta:hover{background:#173a2d}
+.cta:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.hero-meta{font-size:14px;color:var(--muted);line-height:1.5}
+.hero-img{margin-top:clamp(28px,5vw,64px);margin-left:auto;width:min(100%,1040px)}
+.hero-img img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:60% 50%}
+.cap{font-size:13px;color:var(--muted);margin-top:10px}
+@media (min-width:860px){
+  .hero-row{grid-template-columns:minmax(0,1.3fr) auto;align-items:end;gap:48px}
+  .hero-img{width:78%}
+  .hero-img img{aspect-ratio:16/9}
+}
+@media (max-width:859px){
+  .hero-img{width:calc(100% - 28px)}
+  .hero-img img{aspect-ratio:4/3}
+}
+
+/* big sentence */
+.statement{padding-top:clamp(72px,11vw,160px);padding-bottom:clamp(72px,11vw,160px)}
+.statement p{font-family:var(--display);font-size:clamp(32px,4.6vw,72px);line-height:1.08;letter-spacing:-.01em;max-width:17ch}
+.statement p em{font-style:italic}
+.statement .src{font-family:var(--text);font-size:14px;color:var(--muted);margin-top:24px;max-width:none}
+
+/* directions */
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:28px;padding-bottom:28px}
+.sec-head h2{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(34px,4vw,60px);line-height:1}
+.sec-head p{font-size:14px;color:var(--muted);max-width:30ch;text-align:right}
+.cols{display:grid;grid-template-columns:1fr;gap:0 64px}
+@media (min-width:860px){.cols{grid-template-columns:1fr 1fr}}
+.list{list-style:none;border-top:1px solid var(--ink)}
+.list li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:15px 0 14px;border-bottom:1px solid var(--line)}
+.list .n{font-family:var(--display);font-size:clamp(21px,1.2vw + 14px,27px);line-height:1.2}
+.list .w{font-size:14px;color:var(--muted);text-align:right}
+.list-title{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 10px}
+.cols > div + div{margin-top:40px}
+@media (min-width:860px){.cols > div + div{margin-top:0}}
+
+/* full image */
+.full{margin-top:clamp(72px,10vw,140px)}
+.full img{width:100%;height:clamp(320px,52vw,720px);object-fit:cover;object-position:35% 45%}
+.full .cap{padding-left:var(--gutter);padding-right:var(--gutter);max-width:var(--max);margin:12px auto 0}
+
+/* prices */
+.prices{padding-top:clamp(64px,9vw,120px)}
+.price-grid{display:grid;grid-template-columns:1fr;gap:40px}
+@media (min-width:860px){.price-grid{grid-template-columns:5fr 7fr;gap:72px}}
+.price-grid .note{font-size:15px;color:var(--muted);max-width:36ch}
+.price-grid .note p + p{margin-top:12px}
+.list .p{font-family:var(--text);font-size:clamp(16px,.6vw + 13px,19px);font-weight:500;white-space:nowrap}
+
+/* reviews */
+.reviews{padding-top:clamp(80px,11vw,160px)}
+.q-item{padding:clamp(40px,6vw,88px) 0;border-top:1px solid var(--line);display:flex}
+.q-item:last-child{border-bottom:1px solid var(--line)}
+.q-item blockquote{max-width:min(100%,940px)}
+.q-item.r{justify-content:flex-end}
+.q-item.r blockquote{text-align:right}
+.q-item p{font-family:var(--display);font-style:italic;font-size:clamp(25px,2.7vw + 10px,46px);line-height:1.2;letter-spacing:-.005em}
+.q-item footer{margin-top:22px;font-size:15px;color:var(--muted)}
+.q-item footer b{color:var(--ink);font-weight:500}
+
+/* small things: two columns with photo */
+.details{padding-top:clamp(80px,11vw,160px)}
+.two{display:grid;grid-template-columns:1fr;gap:36px}
+@media (min-width:860px){.two{grid-template-columns:5fr 6fr;gap:72px;align-items:start}}
+.two img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 60%}
+.facts{list-style:none;border-top:1px solid var(--ink)}
+.facts li{padding:16px 0 15px;border-bottom:1px solid var(--line);font-size:clamp(16px,.5vw + 14px,18px)}
+.facts li span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+
+/* visit */
+.visit{padding-top:clamp(80px,11vw,160px)}
+.visit-grid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+@media (min-width:860px){.visit-grid{grid-template-columns:1fr 1fr}}
+.visit-info{padding:28px 0}
+@media (min-width:860px){.visit-info{padding:36px 48px 36px 0;border-right:1px solid var(--line)}}
+.visit-info dl{display:grid;grid-template-columns:1fr;gap:0}
+.visit-info dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:22px}
+.visit-info dt:first-child{margin-top:0}
+.visit-info dd{font-family:var(--display);font-size:clamp(24px,1.6vw + 14px,34px);line-height:1.2;margin-top:4px}
+.visit-info dd small{display:block;font-family:var(--text);font-size:15px;color:var(--muted);margin-top:4px;line-height:1.45}
+.visit-info dd a{text-decoration:none}
+.visit-map{padding:0 0 28px}
+@media (min-width:860px){.visit-map{padding:36px 0 36px 48px}}
+.map-img{width:100%;aspect-ratio:650/450;object-fit:cover;filter:grayscale(1) contrast(1.08) sepia(.12);border:1px solid var(--line);background:var(--bg-2)}
+.map-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:14px;font-size:15px}
+.map-links a{text-underline-offset:3px;text-decoration-thickness:1px}
+.tg{display:flex;flex-wrap:wrap;gap:6px 20px;font-family:var(--text);font-size:16px;margin-top:6px}
+.tg a{text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* final */
+.final{padding-top:clamp(80px,12vw,180px);padding-bottom:clamp(64px,8vw,120px)}
+.final h2{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(44px,8vw,128px);line-height:.98;letter-spacing:-.015em;max-width:12ch}
+.final p{margin-top:22px;max-width:40ch;font-size:clamp(17px,.6vw + 14px,20px)}
+.final .cta{margin-top:30px}
+.foot{border-top:1px solid var(--line);padding-top:20px;padding-bottom:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+
+.list .w{white-space:nowrap;flex-shrink:0}
+@media (max-width:859px){
+  .sec-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .sec-head p{text-align:left}
+  .q-item.r blockquote{text-align:left;padding-left:12%}
+}
+@supports (animation-timeline: view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal{animation:none !important;opacity:1 !important;transform:none !important}
+}
+</style>
+
+<header class="wrap top">
+  <span>Школа танцев · йога · Красногорск</span>
+  <a href="tel:+79680763553">+7 968 076-35-53</a>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <h1>Потанцуем<span class="q">?</span></h1>
+    <div class="hero-row">
+      <p class="lead">Танцы с нуля, йога и здоровая спина по одному абонементу, во дворе на Подмосковном бульваре.</p>
+      <div>
+        <a class="cta" href="tel:+79680763553"><small>Записаться на пробное</small><span>+7 968 076-35-53</span></a>
+        <p class="hero-meta" style="margin-top:10px">Ежедневно, по расписанию · 5,0 на Яндекс Картах, 134 оценки</p>
+      </div>
+    </div>
+    <figure class="hero-img">
+      <img src="hero.jpg" alt="Танцевальный зал с зеркальной стеной и вечерним светом из окна" width="2400" height="1339">
+    </figure>
+  </section>
+
+  <section class="wrap statement reveal">
+    <p>Здесь впервые танцуют в&nbsp;34 и&nbsp;в&nbsp;35, а&nbsp;йога нравится и&nbsp;мамам <em>60+</em>.</p>
+    <p class="src">Из отзывов на Яндекс Картах: Alisa Khomyakova, Анита Кабанова, Praz Dalech.</p>
+  </section>
+
+  <section class="wrap directions" id="directions">
+    <hr class="rule">
+    <div class="sec-head">
+      <h2>Направления</h2>
+      <p>Один абонемент — любое направление в расписании. Педагоги — по отзывам учениц, актуальное расписание у администратора</p>
+    </div>
+    <div class="cols">
+      <div class="reveal">
+        <p class="list-title">Танцы</p>
+        <ul class="list">
+          <li><span class="n">Джаз-фанк</span><span class="w">Маша, Полина</span></li>
+          <li><span class="n">High heels</span><span class="w">Маша, Катя</span></li>
+          <li><span class="n">Тверк</span><span class="w">Арина</span></li>
+          <li><span class="n">Бачата</span><span class="w">Карина, Люда</span></li>
+          <li><span class="n">Girly hip-hop</span><span class="w">Мария</span></li>
+          <li><span class="n">Леди дэнс</span><span class="w">Дарья</span></li>
+          <li><span class="n">Стрип-дэнс</span><span class="w"></span></li>
+          <li><span class="n">Dancehall, латина</span><span class="w"></span></li>
+          <li><span class="n">Современные, хореография</span><span class="w"></span></li>
+          <li><span class="n">Акробатика</span><span class="w"></span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <p class="list-title">Тело</p>
+        <ul class="list">
+          <li><span class="n">Йога, хатха</span><span class="w">Евгения Пестова</span></li>
+          <li><span class="n">Здоровая спина</span><span class="w">Наталья Каплина</span></li>
+          <li><span class="n">Функциональный тренинг</span><span class="w">Наталья Каплина</span></li>
+          <li><span class="n">Растяжка</span><span class="w">Наталья Каплина</span></li>
+          <li><span class="n">Силовая аэробика</span><span class="w"></span></li>
+          <li><span class="n">Персональные занятия</span><span class="w"></span></li>
+          <li><span class="n">Постановка свадебного танца</span><span class="w"></span></li>
+          <li><span class="n">Группы для детей и подростков</span><span class="w">от 10 лет</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <figure class="full reveal">
+    <img src="photo-1.jpg" alt="Вход в студию: зелёная дверь со двора и окно с надписью «Школа танцев»" width="1600" height="1200" loading="lazy">
+    <figcaption class="cap">Вход со двора, зелёная дверь. На окне написано «Школа танцев».</figcaption>
+  </figure>
+
+  <section class="wrap reviews" id="reviews">
+    <div class="sec-head" style="padding-top:0">
+      <h2>Что пишут ученицы</h2>
+      <p>5,0 на Яндекс Картах · 134 оценки, 95 отзывов</p>
+    </div>
+
+    <div class="q-item reveal">
+      <blockquote>
+        <p>«Мне, как полному новичку, все было понятно в преподавании танца… В частности, огромное спасибо педагогу Маше — она волшебница!»</p>
+        <footer><b>Анастасия Акжигитова</b> · 5 из 5 · Яндекс Карты</footer>
+      </blockquote>
+    </div>
+
+    <div class="q-item r reveal">
+      <blockquote>
+        <p>«Уровень такой, будто это не маленькая студия возле дома, а серьезная школа… девочки, не бойтесь, что вы «бревно»! Тут нас таких очень быстро поправляют»</p>
+        <footer><b>Lilya M.</b> · 5 из 5 · Яндекс Карты</footer>
+      </blockquote>
+    </div>
+
+    <div class="q-item reveal">
+      <blockquote>
+        <p>«Начинала в октябре с 1 занятия в неделю, сейчас уже 3 и хочется только чаще, а мне меж тем 34 и танцевать я начала только здесь»</p>
+        <footer><b>Alisa Khomyakova</b> · 5 из 5 · Яндекс Карты</footer>
+      </blockquote>
+    </div>
+
+    <div class="q-item r reveal">
+      <blockquote>
+        <p>«Не раздумывая записалась на пробное занятие к чудесному тренеру Наталье Каплиной и вот почти полгода я хожу на занятия для здоровой спины и на функциональную тренировку.»</p>
+        <footer><b>Наталья Тетерятник</b> · 5 из 5 · Яндекс Карты</footer>
+      </blockquote>
+    </div>
+
+    <div class="q-item reveal">
+      <blockquote>
+        <p>«Раньше приходилось ездить в студии MDC, теперь очень рада, что нашла место в Красногорске. С первого занятия у Маши (хилс) поняла, что она на 100% моё.»</p>
+        <footer><b>Наташа</b> · 5 из 5 · Яндекс Карты</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="wrap prices">
+    <hr class="rule">
+    <div class="sec-head">
+      <h2>Стоимость</h2>
+      <p>Актуальные цены уточняйте у администратора</p>
+    </div>
+    <div class="price-grid">
+      <div class="note reveal">
+        <p>Абонемент покупается один, а группу выбираете в расписании: можно начать с бачаты, а через неделю прийти на растяжку.</p>
+        <p>Оплата наличными, картой, онлайн, по QR-коду и СБП. Есть подарочные сертификаты.</p>
+      </div>
+      <ul class="list reveal">
+        <li><span class="n">Пробное занятие</span><span class="p">от 700 ₽</span></li>
+        <li><span class="n">Абонементы на 4, 8 и больше занятий</span><span class="w">по телефону</span></li>
+        <li><span class="n">Персональное занятие</span><span class="w">по телефону</span></li>
+        <li><span class="n">Свадебный танец</span><span class="w">по телефону</span></li>
+        <li><span class="n">Аренда зала</span><span class="w">по телефону</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap details">
+    <hr class="rule">
+    <div class="sec-head">
+      <h2>Мелочи, о которых пишут</h2>
+    </div>
+    <div class="two">
+      <img class="reveal" src="photo-3.jpg" alt="Коврики для йоги и розовые блоки в углу зала" width="900" height="1600" loading="lazy">
+      <ul class="facts reveal">
+        <li>Лаунж-зона с диваном, водой и перекусами<span>можно дождаться своей группы или выпить чай после</span></li>
+        <li>Наколенники и туфли, если забыли свои<span>и резинку для волос тоже дадут</span></li>
+        <li>Занятия снимают на видео<span>прогресс видно от урока к уроку</span></li>
+        <li>Администраторы сами записывают и напоминают<span>записаться можно и онлайн</span></li>
+        <li>Мастер-классы, отчётные концерты, тематические вечеринки<span>анонсы и расписание — в Telegram-канале</span></li>
+        <li>Женский зал, один на всю студию<span>на вечерние группы лучше записаться заранее</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap visit" id="visit">
+    <div class="sec-head" style="padding-top:0">
+      <h2>Как добраться</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <dl>
+          <dt>Адрес</dt>
+          <dd>Подмосковный бульвар, 2, Красногорск<small>Вход со двора, зелёная дверь. Остановка «Ильинский бульвар» — 200 м, МЦД Пенягино — 540 м. Есть парковка.</small></dd>
+          <dt>Часы</dt>
+          <dd>Ежедневно, по расписанию<small>Занятия по предварительной записи, расписание на неделю — в Telegram-канале</small></dd>
+          <dt>Телефон</dt>
+          <dd><a href="tel:+79680763553">+7 968 076-35-53</a></dd>
+          <dt>Telegram</dt>
+          <dd><span class="tg"><a href="https://t.me/maybedance">t.me/maybedance</a><a href="https://t.me/maybe_dance_place">t.me/maybe_dance_place</a></span></dd>
+        </dl>
+      </div>
+      <div class="visit-map">
+        <img class="map-img" src="map.png" alt="Карта: Подмосковный бульвар, 2, Красногорск" width="650" height="450" loading="lazy">
+        <div class="map-links">
+          <a href="https://yandex.ru/maps/org/potantsuyem_/207387294253/">Открыть в Яндекс Картах</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D0%BE%D1%82%D0%B0%D0%BD%D1%86%D1%83%D0%B5%D0%BC%3F%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%2C%20%D0%9F%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D1%8B%D0%B9%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%2C%202">Открыть в Google Картах</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap final">
+    <hr class="rule" style="margin-bottom:clamp(48px,7vw,96px)">
+    <h2>Начните с пробного занятия.</h2>
+    <p>Позвоните, расскажите, что хочется попробовать, и администратор подберёт группу по уровню и времени.</p>
+    <a class="cta" href="tel:+79680763553"><small>Позвонить в студию</small><span>+7 968 076-35-53</span></a>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>Потанцуем? · Школа танцев и йога · Подмосковный бульвар, 2, Красногорск</span>
+  <span> Отзывы — из открытых карточек на Яндекс Картах.</span>
+</footer>
+</body>
+</html>

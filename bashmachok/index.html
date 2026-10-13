@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Башмачок, мастерская</title>
+<link rel="stylesheet" href="fonts.css">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+:root{
+  color-scheme: light;
+  --paper:#EFE8DA;
+  --paper-2:#E6DDCB;
+  --ink:#1E1C1A;
+  --ink-2:#3A3631;
+  --muted:#6E665B;
+  --line:rgba(30,28,26,.28);
+  --line-soft:rgba(30,28,26,.14);
+  --accent:#B4561C;
+  --accent-ink:#FBF5EA;
+  --dark:#23211F;
+  --dark-text:#EAE2D2;
+  --dark-muted:#A79E8F;
+  --dark-line:rgba(234,226,210,.22);
+  --display:"Podkova", Georgia, serif;
+  --text:"Fira Sans", "Helvetica Neue", Arial, sans-serif;
+  --gut:clamp(16px, 5vw, 64px);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--paper);-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--text);font-weight:400;font-size:clamp(16px,1.05vw + 11px,19px);line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+.num{font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.label{font-family:var(--text);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* top strip */
+.strip{display:flex;justify-content:space-between;gap:16px;padding:12px var(--gut);font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
+.strip span:last-child{text-align:right}
+@media (max-width:420px){.strip span:first-child{display:none}.strip{justify-content:flex-start}}
+
+/* hero */
+.band{position:relative;height:clamp(250px,40vh,560px);overflow:hidden;border-bottom:1px solid var(--ink)}
+.band img{width:100%;height:100%;object-fit:cover;object-position:68% 28%}
+.sign{padding-top:clamp(20px,3.2vw,44px);padding-bottom:clamp(28px,4vw,56px)}
+.sign-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.ticket{white-space:nowrap;font-family:var(--text);font-size:13px;color:var(--muted)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(46px,16vw,220px);line-height:.86;letter-spacing:-.02em;margin-left:-.04em}
+.sign-row{display:grid;grid-template-columns:1fr;gap:18px;margin-top:clamp(14px,2vw,28px);align-items:end}
+.lead{font-size:clamp(17px,1.3vw + 11px,24px);line-height:1.4;max-width:34ch;color:var(--ink-2)}
+.call{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:15px 22px;border-radius:2px;font-weight:500;font-size:clamp(17px,1vw + 12px,21px);line-height:1.2}
+.call small{font-size:13px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.call:hover{background:#9C4815}
+.alt-phone{display:block;margin-top:10px;font-size:15px;color:var(--muted)}
+.alt-phone a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (min-width:900px){
+  .sign-row{grid-template-columns:1.4fr 1fr;gap:40px}
+  .cta-col{justify-self:end;text-align:right}
+}
+
+/* receipt / services */
+.receipt{padding:clamp(56px,8vw,120px) 0}
+.receipt-head{display:grid;gap:12px;margin-bottom:clamp(24px,3vw,40px)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,4.4vw,64px);line-height:1;letter-spacing:-.01em}
+.receipt-head p{color:var(--muted);max-width:52ch}
+@media (min-width:900px){.receipt-head{grid-template-columns:1fr 1fr;align-items:end}}
+.slip{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.slip-meta{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13px;color:var(--muted)}
+.slip ol{list-style:none}
+.slip li{display:grid;grid-template-columns:3.2em 1fr;gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+.slip li:last-child{border-bottom:0}
+.slip .n{font-size:14px;color:var(--muted);padding-top:3px}
+.slip .what{font-family:var(--display);font-weight:600;font-size:clamp(20px,1.3vw + 13px,27px);line-height:1.2}
+.slip .note{grid-column:2;font-size:15px;color:var(--muted);line-height:1.45}
+.slip .term{grid-column:2;font-size:15px;color:var(--ink)}
+@media (min-width:760px){
+  .slip li{grid-template-columns:4em 1.3fr 1fr 11em;align-items:baseline}
+  .slip .note,.slip .term{grid-column:auto}
+  .slip .term{text-align:right}
+}
+.slip-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:12px 0;border-top:1px dashed var(--line);font-size:14px;color:var(--muted)}
+
+/* full-width photo pair */
+.photos{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.photos figure{position:relative;overflow:hidden}
+.photos img{width:100%;height:clamp(320px,52vw,720px);object-fit:cover;filter:saturate(.8) contrast(1.04)}
+.photos figcaption{position:absolute;left:var(--gut);bottom:14px;font-size:13px;color:#F3ECDD;background:rgba(30,28,26,.72);padding:4px 10px}
+@media (min-width:760px){.photos{grid-template-columns:1.25fr 1fr}.photos figure+figure{border-left:1px solid var(--ink)}}
+
+/* big sentence */
+.statement{padding:clamp(64px,10vw,150px) 0}
+.statement p{font-family:var(--display);font-weight:600;font-size:clamp(30px,5.2vw,78px);line-height:1.06;letter-spacing:-.01em;max-width:18ch}
+.statement em{font-style:normal;color:var(--accent)}
+.statement .src{margin-top:24px;font-family:var(--text);font-weight:400;font-size:15px;color:var(--muted);max-width:none;letter-spacing:0;line-height:1.5}
+
+/* before / after */
+.ba{padding:clamp(56px,8vw,110px) 0}
+.ba h2{margin-bottom:clamp(24px,3vw,44px)}
+.ba-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--ink)}
+.ba-cols .hd{padding:12px 0;border-bottom:1px solid var(--line)}
+.ba-cols .hd:nth-child(2){padding-left:clamp(12px,3vw,40px);border-left:1px solid var(--line)}
+.ba-row{display:contents}
+.ba-row > div{padding:20px 0;border-bottom:1px solid var(--line-soft);font-size:clamp(15px,.6vw + 12px,18px);line-height:1.45}
+.ba-row > div:nth-child(1){padding-right:clamp(12px,3vw,40px);color:var(--ink-2)}
+.ba-row > div:nth-child(2){padding-left:clamp(12px,3vw,40px);border-left:1px solid var(--line)}
+.ba-row b{font-weight:500}
+.ba-row .who{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
+
+/* reviews (dark) */
+.voices{background:var(--dark);color:var(--dark-text);padding:clamp(64px,9vw,140px) 0}
+.voices-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--dark-line)}
+.voices-head .label{color:var(--dark-muted)}
+.score{font-family:var(--display);font-weight:700;font-size:clamp(40px,5vw,72px);line-height:1}
+.score span{font-family:var(--text);font-weight:400;font-size:15px;color:var(--dark-muted);margin-left:10px}
+.q{padding:clamp(40px,6vw,88px) 0;border-bottom:1px solid var(--dark-line);display:grid;gap:22px}
+.q:last-child{border-bottom:0;padding-bottom:0}
+.q blockquote{font-family:var(--display);font-weight:500;font-size:clamp(23px,2.6vw + 10px,46px);line-height:1.22;max-width:30ch}
+.q blockquote::before{content:"«"}
+.q blockquote::after{content:"»"}
+.q .by{font-size:15px;color:var(--dark-muted);line-height:1.5}
+.q .by strong{display:block;color:var(--dark-text);font-weight:500;font-size:17px}
+@media (min-width:900px){
+  .q{grid-template-columns:15em 1fr;gap:40px;align-items:start}
+  .q .by{order:-1;padding-top:12px;border-top:1px solid var(--dark-line)}
+  .q:nth-child(odd) blockquote{margin-left:auto}
+}
+
+/* place */
+.place{padding:clamp(56px,8vw,110px) 0}
+.place-grid{display:grid;grid-template-columns:minmax(0,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--ink)}
+.facts{padding:24px 0}
+.facts dl{display:grid;grid-template-columns:1fr;gap:0}
+.facts dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:16px}
+.facts dd{font-family:var(--display);font-weight:600;font-size:clamp(22px,1.6vw + 12px,32px);line-height:1.15;padding-bottom:16px;border-bottom:1px solid var(--line-soft)}
+.facts dd:last-of-type{border-bottom:0}
+.facts dd small{display:block;font-family:var(--text);font-weight:400;font-size:15px;color:var(--muted);margin-top:4px;line-height:1.4}
+.facts dd a{text-decoration:none}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:12px;font-size:15px}
+.links a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.mapbox{border-top:1px solid var(--ink)}
+.mapbox img{width:100%;height:100%;min-height:280px;object-fit:cover;filter:grayscale(1) sepia(.18) contrast(1.08)}
+@media (min-width:900px){
+  .place-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+  .facts{padding:24px 40px 24px 0}
+  .mapbox{border-top:0;border-left:1px solid var(--ink)}
+}
+
+/* final */
+.final{padding:clamp(56px,8vw,120px) 0 clamp(40px,5vw,72px);border-top:1px solid var(--ink)}
+.final h2{font-size:clamp(40px,7vw,104px);max-width:12ch;margin-bottom:28px}
+.final .row{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+.final .row a.plain{font-size:17px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+footer{border-top:1px solid var(--line);padding:22px 0 36px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+
+/* reveal */
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+  .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+}
+@media (prefers-reduced-motion: reduce){
+  .rv{animation:none !important}
+}
+</style>
+
+<div class="strip"><span>Мастерская · Павшинская пойма</span><span class="num">10:00–21:00 ежедневно</span></div>
+
+<header>
+  <div class="band"><img src="hero.jpg" alt="Мастерская «Башмачок» вечером: витрина с инструментом и ключами на Красногорском бульваре" fetchpriority="high"></div>
+  <div class="wrap sign">
+    <div class="sign-top"><span class="label">Обувь · ключи · часы</span><span class="ticket num">квитанция № 4/1</span></div>
+    <h1>Башмачок</h1>
+    <div class="sign-row">
+      <p class="lead">По отзывам, дубликат ключа делают за 3 минуты, ремешок укорачивают за 5, обувь чинят здесь же, а не отвозят в цех.</p>
+      <div class="cta-col">
+        <a class="call num" href="tel:+79263872680"><small>Позвонить</small>+7 926 387-26-80</a>
+        <span class="alt-phone">или <a class="num" href="tel:+79037858563">+7 903 785-85-63</a></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="receipt">
+    <div class="wrap">
+      <div class="receipt-head rv">
+        <h2>Что принимаем</h2>
+        <p>Сроки в правой колонке взяты из отзывов клиентов на Яндекс Картах. Стоимость зависит от вещи, её называют на месте или по телефону.</p>
+      </div>
+      <div class="slip rv">
+        <div class="slip-meta num"><span>Работы</span><span>Срок по отзывам</span></div>
+        <ol>
+          <li><span class="n num">01</span><span class="what">Дубликаты ключей</span><span class="note">Обычные и сложные</span><span class="term num">3 минуты</span></li>
+          <li><span class="n num">02</span><span class="what">Автомобильные ключи</span><span class="note">Новый ключ на Peugeot, проверили сразу</span><span class="term num">10 минут</span></li>
+          <li><span class="n num">03</span><span class="what">Ключ зажигания мотоцикла</span><span class="note">Нестандартную болванку подобрали под ключ</span><span class="term">с первого раза</span></li>
+          <li><span class="n num">04</span><span class="what">Ремонт обуви</span><span class="note">Подклейка, профилактика, сложные места на ботинках</span><span class="term">на месте</span></li>
+          <li><span class="n num">05</span><span class="what">Ремешки и браслеты</span><span class="note">Укоротить, заменить, пробить дырку, ремешки Apple Watch</span><span class="term num">5 минут</span></li>
+          <li><span class="n num">06</span><span class="what">Часы</span><span class="note">Батарейки, стрелки, винты и герметичность. Наручные и карманные: японские, швейцарские, российские</span><span class="term">быстро, с показом</span></li>
+          <li><span class="n num">07</span><span class="what">Заточка</span><span class="note">Ножи</span><span class="term">срок уточнять</span></li>
+          <li><span class="n num">08</span><span class="what">Ножи в продаже</span><span class="note">Кизлярские ножи</span><span class="term">наличие уточнять</span></li>
+        </ol>
+        <div class="slip-foot"><span>Оплата: наличные, карта, перевод</span><span>На работы выдают чек</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="photos" aria-label="Мастерская изнутри">
+    <figure><img src="photo-1.jpg" alt="Мастер у заточного станка, позади стена с болванками ключей" loading="lazy"><figcaption>Заточной станок и стена болванок</figcaption></figure>
+    <figure><img src="photo-2.jpg" alt="Витрина с ножами в кожаных ножнах" loading="lazy" style="object-position:50% 60%"><figcaption>Ножи на витрине</figcaption></figure>
+  </section>
+
+  <section class="statement">
+    <div class="wrap rv">
+      <p>Обувь, ключи и&nbsp;часы никуда не&nbsp;увозят: их чинят <em>на&nbsp;месте</em>.</p>
+      <p class="src">После переезда на Красногорский бульвар работают те же мастера: одна из клиенток ходит к ним больше шести лет.</p>
+    </div>
+  </section>
+
+  <section class="ba">
+    <div class="wrap">
+      <h2 class="rv">Принесли — забрали</h2>
+      <div class="ba-cols rv">
+        <div class="hd label">Принесли</div>
+        <div class="hd label">Забрали</div>
+        <div class="ba-row"><div>Ремешок от часов, который в трёх мастерских отказались уменьшать</div><div><b>Уменьшен за 5 минут.</b><span class="who">пересказ отзыва, Яндекс Карты · Виктория Тараненко</span></div></div>
+        <div class="ba-row"><div>Ботинки со сложным местом, за которое другие мастера не брались</div><div><b>Почти весь сезон в носке, всё целое.</b><span class="who">пересказ отзыва, Яндекс Карты · Богдан Т.</span></div></div>
+        <div class="ba-row"><div>Casio G-Shock с конденсатом под стеклом и сорванной резьбой</div><div><b>Подобрали винт, смазали резинку, герметичность восстановлена за 500 ₽.</b><span class="who">пересказ отзыва, Яндекс Карты · Gars</span></div></div>
+        <div class="ba-row"><div>Кроссовки в ремонт</div><div><b>Выглядят как новые, сделали быстро.</b><span class="who">пересказ отзыва, Яндекс Карты · Анастасия Измалкова</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="voices">
+    <div class="wrap">
+      <div class="voices-head rv">
+        <span class="label">Отзывы · Яндекс Карты</span>
+        <div class="score num">5,0<span>117 оценок, 83 отзыва</span></div>
+      </div>
+
+      <article class="q rv">
+        <div class="by"><strong>Светлана Будтолаева</strong>5 из 5 · май 2026 · Яндекс Карты</div>
+        <blockquote>И как же приятно было увидеть тех же мастеров, к которым я обращалась на протяжении более 6-ти лет! … бывали случаи, когда мог тот же самый ботинок где-то отклеится, и ребята мне доделывали при этом не взяв с меня доплаты.</blockquote>
+      </article>
+
+      <article class="q rv">
+        <div class="by"><strong>Наталья Тарутина</strong>5 из 5 · март 2024 · Яндекс Карты</div>
+        <blockquote>Когда есть нюансы - заранее предупреждают. И даже очень сложные ключи делают идеально - с 1го раза сделали мне дубликат ключа зажигания к мото, подобрали нестандартную болванку.</blockquote>
+      </article>
+
+      <article class="q rv">
+        <div class="by"><strong>Виктория Тараненко</strong>5 из 5 · май 2026 · Яндекс Карты</div>
+        <blockquote>Мастер за 5 минут уменьшил ремешок от часов. До этого мне отказывали в трёх мастерских, якобы такие ремни невозможно уменьшить…</blockquote>
+      </article>
+
+      <article class="q rv">
+        <div class="by"><strong>Денис Гончаренко</strong>5 из 5 · август 2024 · Яндекс Карты</div>
+        <blockquote>Менял батарейку в часах casio g-shock ga-100. … все очень аккуратно, болты нисколько не сорваны, никаких излишек герметика.</blockquote>
+      </article>
+
+      <article class="q rv">
+        <div class="by"><strong>Николай Е.</strong>5 из 5 · июнь 2024 · Яндекс Карты</div>
+        <blockquote>Мастер сам предложил сразу надеть ключ на кольцо, чего я прежде не встречал в подобных мастерских.</blockquote>
+      </article>
+    </div>
+  </section>
+
+  <section class="place">
+    <div class="wrap">
+      <div class="place-grid rv">
+        <div class="facts">
+          <dl>
+            <dt>Адрес</dt>
+            <dd>Красногорский бульвар, 4, корп.&nbsp;1, Красногорск<small>Остановка «Красногорский бульвар, 10» — 450 м. Метро Мякинино — 2,4 км</small></dd>
+            <dt>Часы</dt>
+            <dd class="num">Ежедневно, 10:00–21:00</dd>
+            <dt>Телефоны</dt>
+            <dd class="num"><a href="tel:+79263872680">+7 926 387-26-80</a><br><a href="tel:+79037858563">+7 903 785-85-63</a></dd>
+          </dl>
+          <div class="links">
+            <a href="https://wa.me/79263872680">WhatsApp</a>
+            <a href="https://t.me/+xAevogXX8-YyZDgy">Telegram</a>
+            <a href="https://yandex.ru/maps/org/bashmachok/12723221078/">Открыть в Яндекс Картах</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%91%D0%B0%D1%88%D0%BC%D0%B0%D1%87%D0%BE%D0%BA%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%2C%204%2C%20%D0%BA%D0%BE%D1%80%D0%BF.%201">Открыть в Google Картах</a>
+          </div>
+        </div>
+        <a class="mapbox" href="https://yandex.ru/maps/org/bashmachok/12723221078/"><img src="map.png" alt="Карта: Красногорский бульвар, 4, корпус 1" loading="lazy" width="650" height="450"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap rv">
+      <h2>Ключ, каблук или ремешок — несите.</h2>
+      <div class="row">
+        <a class="call num" href="tel:+79263872680"><small>Позвонить</small>+7 926 387-26-80</a>
+        <a class="plain" href="https://wa.me/79263872680">Написать в WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Башмачок · ремонт обуви, изготовление ключей, ремонт часов</span><span> Отзывы — из открытой карточки на Яндекс Картах.</span></div>
+</footer>
+</body>
+</html>

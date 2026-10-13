@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Точка Загара, солярий</title>
+<link rel="stylesheet" href="fonts.css">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+:root{
+  color-scheme: light;
+  --sand:#F4ECE0;
+  --sand-2:#EADFCD;
+  --paper:#FAF6EF;
+  --ink:#2B2119;
+  --ink-2:#6B5B4C;
+  --line:#D9CBB6;
+  --accent:#B4531E;
+  --on-accent:#FFF8F0;
+  --display:'Unbounded', 'Arial Black', sans-serif;
+  --text:'Onest', 'Helvetica Neue', Arial, sans-serif;
+  --gutter:clamp(16px, 5vw, 72px);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--sand);color:var(--ink);font-family:var(--text);font-size:clamp(16px,1.05vw + 12px,18px);line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.rule{border:0;border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--text);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+
+/* Call button */
+.call{display:inline-flex;align-items:center;gap:14px;background:var(--accent);color:var(--on-accent);text-decoration:none;font-family:var(--text);font-weight:500;font-size:clamp(16px,1vw + 12px,19px);padding:16px 26px;border-radius:2px;transition:background .2s}
+.call:hover{background:#9C4516}
+.call small{font-weight:400;opacity:.85;font-size:.82em}
+
+/* HERO */
+.hero{position:relative;min-height:min(100svh,940px);display:flex;align-items:flex-end;overflow:hidden;background:var(--sand-2)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg, rgba(244,236,224,.94) 0%, rgba(244,236,224,.80) 34%, rgba(244,236,224,.18) 62%, rgba(244,236,224,0) 78%),
+  linear-gradient(0deg, rgba(244,236,224,.55) 0%, rgba(244,236,224,0) 40%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-top:96px;padding-bottom:clamp(40px,8vh,96px)}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(46px,8.4vw,132px);line-height:.95;letter-spacing:-.02em;max-width:9ch;margin:18px 0 26px}
+.hero p.lead{max-width:30ch;font-size:clamp(18px,1.3vw + 10px,23px);line-height:1.4;color:var(--ink);margin-bottom:30px}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--ink-2)}
+.hero .meta span+span::before{content:"· ";margin-left:.35em}
+.topbar{position:absolute;top:0;left:0;right:0;z-index:2}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:0}
+.topbar span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.topbar a{font-size:14px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+
+@media (max-width:700px){
+  .hero{align-items:flex-end}
+  .hero img{object-position:100% 40%}
+  .hero .meta span{display:block}
+  .hero .meta span+span::before{content:none}
+  .hero::after{background:linear-gradient(0deg, rgba(244,236,224,.97) 0%, rgba(244,236,224,.92) 44%, rgba(244,236,224,.35) 66%, rgba(244,236,224,0) 82%)}
+  .hero .wrap{padding-bottom:28px}
+  .hero h1{margin:12px 0 16px}
+  .hero p.lead{margin-bottom:22px}
+  .topbar a{display:none}
+}
+
+/* BIG SENTENCE */
+.statement{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.statement .wrap{padding-top:clamp(88px,14vw,200px);padding-bottom:clamp(88px,14vw,200px)}
+.statement p{font-family:var(--display);font-weight:300;font-size:clamp(30px,4.6vw,72px);line-height:1.12;letter-spacing:-.015em;max-width:18ch}
+.statement em{font-style:normal;color:var(--accent)}
+.statement .src{margin-top:40px;font-family:var(--text);font-size:15px;color:var(--ink-2);max-width:56ch}
+
+/* TWO COLUMNS */
+.split{display:grid;grid-template-columns:1fr;gap:0;border-bottom:1px solid var(--line)}
+.split figure{background:var(--sand-2)}
+.split figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;filter:saturate(.85) sepia(.08)}
+.split .txt{padding:clamp(48px,7vw,110px) var(--gutter);display:flex;flex-direction:column;justify-content:center;gap:22px}
+.split h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3vw,46px);line-height:1.1;letter-spacing:-.01em;max-width:14ch}
+.split p{max-width:44ch;color:var(--ink)}
+.split p.muted{color:var(--ink-2)}
+@media (min-width:860px){.split{grid-template-columns:1fr 1fr}.split figure img{aspect-ratio:auto;min-height:640px}}
+
+/* SERVICES */
+.services .wrap{padding-top:clamp(72px,10vw,140px);padding-bottom:clamp(72px,10vw,140px)}
+.services header{display:grid;gap:18px;margin-bottom:48px}
+.services h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,52px);line-height:1.05;letter-spacing:-.01em}
+.list{list-style:none;border-top:1px solid var(--ink)}
+.list li{display:grid;grid-template-columns:1fr;gap:6px;padding:22px 0;border-bottom:1px solid var(--line)}
+.list .n{font-family:var(--display);font-weight:400;font-size:clamp(19px,1.5vw,24px)}
+.list .d{color:var(--ink-2);font-size:16px;max-width:52ch}
+.list .p{font-size:15px;color:var(--ink);white-space:nowrap}
+@media (min-width:860px){.list li{grid-template-columns:minmax(0,5fr) minmax(0,6fr) minmax(0,2fr);align-items:baseline;gap:32px}.list .p{text-align:right}}
+.services .note{margin-top:22px;font-size:14px;color:var(--ink-2);max-width:62ch}
+
+/* FULL WIDTH IMAGE */
+.band{position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band img{width:100%;height:clamp(320px,52vw,640px);object-fit:cover;object-position:50% 38%;filter:saturate(.7) sepia(.18) contrast(.96)}
+.band figcaption{padding:16px var(--gutter);font-size:14px;color:var(--ink-2);background:var(--paper)}
+
+/* REVIEWS */
+.reviews{background:var(--paper)}
+.reviews .wrap{padding-top:clamp(80px,11vw,160px);padding-bottom:clamp(60px,8vw,120px);max-width:1040px}
+.reviews .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:clamp(40px,6vw,80px)}
+.reviews .head h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,52px);line-height:1.05}
+.score{font-size:15px;color:var(--ink-2)}
+.score b{font-family:var(--display);font-weight:500;color:var(--ink);font-size:clamp(22px,2vw,30px);margin-right:6px}
+blockquote{border-top:1px solid var(--line);padding:clamp(36px,5vw,64px) 0}
+blockquote p{font-family:var(--text);font-weight:300;font-size:clamp(22px,2.3vw,34px);line-height:1.35;letter-spacing:-.005em;max-width:32ch}
+blockquote footer{margin-top:24px;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;color:var(--ink-2)}
+blockquote footer cite{font-style:normal;color:var(--ink);font-weight:500}
+blockquote:nth-of-type(even) p{margin-left:auto}
+blockquote:nth-of-type(even) footer{justify-content:flex-end}
+@media (max-width:700px){blockquote:nth-of-type(even) p{margin-left:0}blockquote:nth-of-type(even) footer{justify-content:flex-start}}
+.reviews .more{border-top:1px solid var(--line);padding-top:28px;font-size:15px;color:var(--ink-2)}
+
+/* VISIT */
+.visit{border-top:1px solid var(--line)}
+.visit .wrap{padding-top:clamp(72px,10vw,140px);padding-bottom:clamp(72px,10vw,140px);display:grid;gap:clamp(32px,5vw,72px)}
+@media (min-width:900px){.visit .wrap{grid-template-columns:5fr 6fr;align-items:start}}
+.visit h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,52px);line-height:1.05;margin-bottom:28px}
+.facts{border-top:1px solid var(--ink)}
+.facts div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.facts dd{font-size:17px}
+.facts dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.facts dd a:hover{border-color:var(--ink)}
+.mapbox img{width:100%;aspect-ratio:650/450;object-fit:cover;filter:grayscale(1) sepia(.25) contrast(1.05) brightness(1.02);border:1px solid var(--line)}
+.maplinks{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:16px;font-size:15px}
+.maplinks a{text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+
+/* FINAL CTA */
+.final{background:var(--sand-2);border-top:1px solid var(--line)}
+.final .wrap{padding-top:clamp(80px,12vw,170px);padding-bottom:clamp(64px,9vw,120px)}
+.final p.big{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,76px);line-height:1.02;letter-spacing:-.02em;max-width:14ch;margin-bottom:36px}
+.final .sub{margin-top:20px;font-size:15px;color:var(--ink-2)}
+.foot{border-top:1px solid var(--line);background:var(--sand-2)}
+.foot .wrap{padding-top:24px;padding-bottom:32px;font-size:13px;color:var(--ink-2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* Reveal */
+@supports (animation-timeline: view()){
+  .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion: reduce){.rv{animation:none!important}}
+</style>
+
+<header class="hero">
+  <img src="hero.jpg" alt="Вход в студию загара на Ильинском бульваре, 3: оранжевая лестница и вывеска «Солярий»" fetchpriority="high">
+  <div class="topbar"><div class="wrap"><span>Солярий · Павшинская пойма</span><a href="tel:+79686606274">+7 968 660-62-74</a></div></div>
+  <div class="wrap">
+    <div class="eyebrow">Студия загара · Ильинский бульвар, 3</div>
+    <h1>Точка Загара</h1>
+    <p class="lead">Три кабины с мощными лампами, а крем и минуты подбирают под вашу кожу.</p>
+    <a class="call" href="tel:+79686606274">Позвонить <small>+7 968 660-62-74</small></a>
+    <div class="meta"><span>Ежедневно 10:00–22:00</span> <span>5,0 на Яндекс Картах · 280 оценок</span></div>
+  </div>
+</header>
+
+<section class="statement">
+  <div class="wrap rv">
+    <p>Вертикальный солярий, турбосолярий и <em>коллариум</em> — в одной студии у дома, и очереди обычно нет.</p>
+    <p class="src">«Несколько соляриев, поэтому очереди нет» — так пишет о студии Анастасия Полякова на Яндекс Картах. Одна из трёх кабин работает с коллагеновыми лампами.</p>
+  </div>
+</section>
+
+<section class="split">
+  <figure><img src="photo-1.jpg" alt="Полки с кремами и лосьонами для загара в студии"></figure>
+  <div class="txt rv">
+    <div class="eyebrow">Перед сеансом</div>
+    <h2>Крем подбирают по типу кожи</h2>
+    <p>В студии большой выбор кремов и лосьонов для загара. Администратор поможет выбрать средство и посоветует, сколько минут стоять, чтобы не обгореть. Если лампы только что поменяли, об этом предупредят заранее.</p>
+    <p class="muted">В кабинке уже есть всё на после: влажные и сухие салфетки, мицеллярная вода, дезодорант, ватные диски, зеркало и весы. В холле кулер с водой.</p>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <header class="rv">
+      <div class="eyebrow">Что есть в студии</div>
+      <h2>Услуги</h2>
+    </header>
+    <ul class="list">
+      <li class="rv"><span class="n">Вертикальный солярий</span><span class="d">Загар стоя. В комнате есть зеркало и весы.</span><span class="p">33–50 ₽ / мин</span></li>
+      <li class="rv"><span class="n">Турбосолярий</span><span class="d">Сколько минут нужно вашей коже, подскажет администратор.</span><span class="p">33–50 ₽ / мин</span></li>
+      <li class="rv"><span class="n">Коллариум</span><span class="d">Кабина с коллагеновыми лампами.</span><span class="p">уточняйте</span></li>
+      <li class="rv"><span class="n">Загар без солнца</span><span class="d">Подробности и цену скажут по телефону.</span><span class="p">уточняйте</span></li>
+      <li class="rv"><span class="n">Кремы и лосьоны для загара</span><span class="d">Большой выбор средств в продаже, в том числе с бронзатором.</span><span class="p">в студии</span></li>
+      <li class="rv"><span class="n">Абонементы</span><span class="d">Абонемент продают со скидкой к разовым минутам.</span><span class="p">со скидкой</span></li>
+      <li class="rv"><span class="n">Подарочный сертификат</span><span class="d">Можно подарить сеансы загара.</span><span class="p">есть</span></li>
+    </ul>
+    <p class="note">Диапазон 33–50 ₽ за минуту указан в карточке студии на Яндекс Картах. Актуальную стоимость и акции уточняйте по телефону. Оплата наличными, картой, по QR-коду и через СБП.</p>
+  </div>
+</section>
+
+<figure class="band">
+  <img src="photo-2.jpg" alt="Стена с саше кремов для загара в студии">
+  <figcaption>Саше с кремами для загара на стене в студии.</figcaption>
+</figure>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Что пишут гости</h2>
+      <div class="score"><b>5,0</b>280 оценок и 182 отзыва на Яндекс Картах</div>
+    </div>
+
+    <blockquote class="rv">
+      <p>«Отличное место, за 3 сеанса выровнялся загар с моря… от купальника не осталось и следа ))»</p>
+      <footer><cite>GolotsvanAS</cite><span>5 из 5</span><span>Яндекс Карты, апрель 2025</span></footer>
+    </blockquote>
+
+    <blockquote class="rv">
+      <p>«Если выбрать правильный крем для загара, то результат будет виден буквально через пару часов. Также хотелось бы отметить представителя салона Михаила, которому не все равно на клиентов…»</p>
+      <footer><cite>Alex S</cite><span>5 из 5</span><span>Яндекс Карты, январь 2026</span></footer>
+    </blockquote>
+
+    <blockquote class="rv">
+      <p>«…подберут средство для загара, посоветуют количество минут, чтобы не обгорела. Часто меняют лампы… Посещаю больше года.»</p>
+      <footer><cite>Ксения</cite><span>5 из 5</span><span>Яндекс Карты, февраль 2022</span></footer>
+    </blockquote>
+
+    <blockquote class="rv">
+      <p>«Если лампы только что сменили, персонал всегда оповещает, чтобы клиенты не сгорели) мелочь, а приятно»</p>
+      <footer><cite>Анастасия Халтакшинова</cite><span>5 из 5</span><span>Яндекс Карты, июль 2021</span></footer>
+    </blockquote>
+
+    <blockquote class="rv">
+      <p>«…предоставил капучино… а тут еще и сразу красивый и ровный загар и без ожогов обгаров»</p>
+      <footer><cite>Куба</cite><span>5 из 5</span><span>Яндекс Карты, октябрь 2023</span></footer>
+    </blockquote>
+
+    <p class="more">Все отзывы — в <a href="https://yandex.ru/maps/org/tochka_zagara/41004786665/reviews/">карточке студии на Яндекс Картах</a>.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Как найти</h2>
+      <dl class="facts">
+        <div><dt>Адрес</dt><dd>Ильинский бульвар, 3, Красногорск<br><span style="color:var(--ink-2);font-size:15px">вход с улицы по оранжевой лестнице, вывеска «Солярий»</span></dd></div>
+        <div><dt>Часы</dt><dd>Ежедневно, 10:00–22:00</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79686606274">+7 (968) 660-62-74</a></dd></div>
+        <div><dt>Написать</dt><dd><a href="https://wa.me/79686606274">WhatsApp</a> · <a href="https://t.me/To4kaZagara">Telegram</a> · <a href="https://vk.ru/zagar_poima">ВКонтакте</a></dd></div>
+        <div><dt>Рядом</dt><dd>Остановка «Ильинский бульвар» — 300 м<br>Метро «Мякинино» — 1,9 км</dd></div>
+      </dl>
+    </div>
+    <div class="mapbox rv">
+      <img src="map.png" alt="Карта: Ильинский бульвар, 3, Красногорск">
+      <div class="maplinks">
+        <a href="https://yandex.ru/maps/org/tochka_zagara/41004786665/">Открыть в Яндекс Картах</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A2%D0%BE%D1%87%D0%BA%D0%B0%20%D0%97%D0%B0%D0%B3%D0%B0%D1%80%D0%B0%2C%20%D0%98%D0%BB%D1%8C%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%2C%203%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C">Открыть в Google Картах</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap rv">
+    <p class="big">Позвоните — подскажем, какая кабина свободна.</p>
+    <a class="call" href="tel:+79686606274">Позвонить <small>+7 968 660-62-74</small></a>
+    <p class="sub">Ежедневно 10:00–22:00 · Ильинский бульвар, 3</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Точка Загара · солярий · Красногорск, Павшинская пойма</span>
+    <span> Отзывы — из открытых карточек на Яндекс Картах.</span>
+  </div>
+</footer>
+</body>
+</html>

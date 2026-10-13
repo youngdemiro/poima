@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Грузинская пекарня</title>
+<link rel="stylesheet" href="fonts.css">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+:root{
+  color-scheme: light;
+  --flour:#F3EEE5;
+  --flour-2:#EAE2D4;
+  --ink:#24211E;
+  --ink-soft:#5B534B;
+  --graphite:#26292B;
+  --graphite-ink:#EDE6DA;
+  --graphite-soft:#A79E92;
+  --crust:#9A5A2C;
+  --line:rgba(36,33,30,.18);
+  --line-dark:rgba(237,230,218,.2);
+  --accent:#C0541F;
+  --accent-ink:#FFF8EF;
+  --gutter:clamp(16px,4vw,56px);
+  --display:"Kurale",Georgia,serif;
+  --text:"PT Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--flour);color:var(--ink);font-family:var(--text);font-size:clamp(16px,1.05vw + 10px,19px);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,blockquote,p{margin:0}
+.wrap{padding-inline:var(--gutter)}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* CALL BUTTON */
+.call{display:inline-flex;flex-direction:column;gap:2px;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:14px 22px 13px;border-radius:2px;line-height:1.2}
+.call small{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;opacity:.86}
+.call b{font-family:var(--text);font-weight:700;font-size:clamp(19px,1.4vw + 8px,24px);letter-spacing:.01em}
+.call:hover{background:#A9461A}
+.call:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:2fr 1fr;min-height:min(100svh,940px);border-bottom:1px solid var(--line)}
+.hero-img{position:relative;overflow:hidden;background:var(--graphite)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:30% 60%}
+.hero-text{display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:clamp(28px,4vw,64px) var(--gutter);border-left:1px solid var(--line)}
+.hero-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-size:.82rem;color:var(--ink-soft)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,5vw,92px);line-height:.95;letter-spacing:-.01em}
+.hero h1 span{display:block}
+.hero .lead{margin-top:22px;max-width:30ch;font-size:clamp(17px,.9vw + 10px,21px);color:var(--ink)}
+.hero .meta{margin-top:18px;font-size:.88rem;color:var(--ink-soft)}
+.hero .cta{margin-top:26px}
+
+/* FULL-BLEED BREAD */
+.bleed{position:relative;border-bottom:1px solid var(--line)}
+.bleed img{width:100%;height:clamp(320px,62vw,820px);object-fit:cover;object-position:50% 45%}
+.bleed figcaption{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px var(--gutter);font-size:.86rem;color:var(--ink-soft)}
+
+/* BIG SENTENCE + TWO COLUMNS */
+.tone{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.tone-say{padding:clamp(48px,7vw,120px) var(--gutter);display:flex;flex-direction:column;justify-content:space-between;gap:40px;border-right:1px solid var(--line)}
+.tone-say p.big{font-family:var(--display);font-size:clamp(30px,3.4vw,58px);line-height:1.1}
+.tone-say .rule{width:96px;height:1px;background:var(--accent);margin-bottom:22px}
+.tone-say .note{max-width:44ch;color:var(--ink-soft)}
+.tone{grid-template-columns:5fr 7fr}
+.tone-pics{display:grid;grid-template-columns:1fr 1fr;height:clamp(420px,46vw,720px)}
+.tone-pics img{width:100%;height:100%;object-fit:cover;min-height:0}
+.tone-pics img+img{border-left:1px solid var(--line)}
+
+/* MENU LIST */
+.menu{padding:clamp(56px,8vw,128px) var(--gutter);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(28px,5vw,96px);border-bottom:1px solid var(--line);background:var(--flour-2)}
+.menu h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,4vw,64px);line-height:1}
+.menu .side p{margin-top:18px;color:var(--ink-soft);max-width:34ch}
+.group+.group{margin-top:44px}
+.group h3{font-family:var(--text);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--crust);padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.group ul{list-style:none;margin:0;padding:0}
+.group li{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:13px 0;border-bottom:1px solid var(--line)}
+.group li span:first-child{font-family:var(--display);font-size:clamp(19px,1.1vw + 12px,26px);line-height:1.2}
+.group li em{display:block;font-family:var(--text);font-style:normal;font-size:.84rem;color:var(--ink-soft);margin-top:2px}
+.group li .p{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink)}
+.group li .p.ask{color:var(--ink-soft);font-size:.86rem}
+.menu .fine{margin-top:28px;font-size:.86rem;color:var(--ink-soft)}
+
+/* REVIEWS */
+.reviews{padding:clamp(64px,9vw,150px) var(--gutter) clamp(40px,5vw,80px);border-bottom:1px solid var(--line)}
+.reviews-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--ink)}
+.reviews-head h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,4vw,64px);line-height:1}
+.score{text-align:right}
+.score b{font-family:var(--display);font-weight:400;font-size:clamp(40px,4vw,64px);line-height:1;display:block}
+.score span{font-size:.86rem;color:var(--ink-soft)}
+.q{padding:clamp(40px,6vw,96px) 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:clamp(16px,4vw,72px)}
+.q:last-child{border-bottom:0}
+.q .who{font-size:.92rem;color:var(--ink-soft);line-height:1.45}
+.q .who strong{display:block;color:var(--ink);font-size:1.05rem}
+.q .stars{letter-spacing:.12em;color:var(--crust)}
+.q blockquote{font-family:var(--display);font-size:clamp(25px,2.5vw + 6px,46px);line-height:1.22;max-width:30ch}
+.q.wide blockquote{max-width:34ch}
+.q:nth-child(even) blockquote{margin-left:auto}
+
+/* VISIT */
+.visit{background:var(--graphite);color:var(--graphite-ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--line-dark)}
+.visit-info{padding:clamp(48px,6vw,104px) var(--gutter)}
+.visit h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.6vw,58px);line-height:1.02}
+.facts{margin:34px 0 0;padding:0;display:grid;grid-template-columns:auto 1fr;column-gap:28px}
+.facts dt,.facts dd{margin:0;padding:14px 0;border-top:1px solid var(--line-dark)}
+.facts dt{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite-soft);padding-top:18px}
+.facts dd{font-size:clamp(17px,.8vw + 11px,21px)}
+.facts dd a{text-decoration-color:var(--graphite-soft);text-underline-offset:3px}
+.visit-map{border-left:1px solid var(--line-dark);display:flex;flex-direction:column}
+.visit-map img{width:100%;height:100%;min-height:300px;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.92) sepia(.12)}
+.maplinks{display:flex;flex-wrap:wrap;border-top:1px solid var(--line-dark)}
+.maplinks a{flex:1 1 50%;padding:16px var(--gutter);text-decoration:none;font-size:.92rem;border-right:1px solid var(--line-dark)}
+.maplinks a:last-child{border-right:0}
+.maplinks a:hover{text-decoration:underline}
+
+/* FINAL */
+.final{padding:clamp(64px,9vw,140px) var(--gutter);display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.final p{font-family:var(--display);font-size:clamp(30px,3.6vw,60px);line-height:1.08;max-width:18ch}
+footer{border-top:1px solid var(--line);padding:22px var(--gutter) 28px;font-size:.8rem;color:var(--ink-soft);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-img{height:36svh;min-height:220px;max-height:420px}
+  .hero-img img{object-position:28% 62%}
+  .hero-text{border-left:0;justify-content:flex-start;gap:18px;padding-top:20px;padding-bottom:36px}
+  .hero .lead{margin-top:14px}
+  .hero .meta{margin-top:10px}
+  .hero .cta{margin-top:18px}
+  .tone{grid-template-columns:1fr}
+  .tone-say{border-right:0;border-bottom:1px solid var(--line)}
+  .tone-pics{height:clamp(260px,70vw,520px)}
+  .menu{grid-template-columns:1fr}
+  .q{grid-template-columns:1fr}
+  .q:nth-child(even) blockquote{margin-left:0}
+  .visit{grid-template-columns:1fr}
+  .visit-map{border-left:0;border-top:1px solid var(--line-dark)}
+  .score{text-align:left}
+}
+@media (max-width:420px){
+  .hero h1{font-size:44px}
+}
+
+/* MOTION: visible at rest */
+@supports (animation-timeline: view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+  @keyframes rise{from{opacity:.25;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal{animation:none !important}
+}
+</style>
+
+<header class="hero">
+  <div class="hero-img">
+    <img src="hero.jpg" alt="Павильон грузинской пекарни «шоти» на Красногорском бульваре вечером, в окнах — полки со свежим хлебом" fetchpriority="high">
+  </div>
+  <div class="hero-text">
+    <div class="hero-top"><span>Пекарня · Павшинская пойма</span><span>★ 5,0 на Яндекс Картах</span></div>
+    <div>
+      <h1><span>Грузинская</span><span>пекарня</span></h1>
+      <p class="lead">Шоти из печи тонэ, хинкали и грузинские сыры на Красногорском бульваре. Хлеб часто ещё горячий.</p>
+      <p class="meta">Красногорский бульвар, 4А · ежедневно 09:00–21:00</p>
+      <div class="cta">
+        <a class="call" href="tel:+79166978584"><small>Позвонить в пекарню</small><b>+7 916 697-85-84</b></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<figure class="bleed reveal" style="margin:0">
+  <img src="photo-1.jpg" alt="Ряд золотистых шоти с хрустящей коркой на полке пекарни" loading="lazy">
+  <figcaption><span>Шоти — грузинский хлеб-лодочка</span><span>Фото из карточки пекарни на Яндекс Картах</span></figcaption>
+</figure>
+
+<section class="tone">
+  <div class="tone-say reveal">
+    <span class="eyebrow">Как печётся шоти</span>
+    <div>
+      <div class="rule"></div>
+      <p class="big">Шоти пекут на раскалённой стенке печи тонэ. Гости потом пишут про хрустящую корку и мягкий мякиш.</p>
+    </div>
+    <p class="note">Тонэ — круглая грузинская печь: лепёшки держатся прямо на её стенке, жар идёт снизу. Домой хлеб уходит в крафтовом пакете.</p>
+  </div>
+  <div class="tone-pics">
+    <img src="photo-2.jpg" alt="Шоти на стенке печи тонэ, внизу — раскалённый под" loading="lazy">
+    <img src="photo-3.jpg" alt="Заготовки теста на деревянной доске перед выпечкой" loading="lazy">
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="side reveal">
+    <span class="eyebrow">Что берут гости</span>
+    <h2 style="margin-top:14px">Хлеб, хачапури, хинкали</h2>
+    <p>Список собран по отзывам на Яндекс Картах. Что уже испеклось сегодня и сколько стоит, проще всего спросить по телефону.</p>
+  </div>
+  <div>
+    <div class="group reveal">
+      <h3>Хлеб</h3>
+      <ul>
+        <li><span>Шоти<em>«всегда свежий, а часто еще и горячий»</em></span><span class="p ask">по наличию</span></li>
+        <li><span>Багет с фасолью из тандыра<em>«много начинки»</em></span><span class="p ask">по наличию</span></li>
+        <li><span>Панировочные сухари и сухарики</span><span class="p ask">по наличию</span></li>
+      </ul>
+    </div>
+    <div class="group reveal">
+      <h3>Хачапури</h3>
+      <ul>
+        <li><span>С сыром, яйцом и зеленью</span><span class="p ask">цена у кассы</span></li>
+        <li><span>С сыром</span><span class="p ask">цена у кассы</span></li>
+      </ul>
+    </div>
+    <div class="group reveal">
+      <h3>Хинкали, замороженные домой</h3>
+      <ul>
+        <li><span>С бараниной</span><span class="p ask">цена у кассы</span></li>
+        <li><span>С телятиной</span><span class="p ask">цена у кассы</span></li>
+        <li><span>Свинина с говядиной</span><span class="p ask">цена у кассы</span></li>
+      </ul>
+    </div>
+    <div class="group reveal">
+      <h3>К столу</h3>
+      <ul>
+        <li><span>Грузинские сыры</span><span class="p ask">цена у кассы</span></li>
+        <li><span>Соус сацебели<em>«явно делают сами»</em></span><span class="p ask">цена у кассы</span></li>
+      </ul>
+    </div>
+    <p class="fine">Ассортимент меняется. Что есть сегодня — по телефону +7 916 697-85-84.</p>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="reviews-head reveal">
+    <div>
+      <span class="eyebrow">Отзывы с Яндекс Карт</span>
+      <h2 style="margin-top:14px">Что говорят соседи</h2>
+    </div>
+    <div class="score"><b>5,0</b><span>43 оценки · 32 отзыва</span></div>
+  </div>
+
+  <article class="q reveal">
+    <div class="who"><strong>София Ш.</strong><span class="stars">★★★★★</span> 5 из 5<br>Яндекс Карты, октябрь 2025</div>
+    <blockquote>«Очень вкусно, как в Тбилиси, я жила там год и точно знаю что этот шоти - настоящий!»</blockquote>
+  </article>
+
+  <article class="q wide reveal">
+    <div class="who"><strong>Оксана Харламова</strong><span class="stars">★★★★★</span> 5 из 5<br>Яндекс Карты, июль 2025</div>
+    <blockquote>«Это самые вкусные хинкали из того, что есть вокруг… Взяли в этот раз еще и соус сацибели. Явно делают сами! Очень вкусно. Отличный ужин без заморочек получился»</blockquote>
+  </article>
+
+  <article class="q reveal">
+    <div class="who"><strong>Владислав И.</strong><span class="stars">★★★★★</span> 5 из 5<br>Яндекс Карты, июнь 2025</div>
+    <blockquote>«…Всегда свежий, а часто еще и горячий!) Пока дохожу до дома - съедаю минимум треть))»</blockquote>
+  </article>
+
+  <article class="q reveal">
+    <div class="who"><strong>анастасия б.</strong><span class="stars">★★★★★</span> 5 из 5<br>Яндекс Карты, август 2025</div>
+    <blockquote>«Наконец-то можно купить вкусный хлеб в Павшинской Пойме, именно такого не хватало! У этого хлеба есть вкус…»</blockquote>
+  </article>
+
+  <article class="q reveal">
+    <div class="who"><strong>А</strong><span class="stars">★★★★★</span> 5 из 5<br>Яндекс Карты, май 2026</div>
+    <blockquote>«…Рекомендую багет с фасолью из тандыра, это очень вкусно, много начинки, а хрустящая корочка просто изумительная!»</blockquote>
+  </article>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit-info reveal">
+    <span class="eyebrow" style="color:var(--graphite-soft)">Как найти</span>
+    <h2 style="margin-top:14px">Тёмный павильон с вывеской «шоти» на Красногорском бульваре</h2>
+    <dl class="facts">
+      <dt>Адрес</dt><dd>Красногорский бульвар, 4А, Красногорск</dd>
+      <dt>Часы</dt><dd>Ежедневно, 09:00–21:00</dd>
+      <dt>Рядом</dt><dd>Остановка «Красногорский бульвар» — 206 м, МЦД Пенягино — 292 м</dd>
+      <dt>Телефон</dt><dd><a href="tel:+79166978584">+7 916 697-85-84</a></dd>
+      <dt>ВКонтакте</dt><dd><a href="https://vk.ru/shoti_krasnogorsk" rel="noopener">vk.ru/shoti_krasnogorsk</a></dd>
+    </dl>
+  </div>
+  <div class="visit-map">
+    <img src="map.png" alt="Карта: Красногорский бульвар, 4А" loading="lazy">
+    <div class="maplinks">
+      <a href="https://yandex.ru/maps/org/gruzinskaya_pekarnya/222387630462/" rel="noopener">Открыть в Яндекс Картах →</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%93%D1%80%D1%83%D0%B7%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BF%D0%B5%D0%BA%D0%B0%D1%80%D0%BD%D1%8F%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%2C%204%D0%90%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C" rel="noopener">Открыть в Google Картах →</a>
+    </div>
+  </div>
+</section>
+
+<section class="final reveal">
+  <p>Спросите по телефону, что сейчас из печи.</p>
+  <a class="call" href="tel:+79166978584"><small>Ежедневно 09:00–21:00</small><b>+7 916 697-85-84</b></a>
+</section>
+
+<footer>
+  <span>Грузинская пекарня · Красногорский бульвар, 4А, Красногорск</span>
+  <span> Отзывы — из открытых карточек на Яндекс Картах.</span>
+</footer>
+</body>
+</html>
