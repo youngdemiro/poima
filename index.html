@@ -1,1 +1,214 @@
-<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Дамир</title><p style="font-family:sans-serif;padding:24px">Сайты для бизнесов Павшинской поймы. Дамир, +7 925 606-00-00</p>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Дамир, сайты для бизнеса</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+/* Layout: one-person workshop — big name, steps on hairlines, work as full-width plates, one call button top and bottom */
+:root{
+  --paper:#F4F3EF; --ink:#16171A; --muted:#5E6068; --line:#D3D2CC; --plate:#E9E8E2;
+  --accent:#2B4BD8; --on-accent:#FFFFFF;
+  --display:"Spectral", Georgia, "Times New Roman", serif;
+  --text:"Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gutter:clamp(16px,5vw,64px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#141517; --ink:#ECEBE6; --muted:#A3A4AB; --line:#2E3034; --plate:#1D1E21; --accent:#6F86F2; --on-accent:#0E1020; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#141517; --ink:#ECEBE6; --muted:#A3A4AB; --line:#2E3034; --plate:#1D1E21; --accent:#6F86F2; --on-accent:#0E1020; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:clamp(16px,1.05vw + 11px,18px);line-height:1.6;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gutter)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+.label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+
+/* hero */
+.top{display:flex;justify-content:space-between;gap:16px;padding-block:20px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.hero{padding-block:clamp(28px,6vw,88px) clamp(32px,6vw,72px);display:grid;gap:clamp(20px,3vw,36px)}
+.hero h1{font-size:clamp(64px,13vw,184px);line-height:.9;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--muted)}
+.hero p{font-size:clamp(19px,1.6vw + 10px,26px);line-height:1.45;max-width:30ch;margin:0}
+.call{display:inline-flex;flex-direction:column;gap:2px;background:var(--accent);color:var(--on-accent);text-decoration:none;padding:14px 22px;border-radius:2px;width:max-content;max-width:100%}
+.call small{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.call b{font-weight:600;font-size:clamp(20px,1.2vw + 14px,24px);font-variant-numeric:tabular-nums}
+.call:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.hero-row{display:flex;gap:24px 40px;align-items:end;flex-wrap:wrap}
+.hero-row .alt{color:var(--muted);font-size:15px;line-height:1.5}
+
+/* big sentence */
+.big{padding-block:clamp(48px,8vw,120px);border-top:1px solid var(--line)}
+.big p{font-family:var(--display);font-size:clamp(30px,4.2vw,58px);line-height:1.12;margin:0;max-width:20ch}
+.big p span{color:var(--accent)}
+
+/* steps */
+.steps{padding-block:clamp(40px,6vw,88px);border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 56px}
+.steps h2{font-size:clamp(30px,3vw,44px);line-height:1.1}
+.steps ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.2em minmax(0,1fr);gap:16px;padding-block:18px;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--display);font-size:22px;color:var(--muted);font-variant-numeric:tabular-nums}
+.steps li b{display:block;font-weight:500;margin-bottom:2px}
+.steps li span{color:var(--muted)}
+
+/* two columns */
+.cols{padding-block:clamp(40px,6vw,88px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 56px}
+.cols h3{font-size:clamp(24px,2vw,32px);margin-bottom:14px}
+.cols ul{margin:0;padding:0;list-style:none}
+.cols li{padding-block:10px;border-top:1px solid var(--line)}
+.cols li:last-child{border-bottom:1px solid var(--line)}
+.cols .note{color:var(--muted);font-size:15px;margin:14px 0 0}
+
+/* work */
+.work{padding-block:clamp(40px,6vw,88px) 0;border-top:1px solid var(--line)}
+.work-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:16px 56px;margin-bottom:clamp(28px,4vw,48px)}
+.work-head h2{font-size:clamp(30px,3vw,44px);line-height:1.1}
+.work-head p{margin:0;color:var(--muted);max-width:52ch}
+.plate{margin:0 0 clamp(36px,5vw,64px)}
+.plate img{display:block;width:100%;height:auto;border:1px solid var(--line);background:var(--plate)}
+.plate figcaption{display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap;padding-top:12px;font-size:15px}
+.plate figcaption span{color:var(--muted)}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,40px)}
+
+/* trust */
+.trust{padding-block:clamp(40px,6vw,88px);border-top:1px solid var(--line)}
+.trust dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);}
+.trust dt,.trust dd{padding-block:16px;border-top:1px solid var(--line);margin:0}
+.trust dt{font-family:var(--display);font-size:clamp(20px,1.6vw,24px);padding-right:24px}
+.trust dd{color:var(--ink)}
+.trust dd span{color:var(--muted)}
+
+/* contact */
+.contact{padding-block:clamp(48px,8vw,112px);border-top:1px solid var(--line);display:grid;gap:24px}
+.contact h2{font-size:clamp(40px,6vw,84px);line-height:1}
+.contact .lines{display:grid;gap:6px;color:var(--muted)}
+.contact .lines b{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+footer{border-top:1px solid var(--line);padding-block:20px 32px;color:var(--muted);font-size:14px}
+
+@media (max-width:760px){
+  .steps,.cols,.work-head,.trust dl,.pair{grid-template-columns:minmax(0,1fr)}
+  .trust dt{border-bottom:0;padding-bottom:4px}
+  .trust dd{border-top:0;padding-top:0}
+}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+    @keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
+  }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="label">Сайты для бизнесов Павшинской поймы</span>
+    <span class="label">Красногорск</span>
+  </header>
+
+  <section class="hero">
+    <h1>Дамир<em>.</em></h1>
+    <p>Делаю сайты для кафе, салонов и мастерских рядом с домом. Сначала показываю готовый сайт, потом говорим о деньгах.</p>
+    <div class="hero-row">
+      <a class="call" href="tel:+79256060000"><small>Позвонить</small><b>+7 925 606-00-00</b></a>
+      <div class="alt">Telegram: <a href="https://t.me/youngdemiro">@youngdemiro</a><br>Можно написать SMS на этот же номер</div>
+    </div>
+  </section>
+
+  <section class="big">
+    <p class="reveal">Пока вы не посмотрели готовый сайт, <span>я не беру ни рубля</span>.</p>
+  </section>
+
+  <section class="steps">
+    <h2 class="reveal">Как я работаю</h2>
+    <ol>
+      <li><div><b>Нахожу ваш бизнес на картах</b><span>Смотрю отзывы, фото, часы работы. Если своего сайта нет, делаю его сам, заранее.</span></div></li>
+      <li><div><b>Показываю готовую страницу</b><span>Присылаю ссылку. Страница временная и висит 7 дней.</span></div></li>
+      <li><div><b>Правлю то, что нужно вам</b><span>Две мелкие правки делаю сразу, до любой оплаты.</span></div></li>
+      <li><div><b>Половина оплаты</b><span>Только после того, как сайт вам понравился. Чек самозанятого приходит сразу.</span></div></li>
+      <li><div><b>Переношу на ваш адрес</b><span>Домен вы регистрируете на себя, я подсказываю по шагам на созвоне. Сайт принадлежит вам.</span></div></li>
+      <li><div><b>Вторая половина</b><span>Когда сайт открывается по вашему адресу и вы всё проверили.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="cols">
+    <div>
+      <h3>Что входит</h3>
+      <ul>
+        <li>Одностраничный сайт с вашими фото, отзывами, адресом и картой</li>
+        <li>Кнопка звонка, которую видно на телефоне сразу</li>
+        <li>Два круга правок по одному общему списку</li>
+        <li>Перенос на ваш домен и хостинг, настройка защищённого адреса (https)</li>
+        <li>Помогу поставить ссылку на сайт в вашу карточку на Яндекс Картах</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Что вы платите потом</h3>
+      <ul>
+        <li>Домен .ru: около 400 ₽ в год, регистратору</li>
+        <li>Хостинг: от 0 до примерно 5 000 ₽ в год, хостинг-компании</li>
+        <li>Мне после сдачи ничего не платите, если сами не попросите что-то ещё</li>
+      </ul>
+      <p class="note">Цены регистраторов и хостинга на октябрь 2026 года, у каждой компании свои. Назову точные, когда выберем вместе.</p>
+    </div>
+  </section>
+
+  <section class="work">
+    <div class="work-head">
+      <h2 class="reveal">Как это выглядит</h2>
+      <p>Это концепты, которые я сделал сам, без заказа, для бизнесов Павшинской поймы. Отзывы на них настоящие, из открытых карточек на Яндекс Картах. У каждого бизнеса своё оформление, шаблона нет.</p>
+    </div>
+    <figure class="plate reveal">
+      <img src="work-vsegda-kofe.jpg" alt="Первый экран концепта сайта кофейни: крупное название, время открытия и фото фасада" width="1440" height="900" loading="lazy">
+      <figcaption>Кофейня на Красногорском бульваре <span>утренний журнал, время открытия крупно</span></figcaption>
+    </figure>
+    <div class="pair">
+      <figure class="plate reveal">
+        <img src="work-gorilla.jpg" alt="Первый экран концепта сайта барбершопа на тёмном фоне с фото фасада" width="1440" height="900" loading="lazy">
+        <figcaption>Барбершоп <span>тёмный, тяжёлый шрифт</span></figcaption>
+      </figure>
+      <figure class="plate reveal">
+        <img src="work-mona-liza.jpg" alt="Первый экран концепта сайта салона красоты с фото холла" width="1440" height="900" loading="lazy">
+        <figcaption>Салон красоты <span>тихая галерея</span></figcaption>
+      </figure>
+    </div>
+    <div class="pair">
+      <figure class="plate reveal">
+        <img src="work-igolka.jpg" alt="Первый экран концепта сайта ателье с крупным названием и фото мастерской" width="1440" height="900" loading="lazy">
+        <figcaption>Ателье <span>портновская линейка</span></figcaption>
+      </figure>
+      <figure class="plate reveal">
+        <img src="work-gruzinskaya-pekarnya.jpg" alt="Первый экран концепта сайта пекарни с фото павильона" width="1440" height="900" loading="lazy">
+        <figcaption>Пекарня <span>тёплая, с хлебом из печи</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="trust">
+    <dl>
+      <dt>Официально</dt>
+      <dd>Я самозанятый. На каждую оплату сразу присылаю чек из приложения «Мой налог». Если вы ИП или ООО, чек выпишу на ваш ИНН. <span>Договор оказания услуг подпишем, если он вам нужен.</span></dd>
+      <dt>Ваши данные</dt>
+      <dd>Паспорт и личные данные мне не нужны. Домен и хостинг вы оформляете на себя сами, я только подсказываю.</dd>
+      <dt>Если не понравится</dt>
+      <dd>Вы ничего не платите. Страница просто исчезнет через 7 дней.</dd>
+    </dl>
+  </section>
+
+  <section class="contact">
+    <h2 class="reveal">Позвоните или напишите</h2>
+    <div class="lines">
+      <span>Телефон и SMS: <b>+7 925 606-00-00</b></span>
+      <span>Telegram: <b>@youngdemiro</b></span>
+    </div>
+    <a class="call" href="tel:+79256060000"><small>Позвонить Дамиру</small><b>+7 925 606-00-00</b></a>
+  </section>
+</div>
+<footer><div class="wrap">Дамир, самозанятый. Красногорск, Московская область.</div></footer>
+
+</body>
+</html>
