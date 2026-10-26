@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Хвост, кафе и кондитерская на Авангардной, 3</title>
+<meta name="description" content="Кафе и кондитерская «Хвост» в Павшинской пойме, Красногорск. Своя выпечка, завтраки с 7 утра, можно с собакой. Авангардная ул., 3.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:light;
+  --wall:#ECECE9; --wall-2:#E2E2DE; --ink:#1E1F21; --sign:#1F2022; --muted:#55585C;
+  --line:#BFC0BB; --white:#F8F8F6; --pink:#EF8197;
+  --d:'Tektur',system-ui,sans-serif; --t:'Golos Text',system-ui,sans-serif;
+  --pad:clamp(16px,4vw,56px)}
+*{box-sizing:border-box}
+html{background:var(--wall);scroll-behavior:smooth}
+body{margin:0;background:var(--wall);color:var(--ink);font-family:var(--t);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--d);font-stretch:82%;font-weight:600;line-height:1.05;letter-spacing:-.01em;margin:0;overflow-wrap:anywhere;text-wrap:balance}
+p{margin:0}
+q,blockquote{quotes:"«" "»" "„" "“"}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--pad)}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:16px;top:16px;background:var(--white);padding:8px 12px;z-index:10}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.who{display:block;margin-top:10px;font-size:14px;color:var(--muted);font-style:normal}
+
+/* кнопки: прямые углы; круги только у вывески */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:54px;padding:0 26px;font-family:var(--d);font-stretch:85%;font-weight:600;font-size:19px;letter-spacing:.01em;text-decoration:none;border:1px solid var(--ink);white-space:nowrap;transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s}
+.btn:active{transform:translateY(1px)}
+.btn--call{background:var(--pink);color:var(--ink)}
+.btn--call:hover{background:#F494A7}
+.btn--line{background:transparent;color:var(--ink)}
+.btn--line:hover{background:var(--wall-2)}
+.btn small{font-family:var(--t);font-weight:500;font-size:15px;font-stretch:100%}
+
+/* ===== вывеска ===== */
+.sign{background:var(--sign);color:var(--white);border-bottom:1px solid #000}
+.sign .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:112px}
+.brand{display:flex;align-items:center;gap:clamp(12px,1.6vw,22px);text-decoration:none}
+.brand img{width:clamp(48px,5.6vw,80px);aspect-ratio:1;border-radius:50%;object-fit:cover}
+.sign__name{font-family:var(--d);font-stretch:75%;font-weight:500;font-size:clamp(46px,7vw,84px);line-height:1;letter-spacing:.06em}
+.pops{display:flex;gap:clamp(10px,2vw,26px);align-items:flex-start;padding-top:10px}
+.pop{display:flex;flex-direction:column;align-items:center;text-decoration:none}
+.pop span{display:grid;place-items:center;width:clamp(62px,7vw,80px);aspect-ratio:1;border-radius:50%;background:var(--white);color:var(--sign);font-family:var(--d);font-stretch:80%;font-weight:600;font-size:15px;transition:transform .2s cubic-bezier(.16,1,.3,1)}
+.pop:hover span{transform:translateY(-2px)}
+.pop i{display:block;width:5px;height:24px;background:var(--white)}
+
+/* ===== первый экран ===== */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);min-height:clamp(560px,calc(100dvh - 113px),860px);border-bottom:1px solid var(--line)}
+.hero__text{display:flex;flex-direction:column;justify-content:center;gap:32px;padding:56px var(--pad) 64px}
+.hero__low{display:flex;flex-direction:column;gap:22px}
+.hero h1{font-size:clamp(40px,5.3vw,80px)}
+.hero__sub{font-size:19px;max-width:34ch;color:var(--muted)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin-top:6px}
+.hero__hours{font-size:15px;color:var(--muted)}
+.hero__hours b{color:var(--ink);font-weight:500}
+.hero__photo{position:relative;overflow:hidden;border-left:1px solid var(--line)}
+.hero__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+
+section{padding:clamp(64px,9vw,120px) 0 clamp(72px,10vw,132px)}
+.lead{font-size:19px;max-width:56ch}
+.note{font-size:14px;color:var(--muted)}
+
+/* ===== витрина: одна полка ===== */
+.case__head{max-width:640px;margin-bottom:clamp(32px,4vw,52px)}
+.case__head h2{font-size:clamp(32px,4vw,54px);margin-bottom:16px}
+.case{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);align-items:start}
+.case img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.shelf{border-top:1px solid var(--ink)}
+.item{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:8px 24px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+.item b{justify-self:start;background:var(--sign);color:var(--white);font-family:var(--d);font-stretch:85%;font-weight:500;font-size:17px;line-height:1.25;padding:7px 11px 8px}
+.item p{font-size:16px;line-height:1.5}
+.item .who{margin-top:4px;font-size:13px}
+.also{margin-top:22px;font-size:15px;color:var(--muted)}
+
+/* ===== завтраки ===== */
+.bf{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.bf img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.bf h2{font-size:clamp(32px,4vw,54px);margin-bottom:18px}
+.bf .lead{margin-bottom:26px}
+.bf blockquote{margin:0 0 34px;font-size:18px;padding-left:18px;border-left:1px solid var(--ink)}
+.order{border-top:1px solid var(--ink)}
+.order h3{font-size:22px;padding:16px 0 4px}
+.order dl{margin:0}
+.order dt{font-weight:600;margin-top:12px}
+.order dd{margin:2px 0 0;color:var(--muted);font-size:16px}
+
+/* ===== собаки ===== */
+.dogs{background:var(--wall-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dogs .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,80px);align-items:end}
+.dogs figure{margin:0}
+.dogs img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 85%}
+.dogs h2{font-size:clamp(40px,6vw,88px);margin-bottom:22px}
+.dogs blockquote{margin:30px 0 0;font-size:clamp(20px,1.8vw,24px);line-height:1.4;max-width:34ch}
+
+/* ===== кофе и цены ===== */
+.drinks h2{font-size:clamp(32px,4vw,54px);margin-bottom:14px}
+.drinks .lead{margin-bottom:clamp(30px,4vw,48px)}
+.board{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px clamp(28px,5vw,80px);align-items:start}
+.row{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
+.row{border-bottom:1px solid var(--line)}
+.row b{font-family:var(--d);font-stretch:85%;font-weight:500;font-size:24px}
+.row span{font-family:var(--d);font-stretch:85%;font-size:24px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.board__text{margin-top:18px;font-size:16px;color:var(--muted);max-width:44ch}
+.board blockquote{margin:0;font-size:20px;line-height:1.4}
+
+/* ===== зал ===== */
+.hall figure{margin:0}
+.hall__sign img{width:100%;aspect-ratio:1280/606;object-fit:cover}
+.hall__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,4vw,64px);margin-top:clamp(28px,4vw,48px);align-items:start}
+.hall__win img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hall__win figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.hall__text h2{font-size:clamp(30px,3.2vw,44px);margin-bottom:16px}
+.hall__text p+p{margin-top:14px}
+.hall__text blockquote{margin:24px 0 0;font-size:18px}
+
+/* ===== рейтинг и цитаты ===== */
+.voices__top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 40px;align-items:end;padding-bottom:36px;border-bottom:1px solid var(--ink)}
+.score{font-family:var(--d);font-stretch:75%;font-weight:500;font-size:clamp(88px,12vw,168px);line-height:.85}
+.voices__top h2{font-size:clamp(24px,2.4vw,32px);margin-bottom:10px}
+.voices__top div p{font-size:18px;max-width:44ch}
+.voices__top a{font-weight:500}
+.big-q{font-family:var(--d);font-stretch:85%;font-weight:500;font-size:clamp(28px,3.6vw,50px);line-height:1.12;margin:clamp(40px,6vw,80px) 0 0;max-width:24ch}
+.big-q .who{font-family:var(--t);font-size:15px;margin-top:16px}
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px clamp(24px,3vw,44px);margin-top:clamp(40px,6vw,72px)}
+.wall blockquote{margin:0;padding-top:14px;border-top:1px solid var(--line);font-size:17px}
+
+/* ===== заказ ===== */
+.cake{border-top:1px solid var(--line)}
+.cake .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:center}
+.cake h2{font-size:clamp(32px,4vw,54px);margin-bottom:18px}
+.cake blockquote{margin:36px 0 0;font-size:clamp(19px,1.7vw,22px);line-height:1.4;max-width:40ch}
+.cake figure{margin:0}
+.cake img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.links .btn{font-size:17px;min-height:48px;padding:0 20px}
+.mail{margin-top:14px;font-size:16px;color:var(--muted)}
+.mail a{color:var(--ink);text-underline-offset:3px}
+
+/* ===== контакты ===== */
+.visit{background:var(--wall-2);border-top:1px solid var(--line)}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,4fr);gap:clamp(24px,3vw,44px);align-items:start}
+.visit h2{font-size:clamp(34px,4.4vw,60px);margin-bottom:22px}
+.visit dl{margin:0}
+.visit dt{font-size:14px;color:var(--muted);margin-top:18px}
+.visit dd{margin:2px 0 0;font-size:18px}
+.visit dd a{text-underline-offset:3px}
+.visit .btn--call{margin-top:28px}
+.visit figure{margin:0}
+.visit figure img{width:100%;object-fit:cover;border:1px solid var(--line)}
+.visit .facade img{aspect-ratio:4/3}
+.visit .map img{aspect-ratio:650/450}
+.visit figcaption{font-size:14px;margin-top:8px;color:var(--muted)}
+.visit figcaption a{color:var(--ink);font-weight:500}
+
+footer{padding:26px 0 34px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+
+/* ===== адаптив ===== */
+@media (max-width:1024px){
+  .wall{grid-template-columns:1fr 1fr}
+  .visit .wrap{grid-template-columns:1fr 1fr}
+  .visit .info{grid-column:1/-1}
+  .case{grid-template-columns:1fr}
+  .case img{aspect-ratio:16/10}
+}
+@media (max-width:767px){
+  body{font-size:16px}
+  .sign .wrap{min-height:0;padding-top:14px;padding-bottom:14px}
+  .pops{display:none}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero__photo{order:-1;height:40vh;min-height:250px;max-height:380px;border-left:0;border-bottom:1px solid var(--line)}
+  .hero__text{padding:24px var(--pad) 40px;gap:14px}
+  .hero__low{gap:14px}
+  .hero h1{font-size:33px}
+  .hero__sub{font-size:17px}
+  .hero__cta .btn{width:100%}
+  .case img{aspect-ratio:4/3}
+  .item{grid-template-columns:1fr}
+  .item b{font-size:16px}
+  .bf,.dogs .wrap,.board,.cake .wrap,.visit .wrap,.hall__grid,.wall{grid-template-columns:1fr}
+  .bf img{aspect-ratio:4/3}
+  .dogs img{aspect-ratio:1/1;object-position:50% 50%}
+  .cake img{aspect-ratio:4/3}
+  .voices__top{grid-template-columns:1fr}
+  .visit .info{grid-column:auto}
+  .visit .btn--call{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="sign">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Хвост, к началу страницы">
+      <img src="cat.jpg" width="155" height="155" alt="Кот в противогазе, знак кафе с вывески">
+      <span class="sign__name">ХВОСТ</span>
+    </a>
+    <nav class="pops" aria-label="Разделы">
+      <a class="pop" href="#h-dr"><span>кофе</span><i></i></a>
+      <a class="pop" href="#h-case"><span>выпечка</span><i></i></a>
+      <a class="pop" href="#h-cake"><span>десерты</span><i></i></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="hero__text">
+    <h1>Кофе, своя выпечка и&nbsp;завтраки с&nbsp;семи утра</h1>
+    <div class="hero__low">
+      <p class="hero__sub">Кафе и кондитерская на Авангардной, 3, в Павшинской пойме. Можно с собакой.</p>
+      <div class="hero__cta">
+        <a class="btn btn--call" href="tel:+79250616221">Позвонить <small>+7 925 061-62-21</small></a>
+      </div>
+      <p class="hero__hours"><b>Пн–пт 7:00–22:00</b>, сб и вс 8:00–22:00</p>
+    </div>
+  </div>
+  <div class="hero__photo">
+    <img src="hero.jpg" width="825" height="1100" alt="Зал «Хвоста»: под бетонным потолком десятки разноцветных шаров, кирпичные стены, лестница на антресоль и светящаяся вывеска с котом над стойкой">
+  </div>
+</div>
+
+<section class="showcase" aria-labelledby="h-case">
+  <div class="wrap">
+    <div class="case__head">
+      <h2 id="h-case">Витрина</h2>
+      <p class="lead">Пекарня у нас своя.</p>
+    </div>
+    <div class="case">
+      <img src="photo-1.jpg" width="1280" height="1280" loading="lazy" alt="Ряды капкейков с розовым кремом в бумажных стаканчиках в горошек">
+      <div>
+        <div class="shelf">
+          <div class="item"><b>Трубочки с заварным кремом и печенье «вишня в&nbsp;шоке»</b><div><p>«мои любимые - это трубочки с заварным кремом (берите сразу все, которые видите!) и печенье вишня в шоке, уверяю, вы откусите себе пальцы!»</p><span class="who">Анна Ефремова</span></div></div>
+          <div class="item"><b>Птичье молоко</b><div><p>«Очень вкусный масала и достойнейший птичье молоко.»</p><span class="who">Олег</span></div></div>
+          <div class="item"><b>Вишнёвый пирог</b><div><p>«Отдельное спасибо за великолепный вишневый пирог»</p><span class="who">Alice Kim</span></div></div>
+          <div class="item"><b>Круассаны с индейкой и лососем</b><div><p>«великолепные круасаны (хрустящие!), с разнообразным наполнением! … С индейкой и лососем хороши»</p><span class="who">OlS</span></div></div>
+        </div>
+        <p class="also">Ещё на витрине: карамель, муссовые торты, моти, пироги, торты, тарталетки, капкейки, чизкейки, пирожные, конфеты, печенье.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="breakfast" aria-labelledby="h-bf" style="padding-top:0">
+  <div class="wrap bf">
+    <img src="photo-3.jpg" width="1280" height="1280" loading="lazy" alt="Завтрак на уличном столике: омлет, яичница с тостами, черри и шпинат, два капучино">
+    <div>
+      <h2 id="h-bf">Завтраки до 15:00</h2>
+      <p class="lead">В будни с 7 утра, в выходные с 8. Сырники, запеканка, омлет, яичница с беконом, рисовая каша с манго.</p>
+      <blockquote><q>Вкусная рисовая каша с манго (и без манго), сырники, омлетец!</q><span class="who">Наталья Климова</span></blockquote>
+      <div class="order">
+        <h3>Как у нас заказывают</h3>
+        <dl>
+          <dt>На кассе</dt><dd>Заказываете, получаете номер и садитесь за любой свободный столик.</dd>
+          <dt>Завтрак приносим</dt><dd>Блюда из меню завтраков официант приносит к столу.</dd>
+          <dt>Остальное забираете сами</dt><dd>Напитки, всё с витрины и приборы берёте у стойки.</dd>
+          <dt>Любите погорячее</dt><dd>Скажите на кассе, и бариста сделает кофе горячее обычного.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dogs" aria-labelledby="h-dogs">
+  <div class="wrap">
+    <figure><picture><source media="(max-width:767px)" srcset="photo-4m.jpg" width="455" height="455"><img src="photo-4.jpg" width="975" height="1300" loading="lazy" alt="Кудрявая собака ждёт у витрины с пирожными, пока хозяйка делает заказ"></picture></figure>
+    <div>
+      <h2 id="h-dogs">С хвостом можно</h2>
+      <p class="lead">Пускаем со всеми животными. Летом на улице стоят столики.</p>
+      <blockquote><q>в гостях всегда есть хвостики со своими кожаными, которые либо чилят в кофейне, либо берут что-то с собой навынос!</q><span class="who">Asya D.</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="drinks" aria-labelledby="h-dr">
+  <div class="wrap">
+    <h2 id="h-dr">Кофе и цены</h2>
+    <p class="lead">Кроме кофе: матча, масала, какао, лимонады и свежевыжатые соки.</p>
+    <div class="board">
+      <div>
+        <div class="row"><b>Капучино</b><span>170–240 ₽</span></div>
+        <p class="board__text">Средний чек у нас 250–500 ₽. Кофе и еду можно взять с собой или заказать доставку: Яндекс Еда или наш курьер.</p>
+      </div>
+      <div>
+        <blockquote><q>были с подругами, брали лимонады и матчу, все очень понравилось!</q><span class="who">Дарья Пурясова</span></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hall" aria-labelledby="h-hall" style="padding-top:0">
+  <div class="wrap">
+    <figure class="hall__sign"><img src="photo-6.jpg" width="1280" height="606" loading="lazy" alt="Вывеска внутри: буквы ХВОСТ с подсветкой и круг с котом в противогазе на стене из старых досок, над ней лампочки на красных проводах"></figure>
+    <div class="hall__grid">
+      <div class="hall__text">
+        <h2 id="h-hall">Кирпич, доски, рыжие шторы</h2>
+        <p>Зал небольшой: антресоль, диван и красные кресла у окна. К праздникам наряжаем: шары, гирлянды, ёлка у входа.</p>
+        <p>Можно с ноутбуком, есть зарядка для телефона. В выходные людно, летом открыта веранда.</p>
+        <blockquote><q>Постоянно прохожу рядом по пути на работу и любуюсь на кафе через окошко.</q><span class="who">Филл</span></blockquote>
+      </div>
+      <figure class="hall__win"><img src="photo-5.jpg" width="1280" height="960" loading="lazy" alt="Красные кресла и круглый столик у арочного окна в гирляндах, за окном зима"><figcaption>Окно зимой</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="voices" aria-labelledby="h-voices" style="padding-top:0">
+  <div class="wrap">
+    <div class="voices__top">
+      <p class="score">5,0</p>
+      <div>
+        <h2 id="h-voices">на Яндекс Картах, 797 оценок</h2>
+        <p>Отметка «Хорошее место 2026». <a href="https://yandex.ru/maps/org/khvost/104453463365/reviews/" target="_blank" rel="noopener">Читать все 440 отзывов</a></p>
+      </div>
+    </div>
+
+    <blockquote class="big-q"><q>обалденные ребята, которые знают предпочтения каждого гостя и предлагают любимое лакомство сразу же, едва увидев тебя</q><span class="who">Gulya Shirinova</span></blockquote>
+
+    <div class="wall">
+      <blockquote><q>Хвостик, любим вас уже много лет, десерты и выпечка топ!</q><span class="who">Valeria K.</span></blockquote>
+      <blockquote><q>Очень дружелюбный персонал, особенно понравилась Елизавета - приветливый и вежливый кассир.</q><span class="who">Соня Григорьева</span></blockquote>
+      <blockquote><q>Очень уютное и приятное кафе, пожалуй лучшее капучино которое Я пробовал, имеется вкусная выпечка.</q><span class="who">Руслан Ахмедов</span></blockquote>
+      <blockquote><q>Обычные, стандартные завтраки, вкусный кофе. Работают с 07.00, это большой плюс</q><span class="who">Герман Сафиулин</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="cake" aria-labelledby="h-cake">
+  <div class="wrap">
+    <div>
+      <h2 id="h-cake">Капкейки и торты заранее</h2>
+      <p class="lead">Закажите заранее и заберите сами. Напишите, что нужно и к какому дню.</p>
+      <div class="links">
+        <a class="btn btn--line" href="https://t.me/+79250616221" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn btn--line" href="https://wa.me/79250616221" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn--line" href="https://max.ru/+79250616221" target="_blank" rel="noopener">MAX</a>
+      </div>
+      <p class="mail">Или на почту <a href="mailto:khvost-cafe@yandex.ru">khvost-cafe@yandex.ru</a></p>
+      <blockquote><q>На корпоратив заказали 100 шт капкейков. Очень тонкая работа в оформлении каждого вида капкейков! … И самое главное: они не приторные!</q><span class="who">Людмила Добриогло</span></blockquote>
+    </div>
+    <figure><img src="photo-2.jpg" width="1050" height="1400" loading="lazy" alt="Шоколадное муссовое пирожное с кремом на белой тарелке, сзади кирпичная стена"></figure>
+  </div>
+</section>
+
+<section class="visit" aria-labelledby="h-visit">
+  <div class="wrap">
+    <div class="info">
+      <h2 id="h-visit">Авангардная, 3</h2>
+      <p class="lead">Красногорск, Павшинская пойма. Первый этаж дома, вход с улицы: рыжие двери и чёрная вывеска с котом в противогазе.</p>
+      <dl>
+        <dt>Часы</dt><dd>Пн–пт 7:00–22:00<br>Сб и вс 8:00–22:00</dd>
+        <dt>Телефон и WhatsApp</dt><dd><a href="tel:+79250616221">+7 925 061-62-21</a></dd>
+      </dl>
+      <a class="btn btn--call" href="tel:+79250616221">Позвонить <small>+7 925 061-62-21</small></a>
+    </div>
+    <figure class="facade"><img src="photo-7.jpg" width="1280" height="960" loading="lazy" alt="Фасад кафе: чёрная вывеска ХВОСТ с котом и кругами кофе, круассан, капкейк над рыжими дверями"><figcaption>Так выглядит вход</figcaption></figure>
+    <figure class="map"><a href="https://yandex.ru/maps/org/khvost/104453463365/" target="_blank" rel="noopener"><img src="map.png" width="650" height="450" loading="lazy" alt="Карта: кафе Хвост на Авангардной улице, 3"></a><figcaption><a href="https://yandex.ru/maps/org/khvost/104453463365/" target="_blank" rel="noopener">Открыть в Яндекс Картах</a></figcaption></figure>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Демо-страница. Сделал Дамир, Павшинская пойма · <span style="white-space:nowrap">+7 925 606-00-00</span> · <a href="https://t.me/youngdemiro" target="_blank" rel="noopener">t.me/youngdemiro</a></div>
+</footer>
+</body>
+</html>

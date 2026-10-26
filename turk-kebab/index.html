@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Турк Кебаб · турецкая кухня и мангал, Подмосковный бульвар, 1А</title>
+<meta name="description" content="Турк Кебаб в Павшинской пойме: донер, мясо с мангала, лахмаджун, чай в армуду с лукумом. Подмосковный бульвар, 1А, каждый день с 8:00 до 23:00.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* запасной шрифт, если fonts/ не загрузились: обычный жирный гротеск, сжатый до ширины Alumni Sans */
+@font-face{font-family:"Alumni Fallback";src:local("Arial Bold"),local("Arial-BoldMT"),local("Roboto Bold"),local("Roboto-Bold"),local("Helvetica Neue Bold"),local("HelveticaNeue-Bold");font-weight:100 900;size-adjust:63%}
+:root{
+  color-scheme:dark;
+  --bg:#1c1512;      /* тёмное дерево столов */
+  --bg2:#241b17;
+  --ink:#f2e9de;
+  --mut:#b5a698;
+  --line:rgba(242,233,222,.16);
+  --acc:#c8402f;     /* красные стены зала */
+  --disp:"Alumni Sans","Alumni Fallback",sans-serif;
+  --text:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--disp);font-weight:800;margin:0;line-height:.92;letter-spacing:-.005em;overflow-wrap:break-word;text-wrap:balance}
+p{margin:0}
+blockquote{margin:0}
+figure{margin:0}
+.wrap{max-width:1360px;margin:0 auto;padding:0 40px}
+q{quotes:"«" "»"}
+.nw{white-space:nowrap}
+cite{display:block;font-style:normal;font-size:14px;color:var(--mut);margin-top:6px}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;font:600 17px/1 var(--text);text-decoration:none;white-space:nowrap;border:1px solid transparent;transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s}
+.btn-call{background:var(--acc);color:#fff6ee}
+.btn-call:hover{background:#d4503e;transform:translateY(-1px)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.tel{font:700 30px/1 var(--disp);letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+.wa{font-size:16px;text-underline-offset:4px;text-decoration-thickness:1px}
+.wa:hover,.tel:hover{color:#fff}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+
+/* первый экран */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:min(100dvh,960px)}
+.hero-text{display:flex;flex-direction:column;justify-content:space-between;padding:40px 48px 48px 40px}
+.where{font-size:15px;color:var(--mut)}
+.hero h1{font-size:clamp(96px,min(15vw,calc((41.6vw - 100px) / 2.1)),236px);line-height:.84;margin:0 0 28px;overflow-wrap:normal;word-break:keep-all;hyphens:none}
+.hero h1 span{display:block;white-space:nowrap}
+.lead{font-size:19px;max-width:30ch;margin-bottom:32px}
+.hero .wa{display:inline-block;margin-top:18px}
+.hero-photo{position:relative;min-height:0;overflow:hidden}
+/* кадр выше блока: верх снимка (куртка гостьи на диване) уходит за край */
+.hero-photo img{position:absolute;left:0;right:0;bottom:0;width:100%;height:152%;object-fit:cover;object-position:50% 100%}
+
+section{padding:120px 0}
+.sec-title{font-size:clamp(56px,7vw,104px);margin-bottom:64px}
+
+/* блюда */
+.dishes{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:72px 28px;align-items:start}
+.dish img{width:100%;object-fit:cover}
+.dish h3{font-size:44px;margin:20px 0 10px}
+.dish blockquote,.dish .desc{font-size:16px;max-width:46ch}
+.d1{grid-column:1/7}.d1 img{aspect-ratio:4/5}
+.d2{grid-column:7/13;margin-top:160px}.d2 img{aspect-ratio:3/4;object-position:50% 60%}
+.d3{grid-column:2/6}.d3 img{aspect-ratio:3/4;object-position:50% 60%}
+.d4{grid-column:7/12;margin-top:120px}.d4 img{aspect-ratio:3/4}
+.d5{grid-column:1/13;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px;align-items:end}
+.d5 img{grid-column:1/9;aspect-ratio:16/9}
+.d5 .cap{grid-column:9/13;padding-bottom:8px}
+.d5 h3{margin-top:0}
+
+/* доска */
+.board-sec{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:0 72px}
+.board ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.board li{padding:30px 0 6px}
+.board h3{font-size:clamp(40px,4.4vw,60px);font-weight:700;margin-bottom:10px}
+.board blockquote,.board .desc{font-size:16px;max-width:48ch}
+
+/* чай */
+.tea{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:28px}
+.tea-main{grid-column:1/6;grid-row:1/3}
+.tea-main img{width:100%;height:100%;min-height:640px;object-fit:cover}
+.tea-text{grid-column:7/13;align-self:start}
+.tea-text .sec-title{margin-bottom:24px}
+.tea-text>p{max-width:46ch;margin-bottom:36px}
+.qs{display:grid;gap:22px}
+.q blockquote{font-size:19px;line-height:1.45}
+.tea-pair{grid-column:7/13;align-self:end;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tea-pair img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.tea-pair .p6 img{object-position:50% 100%}
+.tea-pair figcaption{font-size:14px;color:var(--mut);margin-top:8px}
+
+/* люди */
+.people{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 72px;align-items:start}
+.big-q blockquote{font-family:var(--disp);font-weight:700;font-size:clamp(40px,4.6vw,66px);line-height:1}
+.big-q cite{font-size:15px;margin-top:16px}
+.people-side{display:grid;gap:26px;padding-top:8px}
+.people-side p{font-size:19px;line-height:1.5;max-width:40ch}
+
+/* издалека */
+.far h2{font-size:clamp(60px,8.4vw,128px);line-height:.92;max-width:20ch}
+.far .by{font-size:15px;color:var(--mut);margin-top:18px}
+.rating{font-size:18px;margin:56px 0 48px;padding-top:24px;border-top:1px solid var(--line)}
+.rating a{text-underline-offset:4px;text-decoration-thickness:1px}
+.wall{columns:3 300px;column-gap:48px}
+.wall .q{break-inside:avoid;margin-bottom:36px}
+.wall blockquote{font-size:17px}
+
+/* адрес */
+.info{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px;align-items:start}
+.map a{display:block}
+.map img{width:100%;aspect-ratio:650/450;object-fit:cover;filter:saturate(.85)}
+.map p{margin-top:12px;font-size:16px}
+.map p a{text-underline-offset:4px;text-decoration-thickness:1px}
+dl{margin:0;display:grid;grid-template-columns:150px 1fr;gap:0}
+dt,dd{padding:18px 0;border-top:1px solid var(--line);margin:0}
+dt{color:var(--mut);font-size:15px;padding-top:21px}
+dd{font-size:17px}
+dd small{display:block;color:var(--mut);font-size:14px;margin-top:4px}
+.contact{margin-top:40px;display:grid;gap:18px;justify-items:start}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--mut)}
+footer a{text-underline-offset:3px}
+
+@media (max-width:1100px){
+  .hero-text{padding:32px 32px 40px 32px}
+  .d5 img,.d5 .cap{grid-column:1/13}
+}
+@media (max-width:860px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  section{padding:80px 0}
+  .sec-title{margin-bottom:40px}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-photo{order:-1;height:min(42svh,400px);min-height:280px}
+  .hero-photo img{height:150%}
+  .hero-text{padding:20px 20px 32px}
+  .where{margin-bottom:10px}
+  .hero h1{font-size:clamp(84px,27vw,150px);margin-bottom:16px}
+  .lead{font-size:17px;margin-bottom:22px}
+  .hero .wa{margin-top:14px}
+  .dishes{grid-template-columns:1fr;gap:48px}
+  .d1,.d2,.d3,.d4,.d5{grid-column:1/-1;margin-top:0}
+  .d1 img,.d2 img,.d3 img,.d4 img{aspect-ratio:4/5}
+  .d5{grid-template-columns:1fr;gap:0}
+  .d5 img,.d5 .cap{grid-column:1/-1}
+  .d5 img{aspect-ratio:16/10}
+  .d5 h3{margin-top:20px}
+  .dish h3{font-size:40px;margin-top:16px}
+  .board{grid-template-columns:1fr;gap:0}
+  .board ul+ul{border-top:0}
+  .board li{padding-top:24px}
+  .tea{grid-template-columns:1fr;gap:32px}
+  .tea-main,.tea-text,.tea-pair{grid-column:1/-1;grid-row:auto}
+  .tea-main img{min-height:0;aspect-ratio:4/5;height:auto}
+  .tea-pair{gap:12px}
+  .people{grid-template-columns:1fr}
+  .rating{margin:40px 0 32px;font-size:17px}
+  .wall{columns:1}
+  .info{grid-template-columns:1fr;gap:36px}
+  dl{grid-template-columns:1fr}
+  dt{border-top:1px solid var(--line);padding:16px 0 0}
+  dd{border-top:0;padding:4px 0 16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="where">Павшинская пойма, Красногорск</p>
+    <div>
+      <h1><span>Турк</span> <span>Кебаб</span></h1>
+      <p class="lead">Турецкая кухня и мангал на Подмосковном бульваре, 1А. Каждый день с 8:00 до 23:00.</p>
+      <div class="actions">
+        <a class="btn btn-call" href="tel:+79652227707">Позвонить</a>
+        <a class="tel" href="tel:+79652227707">+7 965 222-77-07</a>
+      </div>
+      <a class="wa" href="https://wa.me/79096303889">Написать в WhatsApp</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="hero.jpg" width="960" height="1280" alt="Стол в Турк Кебабе: мясо с рисом и лавашом, лахмаджун, салат, чай в стаканах-армуду, чайник и лукум">
+  </div>
+</header>
+
+<main>
+
+<section aria-labelledby="dishes-t">
+  <div class="wrap">
+    <h2 class="sec-title" id="dishes-t">Донер, мангал, шаурма</h2>
+
+    <div class="dishes">
+      <article class="dish d1">
+        <img src="photo-1.jpg" width="960" height="1280" loading="lazy" alt="Донер на синей тарелке с рисом, луком и печёным перцем, рядом хлеб в плетёной корзинке">
+        <h3>Донер</h3>
+        <p class="desc">Говядина с бараниной, рис, лук и печёный перец.</p>
+      </article>
+
+      <article class="dish d2">
+        <img src="photo-2.jpg" width="720" height="940" loading="lazy" alt="Мясо с мангала с рисом, лавашом и луком, рядом салат и хлеб">
+        <h3>Мясо с мангала</h3>
+        <blockquote><q>Мясо свежее, приготовлено всегда шикарно. Постоянно захожу сюда на ужин</q></blockquote>
+        <cite>Кирилл Д.</cite>
+      </article>
+
+      <article class="dish d3">
+        <img src="photo-3.jpg" width="432" height="768" loading="lazy" alt="Шаурма в лаваше на бумаге с маринованными перчиками, за ней чай в армуду">
+        <h3>Шаурма</h3>
+        <p class="desc">В лаваше, с маринованными перчиками. Можно взять с собой.</p>
+      </article>
+
+      <article class="dish d4">
+        <img src="photo-4.jpg" width="960" height="1280" loading="lazy" alt="Мясо и овощи гриль на тарелке: кабачок, перец, помидор, баклажан">
+        <h3>Мясо и овощи гриль</h3>
+        <p class="desc">Кабачок, перец, помидор и баклажан с мангала, к ним мясо.</p>
+      </article>
+
+      <article class="dish d5">
+        <img src="photo-5.jpg" width="1280" height="720" loading="lazy" alt="Витрина с шашлыком на шампурах, люля, курицей, котлетами, зелёным перцем и помидорами">
+        <div class="cap">
+          <h3>Витрина с мясом</h3>
+          <blockquote><q>Чисто все, открытые витрины видно как работают</q></blockquote>
+          <cite>Роза</cite>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="board-sec" aria-labelledby="board-t">
+  <div class="wrap">
+    <h2 class="sec-title" id="board-t">Ещё из меню</h2>
+    <div class="board">
+      <ul>
+        <li>
+          <h3>Адана-кебаб</h3>
+          <blockquote><q>Я люблю острое, поэтому Адана-Кебаб для меня идеален.</q></blockquote>
+          <cite>Оксана Харламова</cite>
+        </li>
+        <li>
+          <h3>Лахмаджун</h3>
+          <blockquote><q>Лахмаджун лучше, чем в Анталии, я их сотни перепробовала</q></blockquote>
+          <cite>Катя Печаева</cite>
+        </li>
+        <li>
+          <h3>Чечевичный суп</h3>
+          <p class="desc">Турецкий суп из чечевицы.</p>
+        </li>
+        <li>
+          <h3>Пахлава королевская</h3>
+          <p class="desc">К чаю или с собой.</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3>Донер в турецком хлебе</h3>
+          <blockquote><q>Донер в турецком хлебе - лучшее, что я пробовал в последнее время.</q></blockquote>
+          <cite>Alexander Kulkov</cite>
+        </li>
+        <li>
+          <h3>Шашлык из барашка</h3>
+          <p class="desc">Ещё из говядины, куриной грудки и крылышек.</p>
+        </li>
+        <li>
+          <h3>Баранина</h3>
+          <p class="desc">С мангала, с рисом или овощами.</p>
+        </li>
+        <li>
+          <h3>Плов</h3>
+          <p class="desc">Из узбекской части меню.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="tea-t">
+  <div class="wrap tea">
+    <figure class="tea-main">
+      <img src="photo-7.jpg" width="720" height="1280" loading="lazy" alt="Турецкий чай в стакане-армуду, чайник, медная пиала с рафинадом и лукум на столе у окна">
+    </figure>
+    <div class="tea-text">
+      <h2 class="sec-title" id="tea-t">Чай с лукумом и кофе по-турецки</h2>
+      <p>Чай наливаем в стаканы-армуду, кофе варим в медной джезве. К чаю подаём лукум.</p>
+      <div class="qs">
+        <div class="q">
+          <blockquote><q>Безумно приятно, что к чаю в подарок дают лукум…</q></blockquote>
+          <cite>Аленка К.</cite>
+        </div>
+        <div class="q">
+          <blockquote><q>Кофе по-турецки со сладостями-моя любовь!</q></blockquote>
+          <cite>Анжелика Белова</cite>
+        </div>
+      </div>
+    </div>
+    <div class="tea-pair">
+      <figure class="p6">
+        <img src="photo-6.jpg" width="432" height="768" loading="lazy" alt="Чай в стакане-армуду на блюдце и пиала с лукумом">
+        <figcaption>Чай в армуду и лукум</figcaption>
+      </figure>
+      <figure>
+        <img src="photo-8.jpg" width="960" height="1280" loading="lazy" alt="Кофе по-турецки в расписной чашке, медная джезва, стакан воды и лукум на подносе">
+        <figcaption>Кофе по-турецки с джезвой и лукумом</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="board-sec" aria-labelledby="people-t">
+  <div class="wrap">
+    <h2 class="sec-title" id="people-t">Бахром и команда</h2>
+    <div class="people">
+      <div class="big-q">
+        <blockquote><q>Постоянно возвращаемся <span class="nw">из-за</span> хорошего обслуживания официанта Бахрома.</q></blockquote>
+        <cite>Елена Конг</cite>
+      </div>
+      <div class="people-side">
+        <p>Бахром встречает гостей в зале. Вместе с ним работают Суннат, Камиль, Лёха, Вахид, Фирдавс и Билол.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="far" aria-labelledby="far-t">
+  <div class="wrap">
+    <h2 id="far-t"><q>Самое любимое место в пойме</q></h2>
+    <p class="by">Альвина</p>
+
+    <p class="rating">4,9 на Яндекс Картах, 1035 оценок · <a href="https://yandex.ru/maps/org/turk_kebab/199850403500/reviews/">все отзывы</a></p>
+
+    <div class="wall">
+      <div class="q">
+        <blockquote><q>…приезжали на машине из Митино, брали на вынос ))) а недавно потеплело и приехали на велосипедах…</q></blockquote>
+        <cite>Надежда Николаева</cite>
+      </div>
+      <div class="q">
+        <blockquote><q>Живем в Нахабино, искали с мужем что-то новенькое и интересное, нашли это заведение.</q></blockquote>
+        <cite>Анжелика Белова</cite>
+      </div>
+      <div class="q">
+        <blockquote><q>Из центра ( Полежаевская ) езжу на обед в Красногорск</q></blockquote>
+        <cite>alexey.pv.m9</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="board-sec" aria-labelledby="info-t">
+  <div class="wrap">
+    <h2 class="sec-title" id="info-t">Адрес и заказ</h2>
+    <div class="info">
+      <div class="map">
+        <a href="https://yandex.ru/maps/org/turk_kebab/199850403500/" aria-label="Открыть Турк Кебаб в Яндекс Картах">
+          <img src="map.png" width="650" height="450" loading="lazy" alt="Карта: Подмосковный бульвар, 1А, рядом с Волоколамским шоссе">
+        </a>
+        <p><a href="https://yandex.ru/maps/org/turk_kebab/199850403500/">Открыть в Яндекс Картах</a></p>
+      </div>
+      <div>
+        <dl>
+          <dt>Адрес</dt>
+          <dd>Красногорск, Подмосковный бульвар, 1А<small>Рядом с Волоколамским шоссе, вход с улицы</small></dd>
+          <dt>Часы</dt>
+          <dd>Каждый день с 8:00 до 23:00</dd>
+          <dt>С собой</dt>
+          <dd>Навынос, своя доставка, предзаказ к нужному времени</dd>
+          <dt>Средний чек</dt>
+          <dd>350–700 ₽</dd>
+          <dt>Ещё</dt>
+          <dd>Халяль. Алкоголя в меню нет. Оплата наличными и картой, есть Wi-Fi.</dd>
+        </dl>
+        <div class="contact">
+          <div class="actions">
+            <a class="btn btn-call" href="tel:+79652227707">Позвонить</a>
+            <a class="tel" href="tel:+79652227707">+7 965 222-77-07</a>
+          </div>
+          <a class="wa" href="https://wa.me/79096303889">Написать в WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Демо-страница. Сделал Дамир, Павшинская пойма · <a href="tel:+79256060000">+7 925 606-00-00</a> · <a href="https://t.me/youngdemiro">t.me/youngdemiro</a></div>
+</footer>
+
+</body>
+</html>

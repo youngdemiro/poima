@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TopChik kids, детская парикмахерская на Красногорском бульваре, 14</title>
+<meta name="description" content="Детская парикмахерская в Красногорске: стригут в кресле-машинке под мультик. Красногорский бульвар, 14, каждый день с 10:00 до 20:00. +7 925 664-47-77.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:light;
+  --bg:#F3F6F4;
+  --bg2:#E8EFEC;
+  --ink:#1E3834;
+  --muted:#556A65;
+  --line:#C5D2CD;
+  --accent:#3DB7AB;
+  --accent-d:#2FA296;
+  --r:0;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Golos Text",system-ui,sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Rubik",system-ui,sans-serif;font-weight:600;letter-spacing:-.015em;margin:0;overflow-wrap:anywhere;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+blockquote{margin:0}
+q{quotes:"«" "»"}
+
+/* шапка */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.brand{font:500 16px/1.2 "Rubik",sans-serif}
+.top-tel{font-weight:500;text-decoration:none;white-space:nowrap;font-size:16px}
+.top-tel:hover{text-decoration:underline}
+
+/* первый экран */
+.hero{display:grid;gap:18px;padding:26px 0 26px}
+.hero h1{font-size:clamp(46px,12vw,128px);line-height:.95;font-weight:700;letter-spacing:-.035em}
+.lead{font-size:18px;max-width:36ch}
+.hours{margin-top:12px;color:var(--muted);font-size:16px}
+.hours b{color:var(--ink);font-weight:500}
+.hero-act{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;margin-top:20px}
+.call-num{display:inline-flex;align-items:center;min-height:56px;padding:0 22px;background:var(--accent);color:#10302B;font:600 22px/1 "Rubik",sans-serif;letter-spacing:-.01em;text-decoration:none;white-space:nowrap;transition:background-color .2s}
+.call-num:hover{background:var(--accent-d)}
+.call-num:active{transform:translateY(1px)}
+.wa{font-weight:500;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;white-space:nowrap}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;font:500 17px/1 "Golos Text",sans-serif;text-decoration:none;white-space:nowrap;transition:background-color .2s,transform .1s}
+.btn:active{transform:translateY(1px)}
+.btn-call{background:var(--accent);color:#10302B}
+.btn-call:hover{background:var(--accent-d)}
+.btn-line{border:1px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--bg2)}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.hero-photo{margin:0}
+.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 70%}
+.hero-photo figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+
+section{padding:56px 0}
+.sec-line{border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,6.4vw,48px);line-height:1.05}
+.cite{display:block;font-size:14px;color:var(--muted);margin-top:8px;font-style:normal}
+
+/* страх */
+.rating{font-size:15px;color:var(--muted);margin-bottom:14px}
+.rating b{color:var(--ink);font-weight:600}
+.fear-grid{display:grid;gap:32px;margin-top:28px}
+.big-q p{font:500 clamp(22px,4.6vw,30px)/1.3 "Rubik",sans-serif;letter-spacing:-.01em}
+.big-q .cite{font-size:15px;margin-top:12px}
+.fear-photo img{width:100%;aspect-ratio:910/940;object-fit:cover;border-radius:var(--r)}
+.helps{margin-top:36px;display:grid;gap:26px;max-width:60ch}
+.helps blockquote{padding-left:18px;border-left:1px solid var(--line)}
+.helps p{font-size:18px}
+.note{margin-top:40px;padding:22px 22px 24px;background:var(--bg2);border-left:1px solid var(--accent)}
+.note h3{font-size:20px;margin-bottom:10px}
+.note p+p{margin-top:8px}
+.note .cite{margin-top:12px}
+
+/* цены */
+.prices{margin-top:26px;border-top:1px solid var(--ink)}
+.price{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.price h3{font:500 19px/1.3 "Golos Text",sans-serif;letter-spacing:0}
+.price .sum{font:600 24px/1.1 "Rubik",sans-serif;white-space:nowrap;font-variant-numeric:tabular-nums}
+.price-note{margin-top:14px;font-size:15px;color:var(--muted)}
+.price-q{display:grid;gap:22px;margin-top:30px}
+.price-q blockquote p{font-size:18px}
+
+/* мастера */
+.masters{margin-top:24px}
+.master{display:grid;gap:8px;padding:22px 0;border-top:1px solid var(--line)}
+.master h3{font-size:clamp(28px,6vw,40px);font-weight:500;letter-spacing:-.02em}
+.master blockquote p{font-size:17px;max-width:56ch}
+
+/* работы */
+.works{display:grid;gap:18px;margin-top:26px}
+.works figure{margin:0}
+.works img{width:100%;object-fit:cover;border-radius:var(--r)}
+.w-a img{aspect-ratio:3/4}
+.w-b img{aspect-ratio:3/4;object-position:50% 40%}
+.works figcaption{font-size:15px;color:var(--muted);margin-top:8px}
+.works-text{display:grid;gap:22px;align-content:start}
+.works-text blockquote p{font-size:18px}
+
+/* контакты */
+.visit{display:grid;gap:34px;margin-top:26px}
+.tel-big{display:inline-block;font:600 clamp(30px,7.4vw,44px)/1.1 "Rubik",sans-serif;text-decoration:none;letter-spacing:-.01em}
+.tel-big:hover{text-decoration:underline;text-decoration-thickness:1px}
+.facts{margin:22px 0 0;display:grid;gap:0}
+.facts div{display:grid;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
+.facts dt{font-size:14px;color:var(--muted)}
+.facts dd{margin:0}
+.map a{display:block;text-decoration:none}
+.map img{width:100%;aspect-ratio:650/450;object-fit:cover;border-radius:var(--r);border:1px solid var(--line)}
+.map span{display:inline-block;margin-top:10px;font-weight:500;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.place{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+.place .walk{grid-column:1/-1}
+.place figure{margin:0}
+.place img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r)}
+.place figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.walk{margin-top:18px}
+.walk p{font-size:17px}
+
+footer{border-top:1px solid var(--line);padding:22px 0 30px;font-size:13px;color:var(--muted)}
+footer a{text-decoration:none}
+
+@media (min-width:768px){
+  .wrap{padding:0 32px}
+  .btn{flex:0 0 auto}
+  section{padding:80px 0}
+  .lead{font-size:20px}
+  .hero-photo img{aspect-ratio:16/9}
+  .price-q{grid-template-columns:1fr 1fr;gap:40px}
+  .master{grid-template-columns:minmax(200px,1fr) 2fr;align-items:baseline;gap:24px}
+  .works{grid-template-columns:1fr 1fr}
+  .works-text{grid-column:1/-1}
+}
+@media (min-width:1024px){
+  .hero{grid-template-columns:7fr 5fr;align-items:end;gap:48px;padding:44px 0 40px}
+  .hero-photo img{aspect-ratio:21/9;max-height:640px;object-position:50% 72%}
+  .fear-grid{grid-template-columns:7fr 5fr;gap:56px;align-items:start}
+  .prices-wrap{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:start}
+  .price-q{grid-template-columns:1fr;margin-top:26px}
+  .works{grid-template-columns:4fr 3fr 4fr;align-items:start;gap:24px}
+  .works-text{grid-column:auto;order:3;padding-top:12px}
+  .w-b{margin-top:72px}
+  .visit{grid-template-columns:5fr 6fr;gap:56px;align-items:start}
+  .place{grid-template-columns:3fr 3fr 4fr;gap:24px;margin-top:48px;align-items:start}
+  .place .walk{grid-column:auto;margin:0;align-self:center}
+  .place .walk p{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){.btn,.call-num{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="brand">Студия детских стрижек</span>
+    <a class="top-tel" href="tel:+79256644777">+7 925 664-47-77</a>
+  </header>
+
+  <div class="hero-wrap">
+    <section class="hero">
+      <h1>TopChik kids</h1>
+      <div class="hero-side">
+        <p class="lead">Детская парикмахерская на Красногорском бульваре, 14. Ребёнок сидит в кресле-машинке и смотрит мультик, пока его стригут.</p>
+        <p class="hours">Каждый день <b>с 10:00 до 20:00</b>, по записи</p>
+        <div class="hero-act">
+          <a class="call-num" href="tel:+79256644777">+7 925 664-47-77</a>
+          <a class="wa" href="https://wa.me/79256644777">или в WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<figure class="hero-photo">
+  <img src="hero.jpg" width="1280" height="960" alt="Зал парикмахерской: два детских кресла в виде машинок, голубой «Мерседес» и белый спорткар, перед ними зеркала и телевизор с мультиком">
+  <figcaption class="wrap">Голубой «Мерседес» и белый спорткар. Оба кресла с рулём.</figcaption>
+</figure>
+<div class="wrap">
+  <main>
+    <section id="boitsya">
+      <p class="rating"><b>4,8 на Яндекс Картах</b>, 174 оценки</p>
+      <h2>Если ребёнок боится стричься</h2>
+
+      <div class="fear-grid">
+        <div>
+          <blockquote class="big-q">
+            <p><q>…мой ребенок не любит когда его трогают, тем более если это стрижка, заросли очень, надежды было мало, но реальность превзошла все мои ожидания… ребенок спокойно сидел в машинке, смотрел мультик, даже почти засыпал</q></p>
+            <cite class="cite">Илая Полсон</cite>
+          </blockquote>
+
+          <div class="helps">
+            <blockquote><p><q>Внук боится звука машинки для стрижки. Обычно стрижка заканчивается скандалом и истерикой, а здесь прокатился на Мерседесе и оказался в руках замечательного мастера - Светланы!</q></p><cite class="cite">Garri Popandopulo</cite></blockquote>
+            <blockquote><p><q>Мастер Татьяна, всегда находит подход к сыну, в других парикмахерских не давал себя стричь.</q></p><cite class="cite">Анатолий иванов</cite></blockquote>
+            <blockquote><p><q>…отлично просидел всю стрижку в крутой машинке</q></p><cite class="cite">Яна</cite></blockquote>
+            <blockquote><p><q>На телевизоре ютюб, что позволяет включить любой мультик.</q></p><cite class="cite">Ирина Шмакова</cite></blockquote>
+            <blockquote><p><q>Много игрушек - когда приходим еще и с дочкой, ей есть, чем заняться во время стрижки брата</q></p><cite class="cite">Аня Рогожникова</cite></blockquote>
+          </div>
+        </div>
+
+        <div>
+          <figure class="fear-photo" style="margin:0">
+            <img src="photo-1.jpg" width="910" height="940" loading="lazy" alt="Зал: мойка, синее кресло для взрослых, стол с зеркалами, телевизор и край голубой машинки">
+          </figure>
+          <div class="note">
+            <h3>Что стоит знать заранее</h3>
+            <p>Стрижём с самой первой стрижки.</p>
+            <p>Если малыш ещё не готов, приходите в будни или пораньше: в выходные запись плотная.</p>
+            <p>Если малыш плачет и вертится, стрижём под насадку: так безопаснее.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ceny" class="sec-line">
+      <div class="prices-wrap">
+        <div>
+          <h2>Сколько стоит</h2>
+          <div class="prices">
+            <div class="price"><h3>Детская стрижка</h3><span class="sum">1400 ₽</span></div>
+            <div class="price"><h3>Женская стрижка</h3><span class="sum">1200 ₽</span></div>
+          </div>
+          <p class="price-note">Цены уточняйте при записи.</p>
+        </div>
+        <div class="price-q">
+          <blockquote>
+            <p><q>В нашем районе нашла не много парикмахерских именно детских, тут цена была ниже, чем у конкурентов</q></p>
+            <cite class="cite">Алена</cite>
+          </blockquote>
+          <blockquote>
+            <p><q>Всегда есть варианты записи на удобное время, ни разу не ждали. Цена адекватная, рекомендую данное место для детей!</q></p>
+            <cite class="cite">Артем П</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="mastera" class="sec-line">
+      <h2>Мастера</h2>
+      <div class="masters">
+        <div class="master">
+          <h3>Светлана</h3>
+          <blockquote><p><q>Ходим уже почти два года к мастеру Светлане, очень нравится… ребёнок с удовольствием ходит.</q></p><cite class="cite">Ирина Толкачева</cite></blockquote>
+        </div>
+        <div class="master">
+          <h3>Татьяна</h3>
+          <blockquote><p><q>Мы стрижемся у Татьяны, она отличный мастер. У нас два ребенка, стрижки всегда ровные, подходящие по структуре волос и внешности ребенка</q></p><cite class="cite">Елена</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="raboty" class="sec-line">
+      <h2>Стрижки и укладки</h2>
+      <div class="works">
+        <figure class="w-a">
+          <img src="photo-2.jpg" width="622" height="1280" loading="lazy" alt="Короткая мальчишеская стрижка, вид сзади, на затылке выбриты две линии уголком">
+          <figcaption>Короткая стрижка с узором на затылке</figcaption>
+        </figure>
+        <figure class="w-b">
+          <img src="photo-3.jpg" width="960" height="1280" loading="lazy" alt="Укладка девочке, вид сзади: локоны и два пучка на макушке">
+          <figcaption>Локоны и пучки на праздник</figcaption>
+        </figure>
+        <div class="works-text">
+          <blockquote>
+            <p><q>Делали прическу дочке на пятилетие - только лучшие впечатления - даже мастер согласилась прийти пораньше, иначе мы не успевали на праздник!</q></p>
+            <cite class="cite">Юрий Т.</cite>
+          </blockquote>
+          <blockquote>
+            <p><q>…единственное место, где мастер, действительно,  знает свое дело, а не только, как держать машинку и делать всем классику под одну гребёнку</q></p>
+            <cite class="cite">Дарья Маркевич</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakty" class="sec-line">
+      <h2>Записаться и прийти</h2>
+      <div class="visit">
+        <div>
+          <div class="hero-act">
+            <a class="call-num" href="tel:+79256644777">+7 925 664-47-77</a>
+            <a class="wa" href="https://wa.me/79256644777">или в WhatsApp</a>
+          </div>
+          <dl class="facts">
+            <div><dt>Адрес</dt><dd>Красногорск, Красногорский бульвар, 14. Вход с улицы, бирюзовый фасад, над дверью вывеска «Студия детских стрижек».</dd></div>
+            <div><dt>Часы</dt><dd>Каждый день с 10:00 до 20:00.</dd></div>
+            <div><dt>Запись</dt><dd>По телефону или в WhatsApp, на выходные лучше заранее.</dd></div>
+          </dl>
+        </div>
+        <div class="map">
+          <a href="https://yandex.ru/maps/org/topchik_kids/130882313014/">
+            <img src="map.png" width="650" height="450" loading="lazy" alt="Карта: TopChik kids на Красногорском бульваре, 14">
+            <span>Открыть в Яндекс Картах</span>
+          </a>
+        </div>
+      </div>
+      <div class="place">
+            <figure>
+              <img src="photo-4.jpg" width="720" height="720" loading="lazy" alt="Вход в салон: белая дверь в бирюзовом фасаде, над ней вывеска «Студия детских стрижек»">
+              <figcaption>Вход с улицы, вывеска над дверью</figcaption>
+            </figure>
+            <figure>
+              <img src="photo-5.jpg" width="960" height="1280" loading="lazy" alt="Мальчик со спины на набережной, через реку виден Дом правительства Московской области">
+              <figcaption>Набережная рядом</figcaption>
+            </figure>
+          <blockquote class="walk">
+            <p><q>Рядом набережная с прогулочной зоной, по хорошей погоде одно удовольствие погулять в ожидании стрижки второго киндера.</q></p>
+            <cite class="cite">Артем П</cite>
+          </blockquote>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>
+  <div class="wrap">Демо-страница. Сделал Дамир, Павшинская пойма · <a href="tel:+79256060000">+7 925 606-00-00</a> · <a href="https://t.me/youngdemiro">t.me/youngdemiro</a></div>
+</footer>
+</body>
+</html>

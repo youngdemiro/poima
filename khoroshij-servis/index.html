@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Хороший Сервис: ремонт телефонов и ноутбуков, Красногорский бульвар, 4/1</title>
+<meta name="description" content="Ремонт телефонов, ноутбуков и приставок в ТЦ «ТераБит», Павшинская пойма. Красногорский бульвар, 4, корп. 1. +7 999 347-22-00.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F3F3F0;
+  --band:#E6E6E1;
+  --ink:#1F2225;
+  --ink-2:#4A4F54;
+  --ink-3:#686D72;
+  --line:#C9CAC4;
+  --line-strong:#1F2225;
+  --accent:#3B7A27;
+  --head:"Ubuntu Sans","Avenir Next","Helvetica Neue",sans-serif;
+  --body:"Source Sans 3","PT Sans","Helvetica Neue",sans-serif;
+  --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--body);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1;letter-spacing:-.025em;margin:0;overflow-wrap:anywhere;text-wrap:balance}
+p,blockquote,figure{margin:0}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gut)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* top bar */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.mark{font:800 20px/1 var(--head);letter-spacing:-.02em;text-decoration:none}
+.mark small{font:500 14px/1 var(--body);color:var(--ink-3);margin-left:8px;letter-spacing:0}
+.top-tel{font:600 16px/1 var(--body);text-decoration:none;white-space:nowrap;border-bottom:1px solid var(--line-strong);padding-bottom:2px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"text photo";gap:clamp(24px,4vw,64px);padding-top:clamp(24px,5vw,64px);padding-bottom:clamp(32px,5vw,64px);align-items:center}
+.hero-text{grid-area:text}
+.hero-photo{grid-area:photo}
+.hero-kind{font-size:17px;color:var(--ink-2);margin-bottom:18px;max-width:40em}
+.hero h1{font-size:clamp(52px,8.4vw,124px);line-height:.92;letter-spacing:-.04em;margin-bottom:26px}
+.hero-sub{font-size:clamp(18px,1.6vw,21px);line-height:1.45;max-width:28em;margin-bottom:30px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#fff;text-decoration:none;font:600 18px/1 var(--body);padding:18px 24px;border-radius:2px;white-space:nowrap;transition:background .2s,transform .1s}
+.btn:hover{background:#2F6620}
+.btn:active{transform:translateY(1px)}
+.btn span{font-weight:400;opacity:.9}
+.textlink{font:600 17px/1.2 var(--body);text-decoration:none;border-bottom:1px solid var(--line-strong);padding-bottom:3px;white-space:nowrap}
+.textlink:hover{border-bottom-color:transparent}
+.hero-photo img{width:100%;height:min(760px,calc(100dvh - 120px));min-height:520px;object-fit:cover;object-position:50% 40%}
+
+/* sections */
+section{padding:clamp(56px,8vw,112px) 0}
+.hero{padding:0}
+.h2{font-size:clamp(40px,5.2vw,72px);margin-bottom:20px}
+.lead{font-size:18px;color:var(--ink-2);max-width:34em}
+.who{display:block;font:600 15px/1.3 var(--body);color:var(--ink-3);margin-top:10px;font-style:normal}
+
+/* receipt table */
+.times-head{max-width:760px;margin-bottom:36px}
+.ticket{width:100%;max-width:980px;border-collapse:collapse;font-variant-numeric:tabular-nums;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+.ticket th{font:600 14px/1.3 var(--body);color:var(--ink-3);text-align:left;padding:12px 16px 12px 0;border-bottom:1px solid var(--line-strong)}
+.ticket td{padding:13px 16px 13px 0;vertical-align:baseline;font-size:17px;line-height:1.4}
+.ticket tr+tr td{border-top:1px solid var(--line)}
+.ticket td:nth-child(2){font:700 18px/1.3 var(--head);letter-spacing:-.01em;white-space:nowrap}
+.ticket td:nth-child(3){color:var(--ink-3);font-size:15px}
+.ticket th:last-child,.ticket td:last-child{padding-right:0}
+
+/* no-replace */
+.fix{background:var(--band)}
+.fix .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.fix figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+figcaption{font-size:15px;color:var(--ink-2);margin-top:12px;max-width:34em}
+.fix-fact{font-size:19px;line-height:1.5;max-width:30em;margin-bottom:22px}
+.big-quote{font:700 clamp(22px,2vw,28px)/1.25 var(--head);letter-spacing:-.015em;max-width:24em}
+.small-quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line-strong)}
+.small-quotes blockquote{font-size:17px;line-height:1.5}
+
+/* price */
+.price .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(28px,5vw,80px)}
+.price .lead+.lead{margin-top:14px}
+.receipt{margin-top:32px;padding-top:20px;border-top:1px solid var(--line-strong);max-width:36em}
+.receipt h3{font-size:24px;font-weight:700;letter-spacing:-.015em;margin-bottom:8px}
+.price-quotes{display:flex;flex-direction:column;gap:30px;padding-top:6px}
+.price-quotes blockquote{padding-left:20px;border-left:1px solid var(--line-strong);font-size:19px;line-height:1.5}
+
+/* master */
+.master{padding-top:0}
+.master-photo img{width:100%;height:clamp(320px,56vw,720px);object-fit:cover;object-position:50% 45%}
+.master-photo figcaption{max-width:1320px;margin:12px auto 0;padding:0 var(--gut)}
+.master-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);margin-top:clamp(40px,6vw,80px)}
+.master-quotes{display:flex;flex-direction:column;gap:28px}
+.master-quotes blockquote{font-size:19px;line-height:1.5;max-width:34em}
+.master-quotes blockquote:first-child{font:700 clamp(22px,2.1vw,30px)/1.2 var(--head);letter-spacing:-.015em}
+
+/* what else */
+.more .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);align-items:stretch}
+.more-photos{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:12px;min-height:520px}
+.more-photos img{width:100%;height:100%;object-fit:cover}
+.more-text .h2{margin-bottom:22px}
+.more-list{margin:0;padding:0;list-style:none}
+.more-list li{padding:10px 0;border-top:1px solid var(--line);font-size:18px;line-height:1.4}
+.more-card{margin-top:24px;font-size:17px;color:var(--ink-2);line-height:1.6}
+
+/* wall */
+.wall{background:var(--band)}
+.wall-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 32px;margin-bottom:36px}
+.wall-head .h2{margin:0}
+.rating{font-size:18px;color:var(--ink-2)}
+.rating .textlink{margin-left:10px;color:var(--ink)}
+.wall-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);border-top:1px solid var(--line-strong);padding-top:28px}
+.wall-grid blockquote{font-size:18px;line-height:1.5}
+.wall-foot{margin-top:32px}
+
+/* find */
+.find .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,4vw,64px)}
+.find .h2{margin-bottom:24px;font-size:clamp(36px,3vw,44px);overflow-wrap:normal}
+.find dl{margin:0 0 30px}
+.find dt{font-size:14px;color:var(--ink-3);margin-top:16px}
+.find dd{margin:2px 0 0;font-size:18px;line-height:1.45}
+.find dd a{text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.find-media{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;align-items:stretch}
+.facade{position:relative;min-height:240px}
+.facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.map{display:block;max-width:650px}
+.map img{width:100%;height:auto}
+.map-link{display:inline-block;margin-top:14px;font:600 17px/1.2 var(--body);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:3px}
+.socials{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:22px}
+
+footer{border-top:1px solid var(--line);padding:22px 0 30px;font-size:13px;color:var(--ink-3)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+
+@media (max-width:900px){
+  .fix .wrap,.price .wrap,.master-body,.more .wrap,.find .wrap,.wall-grid{grid-template-columns:minmax(0,1fr)}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "photo";gap:24px}
+  .hero-photo img{height:auto;min-height:0;aspect-ratio:4/3;object-position:50% 35%}
+  .hero h1{margin-bottom:18px}
+  .hero-sub{margin-bottom:24px}
+  .small-quotes{grid-template-columns:minmax(0,1fr)}
+  .more-text{order:-1}
+  .more-photos{min-height:0}
+  .more-photos .p-a{aspect-ratio:4/3;height:auto}
+  .more-photos .p-b{aspect-ratio:3/4;height:auto}
+  .find-media{grid-template-columns:minmax(0,1fr)}
+  .facade{min-height:0;aspect-ratio:4/3}
+}
+@media (max-width:600px){
+  .mark small{display:none}
+  .hero-kind{font-size:16px;margin-bottom:12px}
+  .hero h1{font-size:clamp(46px,14vw,64px)}
+  .hero-sub{font-size:18px}
+  .btn{width:100%;justify-content:center}
+  .ticket thead{display:none}
+  .ticket,.ticket tbody,.ticket tr,.ticket td{display:block}
+  .ticket tr{padding:12px 0}
+  .ticket tr+tr{border-top:1px solid var(--line)}
+  .ticket tr+tr td{border-top:0}
+  .ticket td{padding:0}
+  .ticket td:nth-child(2){white-space:normal;margin-top:2px}
+  .ticket td:nth-child(3){margin-top:2px}
+  .more-photos{grid-template-columns:minmax(0,1fr)}
+  .more-photos .p-b{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#">Хороший Сервис<small>Good Services</small></a>
+    <a class="top-tel" href="tel:+79993472200">+7 999 347-22-00</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="hero-kind">Ремонт телефонов и ноутбуков. ТЦ «ТераБит», Красногорский бульвар, 4, корп.&nbsp;1</p>
+      <h1>Хороший Сервис</h1>
+      <p class="hero-sub">Меняем экраны и аккумуляторы, чистим разъёмы, чиним ноутбуки и приставки. Многое делаем, пока вы ждёте рядом.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+79993472200">Позвонить <span>+7 999 347-22-00</span></a>
+        <a class="textlink" href="https://wa.me/79993472200">Написать в WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="hero.jpg" width="1050" height="1400" alt="Мастер за микроскопом паяет плату телефона, за ним полки с коробками от iPhone">
+    </div>
+  </div>
+</section>
+
+<section id="sroki">
+  <div class="wrap">
+    <div class="times-head">
+      <h2 class="h2">Сколько ждать</h2>
+      <p class="lead">Девять ремонтов и сколько их ждали. Сколько займёт ваш, скажем по телефону.</p>
+    </div>
+    <table class="ticket">
+      <thead><tr><th scope="col">Что сломалось</th><th scope="col">Сколько ждали</th><th scope="col">Клиент</th></tr></thead>
+      <tbody>
+        <tr><td>Не работала ни одна кнопка на iPhone</td><td>за минуту</td><td>Валерия Н.</td></tr>
+        <tr><td>Отпаялся контакт на метке автомобильного ключа</td><td>за 5 минут</td><td>Дмитрий Апарин</td></tr>
+        <tr><td>Ремонт телефона</td><td>в течение 15 минут</td><td>Татьяна В.</td></tr>
+        <tr><td>Замена аккумулятора на iPhone 12 Pro</td><td>менее чем за час</td><td>Vital</td></tr>
+        <tr><td>Чистка MacBook со стресс-тестом</td><td>ждал менее часа</td><td>Кирсан М.</td></tr>
+        <tr><td>Замена стекла на Redmi</td><td>за пару часов</td><td>Денис Т.</td></tr>
+        <tr><td>Экран Huawei на оригинальный</td><td>в течение нескольких часов</td><td>Даниил П.</td></tr>
+        <tr><td>Срочный ремонт экрана</td><td>за 5 часов</td><td>Виктория</td></tr>
+        <tr><td>Вирус на ноутбуке: почистить, переустановить, настроить</td><td>утром отдал, после обеда забрал</td><td>Сергей С.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="fix">
+  <div class="wrap">
+    <figure>
+      <img src="photo-1.jpg" width="1050" height="1400" loading="lazy" alt="Снятое стекло дисплея на сепараторе, переклейка">
+      <figcaption>Переклейка: снимаем только разбитое стекло, дисплей остаётся свой. Так на iPhone 13 Pro Max обошлись без нового дисплея.</figcaption>
+    </figure>
+    <div>
+      <h2 class="h2">Иногда менять ничего не нужно</h2>
+      <p class="fix-fact">Samsung S23 перестал заряжаться. Разъём не меняли: его почистили, и всё заработало.</p>
+      <blockquote class="big-quote">«Очень остался доволен данными ребятами, так как в другом сервисе (хотели развести на замену USB разъёма).»<span class="who">Андрей Б.</span></blockquote>
+      <div class="small-quotes">
+        <blockquote>«Ребята клеили стекла на два телефона 3 месяца назад, на одном стекле появился пузырь. Ребята САМИ предложили заменить по гарантии, хотя стекла к расходникам относятся.»<span class="who">Сергей И.</span></blockquote>
+        <blockquote>«Пришел с проблемой сломанного крепления ЦП в ноутбуке. Восстановили по оговоренной цене, при этом обнаружили другие мелкие косяки по шлейфам и заменили без доплат!»<span class="who">Рамиль Г.</span></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Про цену</h2>
+      <p class="lead">Стоимость называем после осмотра: по телефону или на месте, когда посмотрим аппарат.</p>
+      <p class="lead">К ремонту часто клеим защитное стекло или плёнку в подарок.</p>
+      <div class="receipt">
+        <h3>Квитанция при приёме</h3>
+        <p class="lead">Телефон принимаем по квитанции в двух экземплярах. В ней записаны неисправность, серийный номер и внешний вид аппарата. Один экземпляр остаётся у вас.</p>
+      </div>
+    </div>
+    <div class="price-quotes">
+      <blockquote>«При первичном звонке мастер-приемщик все подробно и вежливо рассказал+цены прозрачны.»<span class="who">Кирсан М.</span></blockquote>
+      <blockquote>«Уже второй раз спасли телефон, причем по адекватной цене и максимально оперативно.»<span class="who">Tommy</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="master">
+  <figure class="master-photo">
+    <img src="photo-2.jpg" width="1050" height="1400" loading="lazy" alt="Мастер работает паяльным феном за столом из светлого дерева, на полке над ним чехлы и аксессуары">
+    <figcaption>Пайка на рабочем месте мастерской.</figcaption>
+  </figure>
+  <div class="wrap">
+    <div class="master-body">
+      <div>
+        <h2 class="h2">Ремонт у всех на виду</h2>
+        <p class="lead">Чинит мастер Артемий. Аппарат разбирают за стойкой, в том же зале, где вы ждёте.</p>
+      </div>
+      <div class="master-quotes">
+        <blockquote>«Все инструменты на местах. Запасные детали в ячейках. Все подписано. Это характеризует мастера.»<span class="who">Сеня</span></blockquote>
+        <blockquote>«Была проблема с телефоном, не включался. Как оказалось, шансов на восстановление крайне мало. Артемий смог помочь, проконсультировал и поднял телефон.»<span class="who">Адам Л.</span></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="more">
+  <div class="wrap">
+    <div class="more-photos">
+      <img class="p-a" src="photo-3.jpg" width="1400" height="1050" loading="lazy" alt="Стойка приёмки из светлого дерева, на стене светящаяся вывеска «Сервис центр», слева стена с чехлами">
+      <img class="p-b" src="photo-4.jpg" width="975" height="1300" loading="lazy" alt="Стена из деревянных реек с полками: телефоны, чехлы и зарядки">
+    </div>
+    <div class="more-text">
+      <h2 class="h2">Ещё чиним</h2>
+      <ul class="more-list">
+        <li>iPhone 13 Pro Max после воды</li>
+        <li>Крышку чехла от AirPods</li>
+        <li>Часы</li>
+        <li>Второй жёсткий диск в ноутбук</li>
+        <li>Установку ОС и драйверов на компьютер, за час</li>
+      </ul>
+      <p class="more-card">Ещё ремонтируем игровые приставки, собираем компьютеры, восстанавливаем данные, выезжаем на дом. На ремонт даём гарантию. Работаем с Apple, Samsung, Xiaomi, Honor, Huawei, realme, Tecno, Infinix и другими. Продаём аксессуары и б/у телефоны, принимаем технику в trade-in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wall">
+  <div class="wrap">
+    <div class="wall-head">
+      <h2 class="h2">Сюда возвращаются</h2>
+      <p class="rating">5,0 на Яндекс Картах, 139 оценок. <a class="textlink" href="https://yandex.ru/maps/org/khoroshiy_servis/42280725321/reviews/">Все отзывы</a></p>
+    </div>
+    <div class="wall-grid">
+      <blockquote>«Лучший сервис в мкр Павшинская пойма… постараются помочь и сделают все в кратчайшие сроки.и не нужно никуда ехать.»<span class="who">Ирина Л.</span></blockquote>
+      <blockquote>«Поменяли дисплей на телефоне,быстро ,профессионально и качественно… Рекомендую,тем более имела отрицательный опыт в том же районе.»<span class="who">Жанна</span></blockquote>
+      <blockquote>«…взял у них б/у телефон ребенку,телефон отличный,всё честно рассказали,сделали небольшую скидку… отдельное спасибо Артуру»<span class="who">николай печников</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="adres">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Красногорский бульвар, 4/1</h2>
+      <dl>
+        <dt>Адрес</dt>
+        <dd>Красногорск, Красногорский бульвар, 4, корп. 1, ТЦ «ТераБит»</dd>
+        <dt>Ориентир</dt>
+        <dd>Вывеска «Сервис центр» на сером фасаде, над Ozon и Яндекс Маркетом</dd>
+        <dt>Часы</dt>
+        <dd>Пн–пт 10:00–21:00<br>Сб, вс 10:00–20:00</dd>
+        <dt>Телефон</dt>
+        <dd><a href="tel:+79993472200">+7 999 347-22-00</a></dd>
+        <dt>Удобства</dt>
+        <dd>Пандус, можно с собакой, Wi-Fi. Оплата картой, наличными или переводом.</dd>
+      </dl>
+      <a class="btn" href="tel:+79993472200">Позвонить <span>+7 999 347-22-00</span></a>
+      <div class="socials">
+        <a class="textlink" href="https://wa.me/79993472200">WhatsApp</a>
+        <a class="textlink" href="https://t.me/good_services_center">Telegram</a>
+        <a class="textlink" href="https://vk.ru/goodservicescenter">ВКонтакте</a>
+      </div>
+    </div>
+    <div>
+      <div class="find-media">
+        <div class="facade"><img src="photo-5.jpg" width="720" height="1280" loading="lazy" alt="Серый фасад с вывеской «Сервис центр. Ремонт и аксессуары», ниже вывески Ozon и Яндекс Маркета"></div>
+        <a class="map" href="https://yandex.ru/maps/org/khoroshiy_servis/42280725321/"><img src="map.png" width="650" height="450" loading="lazy" alt="Карта: Красногорский бульвар, 4, корп. 1, ТЦ «ТераБит»"></a>
+      </div>
+      <a class="map-link" href="https://yandex.ru/maps/org/khoroshiy_servis/42280725321/">Открыть в Яндекс Картах</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Хороший Сервис, ремонт телефонов и ноутбуков</span>
+    <span>Демо-страница. Сделал Дамир, Павшинская пойма · +7 925 606-00-00 · <a href="https://t.me/youngdemiro">t.me/youngdemiro</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

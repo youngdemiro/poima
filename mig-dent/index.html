@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>MiG DENT (Миг Дент), стоматология на Красногорском бульваре, 50</title>
+<meta name="description" content="Стоматологическая клиника MiG DENT в Павшинской пойме, Красногорск. Врачи, услуги, часы работы, телефон и карта.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="preload" as="image" href="hero.jpg">
+<style>
+:root{color-scheme:light;
+  --bg:#f1f1ef;
+  --tile:#e6e4df;
+  --ink:#1d2023;
+  --soft:#565b60;
+  --line:#c7c8c7;
+  --accent:#6a4536;
+  --serif:"Noto Serif Display",Georgia,"Times New Roman",serif;
+  --sans:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pad:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;overflow-wrap:anywhere;text-wrap:balance}
+p{margin:0}
+blockquote,figure{margin:0}
+.nw{white-space:nowrap}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+
+.call{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;background:var(--accent);color:#fbf9f7;text-decoration:none;font-weight:500;font-size:17px;white-space:nowrap;border-radius:2px;transition:background .2s,transform .1s}
+.call:hover{background:#573829}
+.call:active{transform:translateY(1px)}
+.link{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--line);transition:text-decoration-color .2s}
+.link:hover{text-decoration-color:var(--ink)}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* первый экран: фото слева, вывеска справа */
+.hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:min(100dvh,940px);border-bottom:1px solid var(--line)}
+.hero-photo{position:relative;background:var(--tile)}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.hero-text{padding:clamp(28px,4.5vw,64px) var(--pad);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.hero-top{font-size:15px;color:var(--soft);display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.hero-top a{text-decoration:none;color:var(--ink);font-weight:500}
+.brand h1{font-size:clamp(60px,8.4vw,132px);line-height:.92;font-weight:400;letter-spacing:-.01em}
+.brand .sub{margin-top:14px;font-size:clamp(13px,1.05vw,15px);letter-spacing:.24em;text-transform:uppercase;color:var(--soft)}
+.hero .lead{margin-top:clamp(28px,3.4vw,44px);max-width:34ch;font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,28px);line-height:1.3;text-wrap:pretty}
+.actions{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
+.hero .legal-top{margin-top:18px;font-size:15px;color:var(--soft)}
+.where-line{font-size:15px;color:var(--soft);line-height:1.7}
+.where-line b{color:var(--ink);font-weight:500}
+
+/* тем, кто боится */
+.fear{padding:clamp(72px,10vw,140px) 0 clamp(56px,7vw,96px)}
+.fear h2{font-size:clamp(38px,5vw,68px);line-height:1.05;letter-spacing:-.01em;max-width:16ch;margin-bottom:22px}
+.note{color:var(--soft);font-size:15px;max-width:60ch}
+.quotes{margin-top:clamp(44px,6vw,80px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));row-gap:clamp(44px,5vw,72px)}
+.q p{font-family:var(--serif);font-weight:300;font-size:clamp(23px,2.3vw,32px);line-height:1.32}
+.q footer{margin-top:16px;font-size:15px;color:var(--soft)}
+.q footer b{color:var(--ink);font-weight:500}
+.q1{grid-column:1 / span 8}
+.q2{grid-column:5 / span 8}
+.q3{grid-column:2 / span 7}
+.q4{grid-column:6 / span 7}
+.band{margin:clamp(64px,8vw,112px) 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band img{width:100%;max-height:640px;object-fit:cover;object-position:50% 45%}
+.band figcaption{font-size:14px;color:var(--soft);padding:12px var(--pad)}
+.after{margin-top:clamp(56px,7vw,96px)}
+
+/* первый приём */
+.visit{padding:clamp(64px,8vw,120px) 0;background:var(--tile)}
+.visit-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.visit h2{font-size:clamp(34px,4vw,54px);line-height:1.08;margin-bottom:28px}
+.plain{font-size:20px;line-height:1.5;max-width:30ch}
+.plain p + p{margin-top:10px}
+.visit figure{margin-top:40px}
+.visit figcaption,.docs figcaption{font-size:14px;color:var(--soft);margin-top:10px}
+.say{display:grid;align-content:start}
+.say blockquote{padding:26px 0;border-top:1px solid var(--line)}
+.say blockquote:first-child{border-top:0;padding-top:4px}
+.say p{font-size:19px;line-height:1.55}
+.say footer{margin-top:10px;font-size:15px;color:var(--soft)}
+.say footer b{color:var(--ink);font-weight:500}
+
+/* врачи */
+.docs{padding:clamp(72px,9vw,130px) 0}
+.docs-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.docs h2{font-size:clamp(32px,3.3vw,46px);line-height:1.08;margin-bottom:clamp(28px,4vw,48px)}
+.doc{padding:26px 0;border-top:1px solid var(--line)}
+.doc:first-child{border-top:0;padding-top:4px}
+.doc h3{margin:0 0 6px;font-size:clamp(26px,2.4vw,34px);line-height:1.15}
+.doc .what{font-size:15px;color:var(--soft);margin-bottom:12px}
+.doc blockquote p{font-size:17px}
+.doc blockquote footer{margin-top:6px;font-size:14px;color:var(--soft)}
+
+/* дети */
+.kids{padding:clamp(64px,8vw,120px) 0;border-top:1px solid var(--line)}
+.kids h2{font-size:clamp(34px,4vw,54px);line-height:1.08;margin-bottom:14px}
+.kids-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center;margin-top:clamp(36px,5vw,56px)}
+.kids-grid img{width:100%;aspect-ratio:3/5;object-fit:cover}
+.kids blockquote p{font-size:19px;line-height:1.55}
+.kids blockquote footer{margin-top:10px;font-size:15px;color:var(--soft)}
+.kids blockquote footer b{color:var(--ink);font-weight:500}
+.kids .low{align-self:end}
+
+/* услуги */
+.services{padding:clamp(64px,8vw,120px) 0;background:var(--tile)}
+.services h2{font-size:clamp(34px,4vw,54px);line-height:1.08;margin-bottom:14px}
+.svc{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px clamp(24px,4vw,56px)}
+.svc h3{font-size:clamp(22px,1.9vw,26px);line-height:1.2;margin-bottom:10px;padding-top:14px;border-top:1px solid var(--ink)}
+.svc p{color:var(--soft);font-size:16px}
+.svc .wide{grid-column:1 / -1}
+.legal{margin-top:48px;font-size:15px;color:var(--soft)}
+
+/* как добраться */
+.where{padding:clamp(64px,8vw,120px) 0 clamp(48px,6vw,80px)}
+.where-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
+.where h2{font-size:clamp(34px,4vw,54px);line-height:1.08;margin-bottom:24px}
+.addr{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);line-height:1.25;margin-bottom:18px}
+.info p{margin-top:8px;max-width:46ch}
+.contacts{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.phone{font-family:var(--serif);font-size:clamp(28px,3vw,40px);text-decoration:none;display:inline-block;margin-top:30px}
+.small-things{margin-top:44px;border-top:1px solid var(--line);padding-top:22px}
+.small-things h3{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--soft);margin-bottom:14px}
+.small-things blockquote + blockquote{margin-top:16px}
+.small-things p{font-size:16px}
+.small-things footer{font-size:14px;color:var(--soft);margin-top:4px}
+.map a{display:block;text-decoration:none}
+.map img{width:100%;border:1px solid var(--line)}
+.map span{display:inline-block;margin-top:12px}
+
+footer.site{border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--soft)}
+footer.site .wrap{display:grid;gap:6px}
+
+@media (max-width:1023px){
+  .svc{grid-template-columns:1fr 1fr}
+}
+@media (max-width:767px){
+  body{font-size:16px}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-photo{height:42vh;min-height:280px;max-height:400px}
+  .hero-photo img{object-position:50% 36%}
+  .hero-text{padding:18px 16px 28px;gap:24px}
+  .brand h1{font-size:clamp(52px,16vw,72px)}
+  .brand .sub{margin-top:10px;font-size:12px;letter-spacing:.18em}
+  .hero .lead{margin-top:18px;font-size:20px}
+  .actions{margin-top:22px}
+  .hero .legal-top{font-size:14px;margin-top:14px}
+  .quotes{grid-template-columns:1fr}
+  .q1,.q2,.q3,.q4{grid-column:1}
+  .q2,.q4{padding-left:14%}
+  .band figcaption{padding:10px 16px}
+  .visit-grid,.docs-grid,.where-grid{grid-template-columns:1fr}
+  .docs-side{display:contents}
+  .docs-side figure{order:2}
+  .kids-grid{grid-template-columns:1fr}
+  .kids-grid img{aspect-ratio:4/5;max-height:520px}
+  .svc{grid-template-columns:1fr}
+  .plain{font-size:18px}
+  .say p,.kids blockquote p{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-photo">
+    <img src="hero.jpg" width="720" height="1280" alt="Кабинет MiG DENT: кресло, микроскоп над ним, светлый пол и тёмный потолок с подсветкой">
+  </div>
+  <div class="hero-text">
+    <div class="hero-top">
+      <span>Красногорск, Павшинская пойма</span>
+      <a href="tel:+79685143143">+7 968 514-31-43</a>
+    </div>
+    <div>
+      <div class="brand">
+        <h1>MiG DENT</h1>
+        <p class="sub">стоматологическая клиника</p>
+      </div>
+      <p class="lead">Лечение под микроскопом, импланты, элайнеры, детский кабинет. Консультация бесплатная.</p>
+      <div class="actions">
+        <a class="call" href="tel:+79685143143">Позвонить</a>
+        <a class="link" href="https://wa.me/79685143143">Написать в WhatsApp</a>
+      </div>
+      <p class="legal-top">Имеются противопоказания, необходима консультация специалиста.</p>
+    </div>
+    <p class="where-line"><b>Красногорский бульвар, 50</b>, вход с улицы. Ежедневно <span class="nw">9:00–21:00</span>.<br>5,0 на Яндекс Картах, 518 оценок.</p>
+  </div>
+</header>
+
+<main>
+
+<section class="fear">
+  <div class="wrap">
+    <h2>Тем, кто боится лечить зубы</h2>
+
+    <div class="quotes">
+      <blockquote class="q q1">
+        <p>«Как и многие, боящиеся стоматологов люди, шла с ужасом на установку двух пломб.»</p>
+        <footer><b>Ангелина Колычева</b>, 2024</footer>
+      </blockquote>
+      <blockquote class="q q2">
+        <p>«…рыдала от страха всю дорогу до кабинета врача… Очень внимательный врач, если надо добавляет анестезию, я прям неженка, мне нужно чтоб вообще не чувствовалось ничего.»</p>
+        <footer><b>Irina Evseeva</b>, 2023</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <figure class="band">
+    <img src="photo-1.jpg" width="1000" height="685" loading="lazy" alt="Врач и ассистент работают у микроскопа, на стене сертификаты">
+    <figcaption>Приём под микроскопом.</figcaption>
+  </figure>
+
+  <div class="wrap">
+    <div class="quotes after">
+      <blockquote class="q q3">
+        <p>«Удалять восьмерки приду сюда же обязательно, как наберусь смелости»</p>
+        <footer><b>Ирина Батура</b>, 2024</footer>
+      </blockquote>
+      <blockquote class="q q4">
+        <p>«Во время приёма всегда интересуется о самочувствии, нет ли дискомфорта, как себя чувствовала после прошлого визита.»</p>
+        <footer><b>Юлия Леонтьева</b>, 2024</footer>
+      </blockquote>
+      <blockquote class="q q1">
+        <p>«Поход к стоматологу для меня теперь не окутан стрессом и паникой за будущее моих зубов.»</p>
+        <footer><b>Анна О.</b>, 2023</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Первый приём</h2>
+      <div class="plain">
+        <p>Консультация бесплатная.</p>
+        <p>Лечение можно оплатить в рассрочку.</p>
+        <p>Принимаем наличные и карты.</p>
+        <p>На лечение есть гарантия.</p>
+      </div>
+      <figure>
+        <img src="photo-4.jpg" width="717" height="610" loading="lazy" alt="Ноутбук с цифровой 3D-моделью зубов после сканирования">
+        <figcaption>Интраоральное 3D-сканирование.</figcaption>
+      </figure>
+    </div>
+    <div class="say">
+      <blockquote>
+        <p>«Сразу сделали снимок, вынесли вердикт, рассказали о возможных вариантах лечения и имплантации. Ответили на все мои вопросы, без навязывания дополнительных услуг…»</p>
+        <footer><b>Валентина Паршина</b>, 2024</footer>
+      </blockquote>
+      <blockquote>
+        <p>«…не навязывают лишних обследований, как сделали мне в клинике до.»</p>
+        <footer><b>Ирина Олифирова</b>, 2023</footer>
+      </blockquote>
+      <blockquote>
+        <p>«По сумме мне сказали сразу. Не было никаких неожиданностей. И это очень ценно.»</p>
+        <footer><b>Geny Lobanova</b>, 2026</footer>
+      </blockquote>
+      <blockquote>
+        <p>«Одна из немногих клиник, где цена озвученная до лечения соответствует факту.»</p>
+        <footer><b>Наталья Ряднова</b>, 2024</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="docs">
+  <div class="wrap docs-grid">
+    <div class="docs-side">
+      <h2>Врачи</h2>
+      <figure>
+        <img src="photo-2.jpg" width="1125" height="640" loading="lazy" alt="Кабинет: врач у микроскопа и ассистент, на мониторе снимок">
+        <figcaption>Кабинет с микроскопом.</figcaption>
+      </figure>
+    </div>
+    <div>
+      <article class="doc">
+        <h3>Борис Залимханович Бахов</h3>
+        <p class="what">Лечение под микроскопом, реставрации, коронки, удаление, импланты.</p>
+        <blockquote>
+          <p>«Бахов Борис работает исключительно на микроскопе,художественные реставрации, эндодонтическое лечение, удаление, протезирование на имплантатах…»</p>
+          <footer>Захар, 2026</footer>
+        </blockquote>
+      </article>
+      <article class="doc">
+        <h3>Анастасия Александровна Куканова</h3>
+        <p class="what">Ортодонт, элайнеры.</p>
+        <blockquote>
+          <p>«У меня безумно чувствительные зубы даже на поток воздуха, но при любых манипуляциях врач нашла выход и всегда предельно деликатно выполняла процедуры…»</p>
+          <footer>Анастасия Лыткина, 2025</footer>
+        </blockquote>
+      </article>
+      <article class="doc">
+        <h3>Давид Сергеевич Гасиловский</h3>
+        <p class="what">Удаление, имплантация, синус-лифтинг.</p>
+        <blockquote>
+          <p>«…врач, который умеет говорить с пациентом на их языке, все объяснить быстро и понятно и расположить к себе!»</p>
+          <footer>Анна О., 2023</footer>
+        </blockquote>
+      </article>
+      <article class="doc">
+        <h3>Евгения Ткачёва</h3>
+        <p class="what">Реставрация зубов.</p>
+        <blockquote>
+          <p>«Была реставрация переднего зуба… Буду продолжать лечение здесь.»</p>
+          <footer>Лена Ш, 2026</footer>
+        </blockquote>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="kids">
+  <div class="wrap">
+    <h2>С ребёнком</h2>
+    <p class="note">У нас есть детский кабинет.</p>
+    <div class="kids-grid">
+      <blockquote>
+        <p>«…записывала ребенка на удаление молочного зуба ,всё было сделано за 15 минут))) и мультики показали ,и рассказали что и как будут сыну делать чтоб он не боялся»</p>
+        <footer><b>zyatkova90</b>, 2023</footer>
+      </blockquote>
+      <img src="photo-3.jpg" width="590" height="1180" loading="lazy" alt="Игрушечный коала сидит на кронштейне стоматологической установки под микроскопом">
+      <blockquote class="low">
+        <p>«Лечили дочке молочные и постоянные зубки… ребенок в хорошем настроении и не боится ходить к зубному.»</p>
+        <footer><b>Ирина</b>, 2024</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <h2>Услуги для взрослых и детей</h2>
+    <div class="svc">
+      <div>
+        <h3>Лечение</h3>
+        <p>Терапия, лечение кариеса, пломбирование, лечение каналов и эндодонтия, лечение периодонтита, лечение кисты зуба, лечение дёсен.</p>
+      </div>
+      <div>
+        <h3>Хирургия</h3>
+        <p>Удаление зубов, хирургия, челюстно-лицевая хирургия, френулопластика.</p>
+      </div>
+      <div>
+        <h3>Импланты</h3>
+        <p>Имплантология, костная пластика.</p>
+      </div>
+      <div>
+        <h3>Протезирование</h3>
+        <p>Коронки, протезирование, виниры и люминиры, реставрация зубов. Зуботехническая лаборатория.</p>
+      </div>
+      <div>
+        <h3>Прикус</h3>
+        <p>Ортодонтия, брекеты, элайнеры.</p>
+      </div>
+      <div>
+        <h3>Гигиена и эстетика</h3>
+        <p>Гигиена полости рта, отбеливание, эстетическая стоматология.</p>
+      </div>
+      <div class="wide">
+        <h3>Снимки и справки</h3>
+        <p>Рентгенография. Справка о медицинском осмотре.</p>
+      </div>
+    </div>
+    <p class="legal">Имеются противопоказания, необходима консультация специалиста.</p>
+  </div>
+</section>
+
+<section class="where">
+  <div class="wrap where-grid">
+    <div class="info">
+      <h2>Красногорский бульвар, 50</h2>
+      <p class="addr">Павшинская пойма</p>
+      <p>Вход с улицы. Есть пандус, кнопка вызова персонала и парковка.</p>
+      <p>Ежедневно с 9:00 до 21:00.</p>
+      <a class="phone" href="tel:+79685143143">+7 968 514-31-43</a>
+      <div class="contacts">
+        <a class="call" href="tel:+79685143143">Позвонить</a>
+        <a class="link" href="https://wa.me/79685143143">WhatsApp</a>
+        <a class="link" href="https://t.me/+79685143143">Telegram</a>
+        <a class="link" href="https://max.ru/u/f9LHodD0cOIWkUNAJ1mRLsUiF_1emoxIJrFVRhLutlC-ywDzI4Ee2j8luOk">MAX</a>
+        <a class="link" href="http://vk.ru/migdent">ВКонтакте</a>
+      </div>
+
+      <div class="small-things">
+        <h3>Мелочи, которые замечают</h3>
+        <blockquote>
+          <p>«Администраторы напоминают о приёме, помогают с документами и всегда предлагают кофе.»</p>
+          <footer>настя снигирева, 2026</footer>
+        </blockquote>
+        <blockquote>
+          <p>«…очень понравилось, что в туалете в стаканчике стоят комплекты одноразовых щёток и пасты в пакетиках, очень удобно,не надо брать с собой свои.»</p>
+          <footer>Лена Ш, 2026</footer>
+        </blockquote>
+      </div>
+    </div>
+    <div class="map">
+      <a href="https://yandex.ru/maps/org/mig_dent/1703712128/">
+        <img src="map.png" width="650" height="450" loading="lazy" alt="Карта: MiG DENT на Красногорском бульваре, 50">
+        <span class="link">Открыть в Яндекс Картах</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>MiG DENT, стоматологическая клиника. Красногорск, Красногорский бульвар, 50.</p>
+    <p>Имеются противопоказания, необходима консультация специалиста.</p>
+    <p>Демо-страница. Сделал Дамир, Павшинская пойма · <span class="nw">+7 925 606-00-00</span> · t.me/youngdemiro</p>
+  </div>
+</footer>
+
+</body>
+</html>

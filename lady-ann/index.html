@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lady Ann, салон красоты на Красногорском бульваре, 46</title>
+<meta name="description" content="Салон красоты Lady Ann в Павшинской пойме: стрижки и окрашивание, маникюр и педикюр, косметолог, лазерная эпиляция. Красногорский бульвар, 46, каждый день 10:00–21:00.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F1F5F5;
+  --tint:#E2ECEC;
+  --ink:#122A2C;
+  --muted:#4A5F61;
+  --line:#BFD0D0;
+  --accent:#2AAFBE;
+  --display:"Yeseva One",Georgia,serif;
+  --text:"Ysabeau Office",system-ui,sans-serif;
+  --wrap:1240px;
+  --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.55 var(--text);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:normal;line-height:1.05;letter-spacing:0;overflow-wrap:anywhere;text-wrap:balance}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.nw{white-space:nowrap}
+
+/* шапка */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px;padding-bottom:16px;border-bottom:1px solid var(--line);font-size:16px}
+.top-place{color:var(--muted);white-space:nowrap}
+.top-tel{font-weight:600;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.top-tel:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* первый экран: арка в центре */
+.hero{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,3fr);grid-template-areas:"name arch act";gap:clamp(24px,3.5vw,52px);padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(40px,6vw,80px)}
+.hero-name{grid-area:name;align-self:start;padding-top:8px}
+.hero h1{font-size:clamp(60px,7.4vw,112px);line-height:1}
+.hero-lead{font-size:clamp(19px,1.6vw,22px);line-height:1.45;max-width:28ch;margin-top:24px}
+.hero-arch{grid-area:arch;margin:0}
+.hero-arch img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:62% 50%;border-radius:999px 999px 0 0}
+.hero-arch figcaption,.cap{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.4}
+.hero-act{grid-area:act;align-self:end;padding-bottom:34px}
+.hero-hours{font-size:17px}
+.hero-hours b{display:block;font-weight:600}
+.actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-top:22px}
+.call{display:inline-flex;flex-direction:column;background:var(--accent);color:var(--ink);text-decoration:none;padding:13px 22px 12px;border:1px solid var(--ink);transition:transform .2s ease,background-color .2s ease}
+.call b{font-family:var(--display);font-weight:normal;font-size:24px;line-height:1.1}
+.call span{font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;white-space:nowrap}
+.call:hover{background:#4FC0CC}
+.call:active{transform:translateY(1px)}
+.textlink{font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.textlink:hover{text-decoration-thickness:2px}
+
+/* оценка */
+.score{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.score .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;padding-top:16px;padding-bottom:16px}
+
+/* мастера */
+.sec{padding-top:clamp(56px,8vw,112px)}
+.sec h2{font-size:clamp(38px,5vw,68px)}
+.sec-lead{max-width:56ch;margin-top:16px;color:var(--muted)}
+.team{margin:clamp(28px,4vw,48px) 0 0}
+.team img{width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 40%}
+.roster{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(24px,5vw,72px);margin-top:clamp(32px,5vw,56px)}
+.group h3{font-family:var(--text);font-weight:600;font-size:16px;line-height:1.3;color:var(--muted);padding-bottom:10px}
+.group + .group{margin-top:40px}
+.person{border-top:1px solid var(--line);padding:16px 0 24px}
+.name{font-family:var(--display);font-size:clamp(34px,3.4vw,44px);line-height:1.05}
+.does{font-size:16px;color:var(--muted);margin-top:4px}
+.person blockquote{margin:12px 0 0;max-width:46ch}
+.who{display:block;font-size:15px;font-style:normal;color:var(--muted);margin-top:6px}
+.person figure{margin:18px 0 0}
+.person figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* работы */
+.works{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,clamp(240px,26vw,360px));gap:14px;margin-top:clamp(28px,4vw,48px)}
+.works figure{margin:0;display:flex;flex-direction:column;min-height:0}
+.works img{flex:1;min-height:0;width:100%;object-fit:cover}
+.works figcaption{font-size:15px;color:var(--muted);padding-top:8px}
+.w-a{grid-column:1/3;grid-row:1}
+.w-b{grid-column:3;grid-row:1/3}
+.w-c{grid-column:4;grid-row:1}
+.w-d{grid-column:1;grid-row:2}
+.w-e{grid-column:2;grid-row:2}
+.w-f{grid-column:4;grid-row:2}
+.w-a img{object-position:50% 45%}
+.w-b img{object-position:50% 70%}
+.w-d img{object-position:50% 30%}
+
+/* история */
+.story{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start;margin-top:clamp(28px,4vw,44px)}
+.story blockquote{margin:0}
+.story blockquote p{font-size:clamp(20px,2vw,26px);line-height:1.45}
+.story blockquote p + p{margin-top:14px}
+.story .who{font-size:16px;margin-top:20px}
+.story figure{margin:0}
+.story figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 50%}
+
+/* перед визитом */
+.visit{background:var(--tint);margin-top:clamp(56px,8vw,112px);padding:clamp(48px,7vw,96px) 0}
+.visit .sec{padding-top:0}
+.visit-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);margin-top:clamp(28px,4vw,48px);align-items:start}
+.visit-grid > figure{margin:0}
+.visit-grid > figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 50%}
+.facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 36px;margin:0}
+.facts div{border-top:1px solid var(--line);padding-top:12px}
+.facts dt{font-weight:600}
+.facts dd{margin:4px 0 0;color:var(--muted);font-size:17px}
+.facts .q{color:var(--ink)}
+
+/* цены */
+.prices{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:start}
+.prices table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.prices td{padding:14px 0;border-top:1px solid var(--line);vertical-align:baseline}
+.prices tr:last-child td{border-bottom:1px solid var(--line)}
+.prices td + td{text-align:right;white-space:nowrap;padding-left:16px;font-weight:600}
+.note{font-size:15px;color:var(--muted);margin-top:12px}
+
+/* контакты */
+.where{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);margin-top:clamp(28px,4vw,48px);align-items:start}
+.where dl{margin:0}
+.where dl div{padding:14px 0;border-top:1px solid var(--line)}
+.where dt{font-size:15px;color:var(--muted)}
+.where dd{margin:4px 0 0}
+.msgs{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:4px}
+.where .call{margin-top:26px}
+.map{display:block;text-decoration:none}
+.map img{width:100%;aspect-ratio:650/450;object-fit:cover;border:1px solid var(--line)}
+.map span{display:inline-block;margin-top:12px;font-weight:600;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.map:hover span{text-decoration-thickness:2px}
+
+footer{margin-top:clamp(64px,9vw,120px);border-top:1px solid var(--line)}
+footer .wrap{padding-top:22px;padding-bottom:28px;font-size:14px;color:var(--muted)}
+footer a{text-decoration:none}
+
+@media (max-width:1000px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"name arch" "act arch"}
+  .hero-act{align-self:start;padding-bottom:0}
+}
+@media (max-width:900px){
+  .story,.visit-grid,.prices,.where{grid-template-columns:minmax(0,1fr)}
+  .roster{grid-template-columns:minmax(0,1fr)}
+  .roster > div:nth-child(2){margin-top:40px}
+  .visit-grid > figure img,.story figure img{aspect-ratio:4/3}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .top{padding-top:13px;padding-bottom:13px;font-size:15px}
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"name" "act" "arch";padding-top:22px;gap:22px}
+  .hero-name{padding-top:0}
+  .hero-hours b{display:inline;font-weight:600}
+  .hero h1{font-size:clamp(56px,17vw,72px)}
+  .hero-lead{margin-top:14px}
+  .actions{flex-direction:row;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:16px}
+  .hero-arch img{aspect-ratio:4/5}
+  .works{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}
+  .works figure{grid-column:auto;grid-row:auto}
+  .works img{flex:none;aspect-ratio:1/1}
+  .w-a,.w-f{grid-column:1/-1 !important}
+  .w-a img,.w-f img{aspect-ratio:4/3}
+  .team img{aspect-ratio:4/3}
+  .facts{grid-template-columns:minmax(0,1fr);gap:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <span class="top-place">Красногорский бульвар, 46</span>
+  <a class="top-tel" href="tel:+79684370754">+7 968 437-07-54</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div class="hero-name">
+    <h1>Lady Ann</h1>
+    <p class="hero-lead">Стрижки и окрашивание, маникюр и педикюр, косметолог и лазерная эпиляция в Павшинской пойме.</p>
+  </div>
+  <figure class="hero-arch">
+    <img src="hero.jpg" width="1280" height="857" alt="Вход в салон Lady Ann: голубая арка из цветов, над дверью вывеска «Центр красоты»">
+    <figcaption>Вход с улицы, под голубой аркой из цветов. Рядом пандус.</figcaption>
+  </figure>
+  <div class="hero-act">
+    <p class="hero-hours"><b>Каждый день</b> <span class="nw">10:00–21:00</span></p>
+    <div class="actions">
+      <a class="call" href="tel:+79684370754"><b>Позвонить</b><span>+7 968 437-07-54</span></a>
+      <a class="textlink" href="https://wa.me/79011835198">Написать в WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="score" aria-label="Оценка на Яндекс Картах">
+  <div class="wrap">
+    <p>4,9 на Яндекс Картах, 424 оценки.</p>
+    <a class="textlink" href="https://yandex.ru/maps/org/lady_ann/1369635993/reviews/">Все отзывы на Яндексе</a>
+  </div>
+</section>
+
+<section class="wrap sec" id="masters">
+  <h2>К кому записаться</h2>
+  <p class="sec-lead">При записи скажите, к кому хотите.</p>
+  <figure class="team">
+    <img src="photo-1.jpg" width="1280" height="857" loading="lazy" alt="Пятеро сотрудников салона в бирюзовой форме в холле у арки">
+    <figcaption class="cap">Часть команды в холле салона.</figcaption>
+  </figure>
+
+  <div class="roster">
+    <div class="group">
+      <h3>Волосы</h3>
+      <article class="person">
+        <div class="name">Севак</div>
+        <p class="does">Стрижка, укладка, окрашивание</p>
+        <blockquote><p>«К нему хожу уже больше 5 лет…»</p><cite class="who">Тамара П</cite></blockquote>
+      </article>
+      <article class="person">
+        <div class="name">Иветта</div>
+        <p class="does">Стрижка, окрашивание, биозавивка</p>
+        <blockquote><p>«Делала ее впервые, очень хотелось супер натурального эффекта, так и случилось.»</p><cite class="who">Татьяна Г., о биозавивке</cite></blockquote>
+        <figure>
+          <img src="photo-3.jpg" width="1000" height="1000" loading="lazy" alt="Длинные прямые волосы до и после биозавивки, мягкие локоны">
+          <figcaption class="cap">Биозавивка, до и после.</figcaption>
+        </figure>
+      </article>
+      <article class="person">
+        <div class="name">Мари</div>
+        <p class="does">Стрижка, окрашивание, укладка</p>
+        <blockquote><p>«…за 40 минут из моих длинных волос сделала прекрасное карэ»</p><cite class="who">Алёна</cite></blockquote>
+      </article>
+    </div>
+
+    <div>
+      <div class="group">
+        <h3>Ногти</h3>
+        <article class="person">
+          <div class="name">Рузанна</div>
+          <p class="does">Маникюр, педикюр, смарт-педикюр</p>
+          <blockquote><p>«Хожу к Рузанне десятый год, лучше нее никто не делает ногти, качественно и быстро…»</p><cite class="who">Ольга Недосекина</cite></blockquote>
+        </article>
+        <article class="person">
+          <div class="name">Ника</div>
+          <p class="does">Маникюр и педикюр</p>
+          <blockquote><p>«…замечательный,качественный, модный маникюр и педикюр.»</p><cite class="who">Anna T.</cite></blockquote>
+        </article>
+      </div>
+      <div class="group">
+        <h3>Лицо, ресницы, лазер</h3>
+        <article class="person">
+          <div class="name">Ани</div>
+          <p class="does">Косметолог</p>
+          <blockquote><p>«Ани настоящий специалист, которому не страшно доверить свое лицо.»</p><cite class="who">Валентина Андреевская</cite></blockquote>
+        </article>
+        <article class="person">
+          <div class="name">Мери</div>
+          <p class="does">Ламинирование ресниц, брови, чистка лица, лазерная эпиляция</p>
+          <blockquote><p>«Таких идеальных ресниц мне не делал никто!»</p><cite class="who">Наташа Федорова</cite></blockquote>
+        </article>
+      </div>
+      <div class="group">
+        <h3>Перманентный макияж</h3>
+        <article class="person">
+          <div class="name">Светлана</div>
+          <p class="does">Перманент и его коррекция</p>
+          <blockquote><p>«Светлана сделала все очень качественно и безболезненно…»</p><cite class="who">Дарья, о коррекции перманента губ</cite></blockquote>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" id="works">
+  <h2>Работы мастеров</h2>
+  <div class="works">
+    <figure class="w-a"><img src="photo-8.jpg" width="1280" height="857" loading="lazy" alt="Косметолог в бирюзовой форме проводит лазерную эпиляцию ног, клиентка в защитных очках"><figcaption>Лазерная эпиляция</figcaption></figure>
+    <figure class="w-b"><img src="photo-4.jpg" width="720" height="1280" loading="lazy" alt="Каре с мягким мелированием, вид сзади"><figcaption>Каре</figcaption></figure>
+    <figure class="w-c"><img src="photo-5.jpg" width="1000" height="1000" loading="lazy" alt="Светлый холодный блонд на длинных прямых волосах, клиентка в накидке"><figcaption>Блонд</figcaption></figure>
+    <figure class="w-d"><img src="photo-9.jpg" width="625" height="665" loading="lazy" alt="Косметолог в маске делает процедуру для лица, клиентка лежит на кушетке"><figcaption>Уход за лицом</figcaption></figure>
+    <figure class="w-e"><img src="photo-6.jpg" width="720" height="1280" loading="lazy" alt="Маникюр с красным покрытием над маникюрным столом"><figcaption>Маникюр</figcaption></figure>
+    <figure class="w-f"><img src="photo-7.jpg" width="1000" height="1000" loading="lazy" alt="Педикюр с красным покрытием"><figcaption>Педикюр</figcaption></figure>
+  </div>
+</section>
+
+<section class="wrap sec" id="story">
+  <h2>Перманент у Светланы, потом окрашивание у Севака</h2>
+  <div class="story">
+    <blockquote>
+      <p>«Пришла утром в салон на коррекцию перманента губ… в разговоре сказала что хочу обновить стрижку, она порекомендовала топ мастера - стилиста Севака.</p>
+      <p>Записалась сразу же и через час пришла за каре. Севак отговорил от короткой стрижки. Обсудили цветотипы и как подходит цвет и стрижка человеку. Сделали сложное окрашивание на месте…»</p>
+      <cite class="who">Дарья, сентябрь 2026</cite>
+    </blockquote>
+    <figure>
+      <img src="photo-10.jpg" width="1280" height="857" loading="lazy" alt="Парикмахер в чёрном фартуке делает окрашивание с фольгой в зале для волос">
+      <figcaption class="cap">Зал для волос, окрашивание с фольгой.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="visit">
+  <section class="wrap sec" id="visit">
+    <h2>Перед первым визитом</h2>
+    <div class="visit-grid">
+      <figure>
+        <img src="photo-2.jpg" width="1280" height="857" loading="lazy" alt="Маникюрный зал: белые столы, бирюзовые бархатные кресла, арка в холл">
+        <figcaption class="cap">Маникюрный зал. Через арку виден холл и вход.</figcaption>
+      </figure>
+      <dl class="facts">
+        <div><dt>Запись</dt><dd>По телефону или в WhatsApp. <span class="q">«Удобно, что записаться, задать любой вопрос можно в вотсап, отвечают мгновенно, напоминают про запись.»</span> Emilina Karpenkova</dd></div>
+        <div><dt>Педикюр в массажном кресле</dt><dd><span class="q">«Смарт педикюр делали в массажном кресле, и я расслабилась так, как после комплекса процедур…»</span> Мария Львовна</dd></div>
+        <div><dt>Чай и кофе</dt><dd><span class="q">«Вам всегда предложат чай/кофе.»</span> Emilina Karpenkova</dd></div>
+        <div><dt>Пандус</dt><dd>Вход с улицы, пандус, туалет для людей на коляске. Есть парковка и велопарковка.</dd></div>
+        <div><dt>С собакой</dt><dd>Можно, если собака ростом до 35&nbsp;см.</dd></div>
+        <div><dt>Детям</dt><dd>Детские стрижки и маникюр, прокол ушей.</dd></div>
+        <div><dt>Мужчинам</dt><dd>Стрижки, маникюр и педикюр.</dd></div>
+        <div><dt>Оплата</dt><dd>Наличные, карта, СБП. Есть подарочные сертификаты.</dd></div>
+      </dl>
+    </div>
+  </section>
+</div>
+
+<section class="wrap sec prices" id="prices">
+  <div>
+    <h2>Цены</h2>
+    <p class="note">Точную цену назовём при записи.</p>
+  </div>
+  <table>
+    <tr><td>Женская стрижка</td><td>1200–2000 ₽</td></tr>
+    <tr><td>Мужская стрижка</td><td>800–1500 ₽</td></tr>
+    <tr><td>Классический маникюр с покрытием</td><td>800–2200 ₽</td></tr>
+    <tr><td>Комбинированный маникюр</td><td>1900–2200 ₽</td></tr>
+  </table>
+</section>
+
+<section class="wrap sec" id="contacts">
+  <h2>Адрес и часы</h2>
+  <div class="where">
+    <div>
+      <dl>
+        <div><dt>Адрес</dt><dd>Красногорск, Красногорский бульвар, 46. Вход с улицы под голубой цветочной аркой, над дверью вывеска «Центр красоты».</dd></div>
+        <div><dt>Часы</dt><dd>Каждый день <span class="nw">10:00–21:00</span></dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79684370754">+7 968 437-07-54</a></dd></div>
+        <div><dt>Написать</dt><dd class="msgs">
+          <a class="textlink" href="https://wa.me/79011835198">WhatsApp</a>
+          <a class="textlink" href="https://max.ru/u/f9LHodD0cOLonMGsJWSwNgWRvjnYqbsvrT906G0Fgwm33aEYT9iObGnTbJE">MAX</a>
+          <a class="textlink" href="https://viber.click/79011835198">Viber</a>
+          <a class="textlink" href="https://vk.ru/club227376078">ВКонтакте</a>
+        </dd></div>
+      </dl>
+      <a class="call" href="tel:+79684370754"><b>Позвонить</b><span>+7 968 437-07-54</span></a>
+    </div>
+    <a class="map" href="https://yandex.ru/maps/org/lady_ann/1369635993/">
+      <img src="map.png" width="650" height="450" loading="lazy" alt="Карта: салон Lady Ann на Красногорском бульваре, 46">
+      <span>Открыть в Яндекс Картах</span>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Демо-страница. Сделал Дамир, Павшинская пойма · <a href="tel:+79256060000">+7 925 606-00-00</a> · <a href="https://t.me/youngdemiro">t.me/youngdemiro</a></div>
+</footer>
+
+</body>
+</html>

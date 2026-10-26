@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>На Окраине, барбершоп на Красногорском бульваре, 25</title>
+<meta name="description" content="Барбершоп и парикмахерская «На Окраине» в Павшинской пойме. Красногорский бульвар, 25. Каждый день с 10:00 до 22:00. +7 999 556-75-46">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F1F1EE;
+  --ink:#2A2A2A;
+  --ink-2:#55554F;
+  --rule:#C4C4BD;
+  --accent:#973238;
+  --accent-dark:#7E2A2F;
+  --display:'Play','Arial Narrow',sans-serif;
+  --text:'Manrope',system-ui,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--text);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{margin:0}
+blockquote{margin:0}
+cite{font-style:normal}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gut)}
+main section.wrap{margin-top:clamp(72px,9vw,128px)}
+
+h2{margin:0 0 26px;font:700 clamp(28px,3.6vw,44px)/1.15 var(--display);overflow-wrap:anywhere;text-wrap:balance}
+/* табличка, как плашка на логотипе: только в двух местах */
+.plate-h{font-size:clamp(30px,4.4vw,50px);text-transform:uppercase;line-height:1.24}
+.plate-h span{background:var(--ink);color:var(--bg);padding:.02em .22em .08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:56px;padding:0 26px;font:600 17px/1.2 var(--text);text-decoration:none;border:1px solid var(--ink);white-space:nowrap;transition:background-color .2s,color .2s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.btn-call{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-call:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn-call b{font-weight:500;opacity:.9}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;width:100%}
+@media (max-width:767px){.actions .btn{width:100%}}
+
+.who{display:block;margin-top:8px;font-size:14px;color:var(--ink-2)}
+
+/* первый экран */
+.hero{display:grid;grid-template-columns:1fr;gap:28px;padding:20px var(--gut) 0}
+.hero-text{display:flex;flex-direction:column;align-items:flex-start}
+.hero h1{margin:0 0 22px;width:100%;max-width:620px}
+.hero h1 img{width:100%}
+.lead{font-size:clamp(18px,1.6vw,21px);line-height:1.45;max-width:30ch}
+.hours{margin-top:10px;font-size:clamp(18px,1.6vw,21px);font-weight:600}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 50%}
+@media (min-width:900px){
+  .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:stretch;padding:28px var(--gut) 0}
+  .hero-text{justify-content:center;padding:24px 0 40px}
+  .hero-photo img{aspect-ratio:auto;height:clamp(560px,calc(100dvh - 56px),860px)}
+}
+
+/* постоянные и мастера одним журналом */
+.rating{font-size:clamp(18px,1.6vw,21px);max-width:46ch}
+.note{margin-top:6px;max-width:52ch;font-size:clamp(18px,1.6vw,21px)}
+.pull{margin:44px 0 0;padding:28px 0 0;border-top:1px solid var(--ink);max-width:1000px}
+.pull p{font:700 clamp(25px,3.4vw,40px)/1.2 var(--display);text-wrap:balance}
+.journal{margin:44px 0 0;padding:0;list-style:none}
+.journal li{display:grid;grid-template-columns:1fr;gap:6px 40px;padding:22px 0 24px;border-top:1px solid var(--rule)}
+.journal .tag{font:400 clamp(20px,2vw,24px)/1.2 var(--display)}
+.journal .tag b{font-weight:700}
+.journal blockquote p{max-width:60ch}
+@media (min-width:768px){.journal li{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}}
+
+/* фото работ */
+.works{display:grid;grid-template-columns:1fr;gap:14px}
+.works figure{margin:0}
+.works img{width:100%;object-fit:cover}
+.w1 img{aspect-ratio:1170/1148}
+.w2 img,.w3 img{aspect-ratio:4/5}
+@media (min-width:768px){
+  .works{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:16px}
+  .works img,.w1 img,.w3 img{height:clamp(420px,48vw,680px);aspect-ratio:auto}
+}
+.src{margin-top:14px;font-size:14px;color:var(--ink-2)}
+
+/* дети */
+.kids{display:grid;grid-template-columns:1fr;gap:34px}
+.kids .big p{font:400 clamp(23px,2.8vw,34px)/1.3 var(--display);text-wrap:balance}
+.kids .small{display:grid;gap:26px;align-content:start}
+.kids .small blockquote{padding-top:18px;border-top:1px solid var(--rule)}
+@media (min-width:900px){.kids{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px}}
+
+/* перед визитом */
+.facts{margin:0;display:grid;grid-template-columns:1fr;gap:0 48px;border-top:1px solid var(--ink)}
+.facts div{padding:18px 0 20px;border-bottom:1px solid var(--rule)}
+.facts dt{font:700 21px/1.2 var(--display);margin-bottom:6px}
+.facts dd{margin:0;max-width:52ch}
+@media (min-width:768px){.facts{grid-template-columns:1fr 1fr}}
+
+/* адрес */
+.where{display:grid;grid-template-columns:1fr;gap:32px}
+.addr{font-size:clamp(19px,1.7vw,22px);font-weight:600;line-height:1.4}
+.where .block{margin-top:18px;max-width:46ch}
+.where .label{display:block;font-weight:600}
+.tel{display:inline-block;font:700 clamp(26px,2.8vw,32px)/1.1 var(--display);text-decoration:none}
+.tel:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.map a{display:block;text-decoration:none}
+.map img{width:100%;aspect-ratio:650/450;object-fit:cover;border:1px solid var(--ink)}
+.map span{display:inline-block;margin-top:12px;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+@media (min-width:900px){.where{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}}
+
+footer{margin-top:clamp(72px,9vw,120px);padding:22px 0 28px;border-top:1px solid var(--ink);font-size:13px;color:var(--ink-2)}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.nw{white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="wrap hero">
+  <div class="hero-text">
+    <h1><img src="logo.png" width="1264" height="540" alt="На Окраине"></h1>
+    <p class="lead">Барбершоп и парикмахерская в Павшинской пойме. Красногорский бульвар, 25, вход с улицы.</p>
+    <p class="hours">Каждый день с 10:00 до 22:00</p>
+    <div class="actions">
+      <a class="btn btn-call" href="tel:+79995567546">Позвонить <b>+7 999 556-75-46</b></a>
+      <a class="btn btn-line" href="https://n192166.yclients.ru/" target="_blank" rel="noopener">Записаться онлайн</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="hero.jpg" width="867" height="1044" alt="Мужчина после стрижки: короткий переход на висках и оформленная борода, вид в профиль">
+  </div>
+</header>
+
+<main>
+
+<section class="wrap" aria-labelledby="h-regulars">
+  <h2 class="plate-h" id="h-regulars"><span>Сюда ходят годами</span></h2>
+  <p class="rating">5,0 на Яндекс Картах, 362 оценки.</p>
+  <p class="note">Мастера: Алексей, Артём, Виктор, Виталий. Кто сегодня на смене, скажем по телефону.</p>
+
+  <blockquote class="pull">
+    <p>«…после нескольких раз принимают тебя не как клиента, а хорошего друга»</p>
+    <cite class="who">Захар К., март 2024</cite>
+  </blockquote>
+
+  <ol class="journal">
+    <li>
+      <span class="tag"><b>Алексей</b></span>
+      <blockquote><p>«Алексей, спасибо за топовую стрижку! Попал в десятку с первого раза. Теперь только к тебе»</p><cite class="who">Александр З., апрель 2026</cite></blockquote>
+    </li>
+    <li>
+      <span class="tag">3 года</span>
+      <blockquote><p>«За те 3 года, которые я являюсь клиентом этого барбершопа, осечек не было.»</p><cite class="who">Георгий Ц., ноябрь 2024</cite></blockquote>
+    </li>
+    <li>
+      <span class="tag"><b>Артём</b>, 3 года</span>
+      <blockquote><p>«Советую мастера - Артем! Посоветует и все сделает на высшем уровне! Хожу уж на протяжении 3 лет»</p><cite class="who">Евгений Кутин, март 2026</cite></blockquote>
+    </li>
+    <li>
+      <span class="tag"><b>Виталий</b></span>
+      <blockquote><p>«Все сделал качественно, провел отличную консультацию и понял задумку.»</p><cite class="who">Никита Здобин, август 2026</cite></blockquote>
+    </li>
+    <li>
+      <span class="tag"><b>Виктор</b></span>
+      <blockquote><p>«…мастера замечательные, сыну понравилось. Мастер Виктор супер!!!»</p><cite class="who">Анастасия Кислякова, апрель 2026</cite></blockquote>
+    </li>
+    <li>
+      <span class="tag">Полтора года, с двумя сыновьями</span>
+      <blockquote><p>«Ходим сюда стричься с двумя сыновьями ежемесячно в течении полутора лет. Всегда быстрые и качественные стрижки.»</p><cite class="who">Евгений Н., октябрь 2024</cite></blockquote>
+    </li>
+  </ol>
+</section>
+
+<section class="wrap" aria-labelledby="h-works">
+  <h2 id="h-works">Как стрижём</h2>
+  <div class="works">
+    <figure class="w1">
+      <img src="photo-1.jpg" width="1170" height="1148" alt="Одна и та же стрижка: сверху до, снизу после, анфас и в профиль">
+    </figure>
+    <figure class="w3">
+      <img src="photo-3.jpg" width="747" height="928" alt="Короткая стрижка с чёткой линией и высоко выбритым затылком, вид сзади сбоку">
+    </figure>
+  </div>
+  <p class="src">На первом фото: сверху до, снизу после.</p>
+</section>
+
+<section class="wrap" aria-labelledby="h-kids">
+  <h2 id="h-kids">Стрижём детей и дедушек</h2>
+  <div class="kids">
+    <blockquote class="big">
+      <p>«Ребенку 3,5 года. … Пообщался с юным посетителем, задавал вопросы, разговаривал с ним. Как со взрослым. Стрижку сделал очень классную.»</p>
+      <cite class="who">Татьяна Бруни, декабрь 2024</cite>
+    </blockquote>
+    <div class="small">
+      <blockquote><p>«Барбер Артем - прекрасный специалист, ребенка стригу только у него, тк он отлично ладит с детьми…»</p><cite class="who">Кристина Денисова, май 2026</cite></blockquote>
+      <blockquote><p>«…дедушка прям почувствовал, что помолодел и сиял весь день.»</p><cite class="who">Алина Н., май 2023</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-visit">
+  <h2 id="h-visit">Перед визитом</h2>
+  <dl class="facts">
+    <div>
+      <dt>Можно с собакой</dt>
+      <dd>Приходите с собакой или другим питомцем, пустим.</dd>
+    </div>
+    <div>
+      <dt>Подъехать</dt>
+      <dd>Вход с улицы. Есть парковка, место для людей с инвалидностью, пандус и велопарковка.</dd>
+    </div>
+    <div>
+      <dt>Оплата</dt>
+      <dd>Картой или наличными. Есть подарочный сертификат и льготная стрижка, условия расскажем по телефону.</dd>
+    </div>
+    <div>
+      <dt>Пока ждёте</dt>
+      <dd>Wi-Fi, чай и кофе. «Очень приятный салон, хорошая атмосфера, чай, кофе все как положено» <cite class="who">Mikael Mikael, март 2025</cite></dd>
+    </div>
+    <div>
+      <dt>Уход за бородой</dt>
+      <dd>«Посоветовали как ухаживать за бородой.» <cite class="who">Роман, март 2023</cite></dd>
+    </div>
+    <div>
+      <dt>Онлайн-запись</dt>
+      <dd>Если неудобно звонить, можно <a href="https://n192166.yclients.ru/" target="_blank" rel="noopener">записаться онлайн</a>.</dd>
+    </div>
+  </dl>
+</section>
+
+<section class="wrap" aria-labelledby="h-where">
+  <h2 class="plate-h" id="h-where"><span>Адрес и часы</span></h2>
+  <div class="where">
+    <div>
+      <p class="addr">Красногорский бульвар, 25, вход с улицы. Павшинская пойма, Красногорск.</p>
+      <p class="block">Остановка «Красногорский бульвар» в 126&nbsp;м, «Таможня» в 190&nbsp;м, до метро «Волоколамская» 1,6&nbsp;км.</p>
+      <p class="block"><span class="label">Каждый день с 10:00 до 22:00</span></p>
+      <p class="block"><a class="tel" href="tel:+79995567546">+7 999 556-75-46</a></p>
+      <div class="actions">
+        <a class="btn btn-call" href="tel:+79995567546">Позвонить</a>
+        <a class="btn btn-line" href="https://n192166.yclients.ru/" target="_blank" rel="noopener">Записаться онлайн</a>
+      </div>
+    </div>
+    <div class="map">
+      <a href="https://yandex.ru/maps/org/na_okraine/153810363692/" target="_blank" rel="noopener">
+        <img src="map.png" width="650" height="450" alt="Карта: Красногорский бульвар, 25, Павшинская пойма">
+        <span>Открыть в Яндекс Картах</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Демо-страница. Сделал Дамир, Павшинская пойма · <span class="nw">+7 925 606-00-00</span> · <a href="https://t.me/youngdemiro">t.me/youngdemiro</a></div>
+</footer>
+
+</body>
+</html>
