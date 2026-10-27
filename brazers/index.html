@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Бразерс, бар в ЖК АРТ на Авангардной, 3</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:dark;--bg:#14110F;--bg2:#1C1916;--ink:#F2ECE3;--mute:#A79E92;--line:rgba(242,236,227,.16);--acc:#D9A441;--dark:#14110F}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:400 16px/1.55 'Golos Text',sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1320px;margin:0 auto;padding:0 16px}
+h2{font:400 clamp(32px,8.4vw,64px)/1.04 'Dela Gothic One',sans-serif;margin:0;overflow-wrap:anywhere;text-wrap:balance}
+.sec{padding:72px 0}
+.call{display:inline-block;background:var(--acc);color:var(--dark);font-weight:700;padding:10px 18px;border-radius:2px;transition:transform .2s,background .2s}
+.call:hover{transform:translateY(-1px);background:#E5B556}
+.call:active{transform:translateY(1px)}
+.call:focus-visible,.ln:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.ln{border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s}
+.ln:hover{border-color:var(--acc)}
+
+/* шапка */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .bros{height:38px;width:auto}
+.brand .word{height:19px;width:auto}
+.nav{display:flex;align-items:center;gap:22px;font-weight:500;font-size:15px}
+.nav a:not(.call){display:none}
+.nav a:not(.call):hover{color:var(--acc)}
+
+/* первый экран */
+.hero{display:grid;gap:34px;padding-top:30px}
+h1{font:400 clamp(44px,12.5vw,104px)/1.02 'Dela Gothic One',sans-serif;margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+h1 span{background:var(--acc);color:var(--dark);padding:.02em .16em .1em}
+h1 span:nth-child(1){transform:rotate(-2deg)}
+h1 span:nth-child(2){transform:rotate(1deg);margin-left:.4em}
+h1 span:nth-child(3){transform:rotate(-1deg)}
+.lead{font-size:18px;line-height:1.45;max-width:30ch;margin:22px 0 0;text-wrap:pretty}
+.acts{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;margin-top:24px}
+.acts .call{font-size:17px;padding:14px 26px}
+.stack{position:relative;height:470px;max-width:600px;width:100%;justify-self:center}
+.pol{margin:0;position:absolute;background:#F4F1EA;padding:10px 10px 44px;width:54%;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.pol img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.pol.p1{left:0;top:4%;transform:rotate(-8deg)}
+.pol.p2{right:0;top:0;transform:rotate(5deg)}
+.pol.p3{left:17%;top:33%;transform:rotate(-2deg)}
+.quote{border-top:1px solid var(--line);margin-top:36px;padding:20px 0 22px;display:grid;gap:10px}
+.quote p{margin:0;font-size:17px;max-width:62ch}
+.quote small,.who{color:var(--mute);font-size:14px}
+
+/* табло */
+.week{background:var(--acc);color:var(--dark)}
+.week .wrap{display:grid;gap:28px}
+.week .note{margin:0;font-size:17px;max-width:34ch}
+.week .note a{border-bottom:1px solid var(--dark)}
+.board{background:#0C0B0A;color:var(--ink);padding:8px;border-radius:3px}
+.board .head{display:flex;justify-content:space-between;gap:12px;padding:6px 8px 12px;font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.14em}
+.row{display:grid;grid-template-columns:5.6em 1fr;gap:4px;margin-top:4px}
+.row > *{background:#171513;padding:10px 12px;min-width:0}
+.row > .day{padding:10px 6px}
+.day{font:400 16px/1 'Dela Gothic One',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;text-transform:uppercase}
+.day small{font:500 12px/1.2 'Golos Text',sans-serif;color:var(--mute);margin-top:4px;text-transform:none}
+.what{display:grid;gap:4px}
+.what b{font:400 19px/1.15 'Dela Gothic One',sans-serif;text-transform:uppercase}
+.what i{font-style:normal;font-weight:700;font-size:17px;color:var(--acc)}
+
+/* матчи */
+.match .wrap{display:grid;gap:28px}
+.match figure{margin:0}
+.match figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.match .txt p{margin:18px 0 0;max-width:46ch;font-size:17px}
+.evenings{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line)}
+.evenings li{display:grid;grid-template-columns:8.5em 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.evenings span{color:var(--mute)}
+
+/* кухня */
+.food{background:var(--bg2)}
+.food .shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.food .shots img{width:100%;object-fit:cover;aspect-ratio:4/5}
+.food .shots img:first-child{grid-column:1/-1;aspect-ratio:3/2}
+.menu{display:grid;gap:0 40px;margin-top:8px}
+.menu h3{font:500 13px/1.3 'Golos Text',sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--mute);margin:26px 0 6px}
+.menu ul{list-style:none;margin:0;padding:0}
+.menu li{display:flex;align-items:baseline;gap:8px;padding:7px 0;font-size:17px}
+.menu li span{white-space:nowrap}
+.menu li::after{content:"";order:2;flex:1;border-bottom:1px dotted rgba(242,236,227,.35);transform:translateY(-4px)}
+.menu li b{order:3;font-weight:500;white-space:nowrap}
+.food .src{margin:22px 0 0;color:var(--mute);font-size:14px}
+
+/* наследие HOT POINT */
+.past .wrap{display:grid;gap:34px}
+.past .txt p{margin:18px 0 0;max-width:44ch;font-size:17px}
+.pair{position:relative;height:370px;max-width:560px;width:100%;justify-self:center}
+.pair .pol{width:58%}
+.pair .q1{left:0;top:0;transform:rotate(-4deg)}
+.pair .q2{right:0;top:22%;transform:rotate(4deg)}
+.pair .pol img{aspect-ratio:1}
+.said{display:grid;gap:22px;margin-top:28px}
+.said blockquote{margin:0;border-left:1px solid var(--line);padding-left:16px}
+.said p{margin:0 0 6px;font-size:18px;line-height:1.4}
+
+/* отзывы о баре */
+.reviews .list{display:grid;gap:0;margin-top:30px;border-top:1px solid var(--line)}
+.reviews blockquote{margin:0;padding:24px 0;border-bottom:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.reviews blockquote p{margin:0;font-size:clamp(19px,4.6vw,26px);line-height:1.3;max-width:40ch}
+
+/* праздники */
+.party .wrap{display:grid;gap:28px}
+.party img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.party .txt p{margin:18px 0 22px;max-width:40ch;font-size:17px}
+
+/* контакты */
+.contacts .wrap{display:grid;gap:30px}
+.facts{margin:26px 0 0;display:grid;border-top:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:7em 1fr;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+.facts dt{color:var(--mute)}
+.facts dd{margin:0}
+.map{display:grid;gap:12px}
+.map img{width:100%;border:1px solid var(--line)}
+.pin{position:relative}
+.pin span{position:absolute;right:52%;top:36%;background:var(--acc);color:var(--dark);font:400 clamp(13px,2.4vw,17px)/1 'Dela Gothic One',sans-serif;padding:5px 8px 6px;transform:rotate(-2deg)}
+
+/* финал */
+.end{padding:70px 16px 40px;text-align:center}
+.end img{width:min(70vw,360px);margin:0 auto 26px}
+.end p{font:400 clamp(24px,6.4vw,56px)/1.12 'Dela Gothic One',sans-serif;margin:0 auto;max-width:18ch;text-wrap:balance}
+footer{border-top:1px solid var(--line);padding:22px 16px 30px;text-align:center;color:var(--mute);font-size:13px}
+
+@media (min-width:440px) and (max-width:899px){
+ .stack{height:auto;aspect-ratio:5/6}
+ .pair{height:auto;aspect-ratio:10/9}
+}
+@media (min-width:900px){
+ .wrap{padding:0 40px}
+ .top{padding:18px 40px}
+ .brand .word{height:22px}
+ .nav a:not(.call){display:inline}
+ .sec{padding:110px 0}
+ .hero{grid-template-columns:1.1fr 1fr;align-items:center;padding-top:48px;min-height:calc(100dvh - 190px)}
+ .stack{height:640px}
+ .quote{grid-template-columns:1fr auto;align-items:baseline;margin-top:40px}
+ .week .wrap{grid-template-columns:.8fr 1.4fr;align-items:start;gap:56px}
+ .row{grid-template-columns:6.8em 1.25fr 1fr}
+ .what{display:contents}
+ .what b,.what i{background:#171513;padding:16px 18px;display:flex;align-items:center}
+ .what b{font-size:22px}
+ .what i{font-size:19px}
+ .day{font-size:22px}
+ .match .wrap{grid-template-columns:1.3fr 1fr;align-items:center;gap:56px}
+ .food .shots{grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:36px}
+ .food .shots img:first-child{grid-column:auto;aspect-ratio:4/5}
+ .menu{grid-template-columns:repeat(4,1fr);margin-top:20px}
+ .past .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:56px}
+ .pair{height:560px}
+ .reviews .list{grid-template-columns:1fr 1fr;column-gap:56px}
+ .party .wrap{grid-template-columns:1fr 1.2fr;align-items:center;gap:56px}
+ .party img{aspect-ratio:1}
+ .addr{font-size:clamp(32px,4.4vw,56px)}
+ .contacts .wrap{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+}
+</style>
+</head>
+<body>
+<header class="top">
+ <a class="brand" href="#"><img class="bros" src="bros-w.svg" alt=""><img class="word" src="word-w.svg" alt="Бразерс"></a>
+ <nav class="nav">
+  <a href="#menu">Меню</a>
+  <a href="#match">Матчи</a>
+  <a href="https://t.me/BrazersBar">Telegram</a>
+  <a class="call" href="tel:+79639769777">Позвонить</a>
+ </nav>
+</header>
+
+<main>
+<section class="wrap">
+ <div class="hero">
+  <div>
+   <h1><span>Кухня,</span><span>дружба,</span><span>бар.</span></h1>
+   <p class="lead">Бар в ЖК АРТ, Авангардная, 3. Футбол на трёх экранах, бургеры, буузы, настойки. Каждый день с&nbsp;14:00 до&nbsp;02:00.</p>
+   <div class="acts">
+    <a class="call" href="tel:+79639769777">Позвонить</a>
+    <a class="ln" href="tel:+79639769777">+7 963 976-97-77</a>
+   </div>
+  </div>
+  <div class="stack">
+   <figure class="pol p1"><img src="photo-bar.jpg" alt="Полки бара с бутылками"></figure>
+   <figure class="pol p2"><img src="photo-guests.jpg" alt="Гости в футболке Бразерс показывают козу"></figure>
+   <figure class="pol p3"><img src="photo-team.jpg" alt="Компания за столом у барной стойки"></figure>
+  </div>
+ </div>
+ <div class="quote">
+  <p>«Бар полностью обновился. Отличная еда, приятная атмосфера, ТОПовые настоечки по 250…» <small>Ксения Тарасова</small></p>
+  <small>4,9 на Яндекс Картах, 220 оценок</small>
+ </div>
+</section>
+
+<section class="week sec" id="week">
+ <div class="wrap">
+  <div>
+   <h2>Неделя в баре</h2>
+   <p class="note" style="margin-top:18px">Акции и матчи объявляем в <a href="https://t.me/BrazersBarChannel">телеграм-канале</a>. Стол можно забронировать через <a href="https://t.me/BrazersBar">@BrazersBar</a> или по телефону.</p>
+  </div>
+  <div class="board">
+   <div class="head"><span>Акции</span><span>Бразерс</span></div>
+   <div class="row"><div class="day">Пн</div><div class="what"><b>День тяжёлый</b><i>пиво 2+1</i></div></div>
+   <div class="row"><div class="day">Вт</div><div class="what"><b>На игле</b><i>апероль 2+1</i></div></div>
+   <div class="row"><div class="day">Ср</div><div class="what"><b>Маленькая пятница</b><i>настойки 2+1</i></div></div>
+   <div class="row"><div class="day">Будни<small>до 17:00</small></div><div class="what"><b>Анти бизнес-ланч</b><i>скидка 20% на основное меню</i></div></div>
+   <div class="row"><div class="day">Матч</div><div class="what"><b>Первым пяти гостям</b><i>пиво в подарок</i></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="match sec" id="match">
+ <div class="wrap">
+  <figure><img src="photo-hall-night.jpg" alt="Зал Бразерс вечером, люстра и пианино" loading="lazy"></figure>
+  <div class="txt">
+   <h2>Лига чемпионов</h2>
+   <p>Показываем на трёх экранах, летом смотрели чемпионат мира. Что и во сколько включаем, пишем в канале в день матча.</p>
+   <ul class="evenings">
+    <li><span>Пятница, 22:00</span>Диджей</li>
+    <li><span>Бывает</span>Живая музыка, вечер мафии</li>
+    <li><span>В зале</span>Караоке, танцпол, настольные игры</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="food sec" id="menu">
+ <div class="wrap">
+  <h2>Мясо хочу</h2>
+  <div class="shots">
+   <img src="photo-snacks.jpg" alt="Жареные закуски с соусами на доске, рядом пиво" loading="lazy">
+   <img src="photo-burger.jpg" alt="Бургер с картошкой фри в корзинке на столе бара" loading="lazy">
+   <img src="photo-cheese.jpg" alt="Сырная тарелка" loading="lazy">
+  </div>
+  <div class="menu">
+   <div class="group">
+    <h3>Бургер и шаурма</h3>
+    <ul>
+     <li>Бургер «Папа»<b>690 ₽</b></li>
+     <li>Бургер «Дабл Папа»<b>890 ₽</b></li>
+     <li>Бургер «Эль Диабло»<b>720 ₽</b></li>
+     <li>Хот Доги-Дог<b>390 ₽</b></li>
+     <li>Шаурма классик<b>490 ₽</b></li>
+    </ul>
+   </div>
+   <div class="group">
+    <h3>Горячее</h3>
+    <ul>
+     <li>Буузы классические<b>690 ₽</b></li>
+     <li>Забайкальские колдуны<b>590 ₽</b></li>
+     <li>Удар по рёбрам<b>990 ₽</b></li>
+    </ul>
+   </div>
+   <div class="group">
+    <h3>К пиву</h3>
+    <ul>
+     <li>Крылышки Баффало<b>780 ₽</b></li>
+     <li>Сырные палочки<b>450 ₽</b></li>
+     <li>Пивной сет<b>2550 ₽</b></li>
+    </ul>
+   </div>
+   <div class="group">
+    <h3>Ещё в меню</h3>
+    <ul>
+     <li>Стейк рибай 250 г<b>1490 ₽</b></li>
+     <li>Паста «Море гудбай»<b>750 ₽</b></li>
+     <li>Тако сет<b>1590 ₽</b></li>
+     <li>Игра в кальмара<b>690 ₽</b></li>
+    </ul>
+   </div>
+  </div>
+  <p class="src">Цены из нашего меню 2026 года. Всё меню в зале.</p>
+ </div>
+</section>
+
+<section class="past sec">
+ <div class="wrap">
+  <div class="txt">
+   <h2>Раньше мы были HOT POINT</h2>
+   <p>До бара у нас была шаурмичная HOT POINT напротив Нахмеле. В октябре 2025 года открыли бар в ЖК АРТ. Шаурму и буузы взяли с собой.</p>
+   <div class="said">
+    <blockquote><p>«30 сантиметров счастья. Тонкая и длинная… Ничего не текло и не рассыпалось.»</p><span class="who">Алексей К., декабрь 2022</span></blockquote>
+    <blockquote><p>«Сложно представить себе существование более сбалансированной и вкусной шаурмы, чем здесь.»</p><span class="who">Василий Горбовский, май 2023</span></blockquote>
+   </div>
+  </div>
+  <div class="pair">
+   <figure class="pol q1"><img src="photo-shawarma.jpg" alt="Шаурма с мясом и овощами на крафте, наклейка HOT POINT" loading="lazy"></figure>
+   <figure class="pol q2"><img src="photo-buuzy-hp.jpg" alt="Гора бууз на жёлтом столе HOT POINT" loading="lazy"></figure>
+  </div>
+ </div>
+</section>
+
+<section class="reviews sec" style="padding-top:0">
+ <div class="wrap">
+  <h2>Гости о баре</h2>
+  <div class="list">
+   <blockquote><p>«Сидели в шикарном заведении, вкуснейшая кухня, большое спасибо официантам и менеджеру с управляющем! Максимально дружелюбный владелец»</p><span class="who">Богдан Николенко, май 2026</span></blockquote>
+   <blockquote><p>«Пиво свежее, бургеры вкусные… Отдельный респект за очень душевное обслуживание!»</p><span class="who">Егор, октябрь 2025</span></blockquote>
+   <blockquote><p>«Теперь любимое место:) очень вкусная еда!»</p><span class="who">Антон Колтунов, апрель 2026</span></blockquote>
+   <blockquote><p>«На 7000 на двоих можно объесться и упиться))»</p><span class="who">Ксения Тарасова, февраль 2026</span></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="party sec" style="padding-top:0">
+ <div class="wrap">
+  <img src="photo-door.jpg" alt="Вход в Бразерс в арке из чёрных и золотых шаров" loading="lazy">
+  <div class="txt">
+   <h2>Закроем бар под вашу компанию</h2>
+   <p>Дни рождения, свадьбы, корпоративы, семейные ужины. Дату обсудим по телефону или в <a class="ln" href="https://t.me/BrazersBar">@BrazersBar</a>.</p>
+   <a class="call" href="tel:+79639769777">Позвонить</a>
+  </div>
+ </div>
+</section>
+
+<section class="contacts sec" id="contacts" style="padding-top:0">
+ <div class="wrap">
+  <div>
+   <h2 class="addr">Авангардная,&nbsp;3</h2>
+   <dl class="facts">
+    <div><dt>Где</dt><dd>Красногорск, ЖК АРТ, Авангардная улица, 3</dd></div>
+    <div><dt>Когда</dt><dd>Каждый день с&nbsp;14:00 до&nbsp;02:00</dd></div>
+    <div><dt>Телефон</dt><dd><a class="ln" href="tel:+79639769777">+7 963 976-97-77</a></dd></div>
+    <div><dt>Бронь</dt><dd><a class="ln" href="https://t.me/BrazersBar">t.me/BrazersBar</a></dd></div>
+    <div><dt>Канал</dt><dd><a class="ln" href="https://t.me/BrazersBarChannel">t.me/BrazersBarChannel</a></dd></div>
+    <div><dt>Ещё</dt><dd>Бесплатная парковка, можно с собакой</dd></div>
+   </dl>
+  </div>
+  <div class="map">
+   <div class="pin"><img src="map.png" alt="Бразерс на карте, Авангардная улица, 3" loading="lazy"><span>Бразерс</span></div>
+   <a class="ln" style="justify-self:start" href="https://yandex.ru/maps/org/brazers/126727224286/">Открыть в Яндекс Картах</a>
+  </div>
+ </div>
+</section>
+
+<section class="end">
+ <img src="logo-w.svg" alt="Логотип Бразерс: два силуэта, кухня, дружба, бар" loading="lazy">
+ <p>То, что было в Бразерс, остаётся в Бразерс.</p>
+</section>
+</main>
+
+<footer>Демо-страница. Сделал Дамир, Павшинская пойма · <span style="white-space:nowrap">+7 925 606-00-00</span> · t.me/youngdemiro</footer>
+</body>
+</html>
