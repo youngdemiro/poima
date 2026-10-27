@@ -9,7 +9,7 @@
 <link rel="icon" href="logo.jpg">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
-:root{color-scheme:dark;--bg:#151515;--bg2:#1C1C1B;--ink:#F1F0EC;--mute:#A09F9A;--line:rgba(241,240,236,.18);--acc:#E7B53C}
+:root{color-scheme:dark;--bg:#151515;--bg2:#1C1C1B;--glaze:#3FA39B;--deep:#102B2A;--ink:#F1F0EC;--mute:#A09F9A;--line:rgba(241,240,236,.18);--acc:#E7B53C}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink)}
 html{scroll-behavior:smooth}
@@ -28,11 +28,16 @@ blockquote p{font:400 clamp(22px,5.6vw,30px)/1.22 'Oranienbaum',serif}
 blockquote p::before{content:"«"}
 blockquote p::after{content:"»"}
 blockquote footer{margin-top:10px;color:var(--mute);font-size:14px}
-section{border-top:1px solid var(--line)}
+section{position:relative;padding-top:26px}
+section::before,.orn{content:"";display:block;box-sizing:border-box;height:26px;border-top:1px solid var(--glaze);border-bottom:1px solid var(--glaze);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='18' viewBox='0 0 36 18'%3E%3Cpath d='M9 4L9 14L1 9ZM27 4L27 14L35 9ZM18 1L23 6L13 6ZM18 17L13 12L23 12Z' fill='%233FA39B'/%3E%3C/svg%3E") 0 50%/36px 18px;background-repeat:space no-repeat}
+section::before{position:absolute;top:0;left:0;right:0}
+.route::before,.tents::before,.contacts::before{display:none}
+.route,.tents,.contacts{padding-top:0}
+.contacts{background:var(--deep)}
 .in{max-width:1320px;margin:0 auto;padding:56px 20px}
 
 /* первый экран: доска */
-.top{display:grid;grid-template-columns:1fr;gap:26px;padding:20px 20px 0}
+.top{display:grid;grid-template-columns:1fr;gap:26px;padding:28px 20px 0}
 .who{display:flex;align-items:center;gap:14px}
 .who img{width:64px;height:64px;border-radius:50%;clip-path:circle(47%)}
 .who b{display:block;font:400 30px/1 'Oranienbaum',serif;letter-spacing:.02em}
@@ -50,7 +55,9 @@ section{border-top:1px solid var(--line)}
 .addr{margin-top:10px;color:var(--mute);font-size:15px}
 .word{margin-top:18px;font-style:italic;font-size:15px;color:var(--mute);max-width:44ch}
 .word i{font-style:normal;color:var(--ink)}
-.hero-photo img{width:100%;height:56svh;min-height:320px;object-fit:cover}
+.hero-photo{position:relative;padding-top:10px}
+.hero-photo img{width:100%;height:56svh;min-height:320px;object-fit:cover;border-radius:999px 999px 0 0}
+.hero-photo::after{content:"";position:absolute;top:0;left:-10px;right:-10px;bottom:0;border:1px solid var(--glaze);border-bottom:0;border-radius:999px 999px 0 0;pointer-events:none}
 .jump{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:15px}
 
 /* как найти вход */
@@ -81,18 +88,19 @@ section{border-top:1px solid var(--line)}
 .mosaic img{width:100%;height:100%;object-fit:cover}
 .mosaic .t1{grid-column:1/-1}
 .mosaic figcaption{font-size:13px;color:var(--mute);margin-top:6px}
-.mosaic .t1 img{aspect-ratio:4/5;height:auto}
+.mosaic .t1 img{aspect-ratio:4/5;height:auto;border-radius:999px 999px 0 0;object-position:50% 0}
 .mosaic .t2 img,.mosaic .t3 img{aspect-ratio:3/4}
 .tents blockquote{margin-top:30px;max-width:40ch}
 
 /* утро */
+.morning{background:var(--deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%233FA39B' stroke-opacity='.18'%3E%3Crect x='5.86' y='5.86' width='28.28' height='28.28'/%3E%3Cpath d='M20 0L40 20L20 40L0 20Z'/%3E%3C/g%3E%3C/svg%3E") repeat 0 26px/40px 40px}
 .morning .in{display:grid;grid-template-columns:1fr;gap:26px}
 .morning-text{display:flex;flex-direction:column;gap:16px}
 .morning-text>p{font-size:17px;max-width:44ch}
 .morning .pics{display:grid;grid-template-columns:3fr 2fr;gap:10px;align-items:end}
 .morning .pics img{width:100%;object-fit:cover}
-.morning .pics .p1 img{aspect-ratio:3/4}
-.morning .pics .p2 img{aspect-ratio:3/4}
+.morning .pics .p1 img{aspect-ratio:3/4;border-radius:999px 999px 0 0}
+.morning .pics .p2 img{aspect-ratio:3/4;border-radius:999px 999px 0 0}
 .morning .pics figure{margin:0}
 
 /* отзывы */
@@ -111,7 +119,7 @@ section{border-top:1px solid var(--line)}
 .c-list div b{font:400 22px/1.3 'Oranienbaum',serif}
 .c-list .call{margin-top:2px}
 .facts{color:var(--mute);max-width:46ch}
-footer.demo{border-top:1px solid var(--line);padding:22px 20px 30px;font-size:13px;color:var(--mute);text-align:left}
+footer.demo{padding:22px 20px 30px;font-size:13px;color:var(--mute);text-align:left}
 footer.demo a{text-decoration:none;white-space:nowrap}
 
 @media (min-width:900px){
@@ -122,8 +130,9 @@ footer.demo a{text-decoration:none;white-space:nowrap}
  .who b{font-size:44px}
  .who span:nth-of-type(2){display:block}
  .board{align-self:center;padding:20px 0 40px}
- .hero-photo{align-self:stretch;margin-top:-40px;position:relative}
- .hero-photo img{position:absolute;inset:0;height:100%;min-height:0}
+ .hero-photo{align-self:stretch;margin-top:0;padding:0}
+ .hero-photo img{position:absolute;top:24px;left:0;width:calc(100% - 56px);height:calc(100% - 24px);min-height:0}
+ .hero-photo::after{top:12px;left:-12px;right:44px;border-width:1.5px}
  .route .in{grid-template-columns:5fr 7fr;gap:64px;align-items:start}
  .route-text{position:sticky;top:40px}
  .route-pics{grid-template-columns:1fr 1fr}
@@ -148,6 +157,7 @@ footer.demo a{text-decoration:none;white-space:nowrap}
 </head>
 <body>
 
+<div class="orn" aria-hidden="true"></div>
 <header class="top">
  <div class="who"><img src="logo.jpg" alt="Логотип Ошхоны: чайник и пиала в чёрном круге"><div><b>Ошхона</b><span>кафе у Крокуса</span><span>Международная, 14</span><span>с 9:00 до полуночи</span></div></div>
  <div class="board">
@@ -256,6 +266,7 @@ footer.demo a{text-decoration:none;white-space:nowrap}
  </div>
 </section>
 
+<div class="orn" aria-hidden="true"></div>
 <footer class="demo">Демо-страница. Сделал Дамир, Павшинская пойма · <a href="tel:+79256060000">+7 925 606-00-00</a> · <a href="https://t.me/youngdemiro">t.me/youngdemiro</a></footer>
 
 </body>
