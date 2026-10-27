@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ошхона, кафе у Крокуса. Международная, 14</title>
+<meta name="description" content="Кафе Ошхона в Красногорске, Международная, 14, через дорогу от Крокус Экспо. Баранина с мангала, шурпа, лагман, завтраки с 9 утра. Каждый день с 9:00 до полуночи.">
+<link rel="icon" href="logo.jpg">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:dark;--bg:#151515;--bg2:#1C1C1B;--ink:#F1F0EC;--mute:#A09F9A;--line:rgba(241,240,236,.18);--acc:#E7B53C}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.6 'Onest',sans-serif;-webkit-text-size-adjust:100%}
+a{color:inherit}
+img{display:block;max-width:100%}
+h2{font:400 clamp(36px,9vw,64px)/1.02 'Oranienbaum',serif;margin:0;letter-spacing:.005em}
+p{margin:0}
+.serif{font-family:'Oranienbaum',serif}
+.mute{color:var(--mute)}
+.ln{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s}
+.ln:hover{border-color:var(--ink)}
+q,blockquote{quotes:"«" "»"}
+blockquote{margin:0}
+blockquote p{font:400 clamp(22px,5.6vw,30px)/1.22 'Oranienbaum',serif}
+blockquote p::before{content:"«"}
+blockquote p::after{content:"»"}
+blockquote footer{margin-top:10px;color:var(--mute);font-size:14px}
+section{border-top:1px solid var(--line)}
+.in{max-width:1320px;margin:0 auto;padding:56px 20px}
+
+/* первый экран: доска */
+.top{display:grid;grid-template-columns:1fr;gap:26px;padding:20px 20px 0}
+.who{display:flex;align-items:center;gap:14px}
+.who img{width:64px;height:64px;border-radius:50%;clip-path:circle(47%)}
+.who b{display:block;font:400 30px/1 'Oranienbaum',serif;letter-spacing:.02em}
+.who span{display:block;color:var(--mute);font-size:14px;margin-top:6px}
+.who span+span{margin-top:0}
+.who span:nth-of-type(2){display:none}
+.board h1{font:400 15px/1.4 'Onest',sans-serif;color:var(--mute);margin:0 0 6px}
+.board ul{list-style:none;margin:0;padding:0}
+.board li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)}
+.board li:last-child{border-bottom:0}
+.board li b{font:400 clamp(25px,6.6vw,40px)/1.12 'Oranienbaum',serif}
+.board li span{color:var(--mute);font-size:14px;text-align:right;white-space:nowrap}
+.acc,.board li span.acc{color:var(--acc)}
+.call{display:inline-block;margin-top:20px;font:400 clamp(32px,8.6vw,46px)/1 'Oranienbaum',serif;color:var(--acc);text-decoration:none}
+.addr{margin-top:10px;color:var(--mute);font-size:15px}
+.word{margin-top:18px;font-style:italic;font-size:15px;color:var(--mute);max-width:44ch}
+.word i{font-style:normal;color:var(--ink)}
+.hero-photo img{width:100%;height:56svh;min-height:320px;object-fit:cover}
+.jump{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:15px}
+
+/* как найти вход */
+.route .in{display:grid;grid-template-columns:1fr;gap:28px}
+.route-text{display:flex;flex-direction:column;gap:18px}
+.route-text>p{max-width:42ch;font-size:17px}
+.route-text .big{font:400 clamp(24px,6vw,32px)/1.25 'Oranienbaum',serif;max-width:none}
+.route-pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.route-pics .main{grid-column:1/-1}
+.route-pics img{width:100%;height:auto;object-fit:cover}
+.route-pics .main img{aspect-ratio:4/3}
+.route-pics .small img{aspect-ratio:650/450}
+.route-pics figcaption{font-size:13px;color:var(--mute);margin-top:6px}
+.route-pics figure{margin:0}
+.links{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:16px}
+
+/* мангал */
+.grill{display:grid;grid-template-columns:1fr;background:var(--bg2)}
+.grill img{width:100%;height:62svh;min-height:300px;object-fit:cover}
+.grill-text{padding:40px 20px 52px;display:flex;flex-direction:column;gap:22px}
+.grill-text p.lead{font-size:18px;max-width:40ch}
+
+/* веранда */
+.tents .head{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
+.tents .head p{max-width:52ch;font-size:17px}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mosaic figure{margin:0}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .t1{grid-column:1/-1}
+.mosaic figcaption{font-size:13px;color:var(--mute);margin-top:6px}
+.mosaic .t1 img{aspect-ratio:4/5;height:auto}
+.mosaic .t2 img,.mosaic .t3 img{aspect-ratio:3/4}
+.tents blockquote{margin-top:30px;max-width:40ch}
+
+/* утро */
+.morning .in{display:grid;grid-template-columns:1fr;gap:26px}
+.morning-text{display:flex;flex-direction:column;gap:16px}
+.morning-text>p{font-size:17px;max-width:44ch}
+.morning .pics{display:grid;grid-template-columns:3fr 2fr;gap:10px;align-items:end}
+.morning .pics img{width:100%;object-fit:cover}
+.morning .pics .p1 img{aspect-ratio:3/4}
+.morning .pics .p2 img{aspect-ratio:3/4}
+.morning .pics figure{margin:0}
+
+/* отзывы */
+.rev-head{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.rate{font-size:17px}
+.rate b{font-weight:500}
+.wall{columns:1;column-gap:48px}
+.wall blockquote{break-inside:avoid;padding:22px 0;border-top:1px solid var(--line)}
+.wall blockquote p{font-size:clamp(21px,5.2vw,26px)}
+
+/* контакты */
+.contacts .in{display:grid;grid-template-columns:1fr;gap:30px}
+.contacts h2{margin-bottom:6px}
+.c-list{display:grid;grid-template-columns:1fr;gap:18px}
+.c-list div span{display:block;color:var(--mute);font-size:14px}
+.c-list div b{font:400 22px/1.3 'Oranienbaum',serif}
+.c-list .call{margin-top:2px}
+.facts{color:var(--mute);max-width:46ch}
+footer.demo{border-top:1px solid var(--line);padding:22px 20px 30px;font-size:13px;color:var(--mute);text-align:left}
+footer.demo a{text-decoration:none;white-space:nowrap}
+
+@media (min-width:900px){
+ .in{padding:96px 56px}
+ .top{grid-template-columns:clamp(200px,20vw,300px) minmax(0,1fr) 34%;gap:0 56px;padding:40px 0 0 56px;min-height:min(100svh,920px);align-items:start}
+ .who{flex-direction:column;align-items:flex-start;gap:18px}
+ .who img{width:150px;height:150px}
+ .who b{font-size:44px}
+ .who span:nth-of-type(2){display:block}
+ .board{align-self:center;padding:20px 0 40px}
+ .hero-photo{align-self:stretch;margin-top:-40px;position:relative}
+ .hero-photo img{position:absolute;inset:0;height:100%;min-height:0}
+ .route .in{grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+ .route-text{position:sticky;top:40px}
+ .route-pics{grid-template-columns:1fr 1fr}
+ .grill{grid-template-columns:1fr 1fr;min-height:640px}
+ .grill img{height:100%;min-height:0}
+ .grill-text{padding:96px 56px;justify-content:center;max-width:620px}
+ .tents .head{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:64px}
+ .tents .head p{margin-bottom:6px}
+ .mosaic{grid-template-columns:7fr 4fr;grid-template-rows:auto auto}
+ .mosaic .t1{grid-column:1;grid-row:1/3}
+ .mosaic .t1{display:flex;flex-direction:column}
+ .mosaic .t1 img{aspect-ratio:auto;height:auto;flex:1;min-height:0}
+ .mosaic .t2 img,.mosaic .t3 img{aspect-ratio:4/3}
+ .morning .in{grid-template-columns:5fr 6fr;gap:64px;align-items:center}
+ .morning .pics .p2{margin-bottom:-48px}
+ .wall{columns:2}
+ .contacts .in{grid-template-columns:5fr 7fr;gap:64px}
+ .c-list{grid-template-columns:1fr 1fr;gap:28px 40px}
+ footer.demo{padding:24px 56px 32px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+ <div class="who"><img src="logo.jpg" alt="Логотип Ошхоны: чайник и пиала в чёрном круге"><div><b>Ошхона</b><span>кафе у Крокуса</span><span>Международная, 14</span><span>с 9:00 до полуночи</span></div></div>
+ <div class="board">
+  <h1>Что у нас заказывают</h1>
+  <ul>
+   <li><b>Шашлык из бараньей корейки</b></li>
+   <li><b>Люля-кебаб из баранины</b></li>
+   <li><b>Шурпа из баранины</b></li>
+   <li><b>Плов</b></li>
+   <li><b>Каши и омлет</b><span>с 9 утра</span></li>
+   <li><b>Бизнес-ланч</b><span class="acc">500 ₽</span></li>
+  </ul>
+  <a class="call" href="tel:+79687771001">+7 968 777-10-01</a>
+  <p class="addr">Две минуты пешком от Мякинино. Еду можно забрать с собой.</p>
+  <p class="word"><i>«Ошхона»</i> значит «кухня».</p>
+  <nav class="jump"><a class="ln" href="#route">Как найти вход</a><a class="ln" href="#tents">Веранда</a><a class="ln" href="https://wa.me/79687771001">WhatsApp</a></nav>
+ </div>
+ <div class="hero-photo"><img src="hero.jpg" alt="Шашлык из баранины и курицы, печёный картофель, лук и зелень на деревянной доске"></div>
+</header>
+
+<section class="route" id="route">
+ <div class="in">
+  <div class="route-text">
+   <h2>Как найти вход</h2>
+   <p class="big">Мы через дорогу от Крокус Экспо. От метро Мякинино две минуты пешком.</p>
+   <p>Издалека ищите колесо обозрения и чёрный павильон с белыми буквами «КАФЕ ОШХОНА» на крыше. Вход с улицы, в ряду павильонов: над дверью та же вывеска.</p>
+   <blockquote><p>Отличное тихое место. Главное - найти вход.</p><footer>Ирина Чу</footer></blockquote>
+   <div class="links">
+    <a class="ln" href="https://yandex.ru/maps/?rtext=~55.822334%2C37.385122&amp;rtt=pd">Пеший маршрут в Яндекс Картах</a>
+    <a class="ln" href="tel:+79687771001">Позвонить, если заблудились</a>
+   </div>
+  </div>
+  <div class="route-pics">
+   <figure class="main"><img src="route-door.jpg" alt="Вход в кафе с улицы: стеклянные двери в ряду павильонов, над ними вывеска «Кафе Ошхона»" loading="lazy"><figcaption>Вход с улицы. Над дверью вывеска «Кафе Ошхона»</figcaption></figure>
+   <figure class="small"><img src="route-1.jpg" alt="Чёрный павильон с надписью «Кафе Ошхона» зимой, за ним колесо обозрения" loading="lazy"><figcaption>Ориентир издалека: колесо и павильон</figcaption></figure>
+   <figure class="small"><a href="https://yandex.ru/maps/org/oshkhona/79729126492/"><img src="map.png" alt="Карта: Ошхона через дорогу от Крокус Экспо" loading="lazy"></a><figcaption><a class="ln" href="https://yandex.ru/maps/org/oshkhona/79729126492/">Открыть в Яндекс Картах</a></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="grill" id="grill">
+ <img src="grill.jpg" alt="Шашлык с мангала на лаваше с красным луком, зеленью и соусом" loading="lazy">
+ <div class="grill-text">
+  <h2>Мангал</h2>
+  <p class="lead">На мангале жарим баранину: корейку, люля, шашлык. Ещё телятину, курицу, сёмгу, дорадо и овощи.</p>
+  <blockquote><p>Люля и шурпа из баранины, шашлык из телятины, семга и овощи на мангале - все вкусно…</p><footer>Галина Строева</footer></blockquote>
+ </div>
+</section>
+
+<section class="tents" id="tents">
+ <div class="in">
+  <div class="head">
+   <h2>Веранда и шатры</h2>
+   <p>Летом столы стоят в отдельных шатрах на газоне. Зимой работает тёплая веранда с панорамными окнами. Дни рождения отмечают в шатрах. Стол лучше обсудить заранее по телефону.</p>
+  </div>
+  <div class="mosaic">
+   <figure class="t1"><img src="tents.jpg" alt="Шатры Ошхоны на газоне, кабинки колеса обозрения, за рекой дома Павшинской поймы" loading="lazy"><figcaption>За рекой Павшинская пойма</figcaption></figure>
+   <figure class="t2"><img src="tents-2.jpg" alt="Белые шатры на газоне и деревянный настил, сверху" loading="lazy"></figure>
+   <figure class="t3"><img src="night.jpg" alt="Веранда вечером в гирляндах под колесом обозрения" loading="lazy"></figure>
+  </div>
+  <blockquote><p>Уютная веранда, тихий уголок среди суеты возле выставочных павильонов.</p><footer>Natalia Vasileva</footer></blockquote>
+ </div>
+</section>
+
+<section class="morning" id="morning">
+ <div class="in">
+  <div class="morning-text">
+   <h2>С 9 утра</h2>
+   <p>Утром каши, яичница и омлет. Лепёшка с хрустящей корочкой, чай с чабрецом. Днём бизнес-ланч за <span class="acc">500 ₽</span>.</p>
+   <p class="mute">В зале Wi-Fi, можно сидеть с ноутбуком.</p>
+  </div>
+  <div class="pics">
+   <figure class="p1"><img src="hall.jpg" alt="Зал Ошхоны днём: кресла, столы, барная стойка" loading="lazy"></figure>
+   <figure class="p2"><img src="bar.jpg" alt="Барная стойка и витрина в зале днём" loading="lazy"></figure>
+  </div>
+ </div>
+</section>
+
+<section class="reviews" id="reviews">
+ <div class="in">
+  <div class="rev-head">
+   <h2>Отзывы на Яндексе</h2>
+   <p class="rate"><b>5,0</b> на Яндекс Картах, 362 оценки. <a class="ln" href="https://yandex.ru/maps/org/oshkhona/79729126492/reviews/">Все отзывы</a></p>
+  </div>
+  <div class="wall">
+   <blockquote><p>…а ушел с хорошим настроением: просто вежливые люди оставили впечатление на целый день.</p><footer>Ростислав Дзуцев</footer></blockquote>
+   <blockquote><p>Рядом с метро - 2 минуты пешком, относительно адекватные цены, хорошее качество мясных блюд (например: люля кебаб из баранины), официантка Диана слушает и слышит клиентов.</p><footer>MS</footer></blockquote>
+   <blockquote><p>Рекомендую блюда на мангале, заказали дорадо и люля кебаб) порции громадные просто таки! Половину забрали домой</p><footer>Юлия Л.</footer></blockquote>
+   <blockquote><p>Безумно вкусная еда, постоянно возвращаемся сюда, когда хотим мяса! … Баранья корейка моя любовь тут!</p><footer>Виктория Р.</footer></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="contacts" id="contacts">
+ <div class="in">
+  <div>
+   <h2>Ошхона</h2>
+   <p class="facts">Бесплатная парковка. Халяль. Есть детское меню. Еду можно забрать с собой или заказать через Яндекс Еду.</p>
+  </div>
+  <div class="c-list">
+   <div><span>Телефон</span><a class="call" href="tel:+79687771001">+7 968 777-10-01</a></div>
+   <div><span>Часы</span><b>Каждый день с 9:00 до полуночи</b></div>
+   <div><span>Адрес</span><b>Красногорск, Международная, 14</b></div>
+   <div><span>Написать</span><b><a class="ln" href="https://wa.me/79687771001">WhatsApp</a> &nbsp; <a class="ln" href="https://t.me/+79687771001">Telegram</a></b></div>
+  </div>
+ </div>
+</section>
+
+<footer class="demo">Демо-страница. Сделал Дамир, Павшинская пойма · <a href="tel:+79256060000">+7 925 606-00-00</a> · <a href="https://t.me/youngdemiro">t.me/youngdemiro</a></footer>
+
+</body>
+</html>
