@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Лак Ми, ногтевая студия на Молодёжной, 3 в Красногорске</title>
+<meta name="description" content="Маникюр, педикюр и брови в Красногорске, Молодёжная улица, 3. Каждый день с 10 до 22. Запись онлайн и по телефону.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:light;--wall:#E2187E;--ink:#17131A;--paper:#FFFFFF;--board:#1E1B1F;--chalk:#F4F1F3;--mute:#5E5662;--neon:#5CF08A}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:400 17px/1.5 'Commissioner',sans-serif;-webkit-text-size-adjust:100%}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1240px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;font-weight:700;font-size:17px;border-radius:999px;text-decoration:none;transition:transform .15s}
+.btn:active{transform:scale(.98)}
+.btn.main{background:var(--wall);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.line{border:1.5px solid currentColor}
+
+/* 1. Первый экран: их ресепшен. Розовая стена с граффити, на стойке стакан, внизу рейки с подсветкой */
+.hero{min-height:100svh;display:flex;flex-direction:column;background:var(--wall)}
+.wall{position:relative;flex:1;min-height:440px;overflow:hidden}
+/* фраза висит на розовой стене чёрными буквами, лесенкой, как у них в зале */
+.wall h1{position:absolute;z-index:1;left:20px;top:26px;margin:0;font:500 clamp(21px,6.8vw,30px)/1.3 'Commissioner',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.wall h1 .l{display:block}
+.wall h1 .l2{padding-left:2.3em}
+.logo{position:absolute;left:50%;top:58%;width:min(70vw,340px);transform:translate(-54%,-50%) rotate(-4deg);filter:drop-shadow(0 2px 1px rgba(90,0,45,.5)) drop-shadow(0 14px 22px rgba(70,0,35,.5))}
+.cup{position:absolute;right:24px;bottom:-34px;width:min(38vw,170px);transform-origin:50% 100%;transform:rotate(8deg);filter:drop-shadow(0 12px 18px rgba(40,0,20,.3))}
+.desk{position:relative;z-index:2;background:#fff}
+.desk-top{padding:22px 16px 20px;border-top:10px solid #F3F0F4}
+.lead{margin:0;font-size:18px;line-height:1.4;max-width:40ch}
+.lead b{font-weight:800}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.ribs{position:relative;height:38px;background:repeating-linear-gradient(90deg,#fff 0 18px,#E9E6EC 18px 19px);border-top:1px solid #E9E6EC}
+.ribs::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--neon);box-shadow:0 0 16px 3px rgba(92,240,138,.7)}
+
+/* 2. Доска с размерами: как их чёрные стаканы с мелом */
+.board{background:var(--board);color:var(--chalk);padding:60px 16px 64px}
+.board-in{display:grid;gap:36px}
+.chalk{font-family:'Marck Script',cursive;font-weight:400;word-spacing:-.14em}
+.board h2{margin:0;font-size:clamp(42px,10vw,76px);line-height:1.05;color:#fff}
+.board .sub{margin:12px 0 0;color:#CFC8D0;max-width:36ch}
+.sizes{margin:0;padding:0;list-style:none}
+.sizes .hd,.sizes li{display:grid;grid-template-columns:62px 1fr 1fr;gap:6px 12px;align-items:baseline}
+.sizes .sz{grid-row:1/3}
+.sizes .what{grid-column:2/4}
+.sizes .hd{font-size:13px;color:#A99FAB;padding:0 0 8px}
+.sizes .hd span:first-child,.sizes .hd span:nth-child(2){display:none}
+.sizes .hd span:nth-child(3){grid-column:2}
+.sizes .hd span:nth-child(4){grid-column:3}
+.sizes li{padding:14px 0;border-top:1px solid rgba(244,241,243,.16)}
+.sizes .sz{font-weight:800;font-size:32px;line-height:1;color:#fff}
+.sizes .what{font-size:15px;color:#DCD5DD;line-height:1.35}
+.sizes .pr{font-weight:700;font-size:18px;white-space:nowrap}
+.sizes .pr.top{color:#CFC8D0;font-weight:500}
+.more{margin:22px 0 0;font-size:15px;color:#CFC8D0;max-width:60ch}
+.more b{color:#fff;font-weight:600}
+.two{display:flex;gap:0;justify-content:center;padding:8px 0}
+.two figure{margin:0;width:48%;background:#fff;padding:7px 7px 7px}
+.two figure img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.two figure:first-child{transform:rotate(-5deg);z-index:1}
+.two figure:last-child{transform:rotate(4deg) translateY(22px);margin-left:-6%}
+
+/* 3. Меню FREE: розовое табло */
+.free{background:var(--wall);color:#fff;padding:60px 16px 0;overflow:hidden}
+.free-in{display:grid;gap:30px}
+.free h2{margin:0;font:800 clamp(52px,14vw,128px)/.92 'Commissioner',sans-serif;letter-spacing:-.03em}
+.drinks{list-style:none;margin:0;padding:22px 20px 24px;font-size:clamp(19px,5vw,28px);line-height:1.5;font-weight:400;background:var(--ink);color:#fff;border:6px solid rgba(255,255,255,.88);outline:1px solid rgba(23,19,26,.25);transform:rotate(-1.5deg);max-width:520px}
+.qs{display:grid;gap:22px;align-content:start}
+.qs blockquote{margin:0}
+.qs p{margin:0;font-size:21px;line-height:1.4;font-weight:500}
+.qs cite{display:block;margin-top:6px;font-style:normal;font-size:15px}
+.cups{display:flex;align-items:flex-end;justify-content:center;gap:0;margin-top:6px}
+.cups .c1{width:min(50vw,250px);margin-right:-18px;position:relative;z-index:1}
+.cups .c2{width:min(34vw,170px)}
+
+/* 4. Зал целиком */
+.room{position:relative;background:#eee;margin:0}
+.room img{width:100%;height:min(76svh,820px);min-height:420px;object-fit:cover;object-position:74% 50%}
+.room figcaption{position:absolute;left:16px;bottom:14px;background:#fff;padding:6px 12px;font-size:15px;font-weight:500}
+
+/* 5. Работы сеткой разного размера */
+.works{padding:64px 16px}
+.works h2,.team h2{margin:0;font:800 clamp(34px,8vw,64px)/1 'Commissioner',sans-serif;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:28px}
+.grid img{width:100%;height:100%;object-fit:cover}
+.grid .big{grid-column:1/-1;aspect-ratio:4/5}
+.grid .t{aspect-ratio:3/4}
+.grid .w{grid-column:1/-1;aspect-ratio:16/10}
+
+/* 6. Мастера */
+.team{padding:8px 16px 72px}
+.rating{margin:12px 0 0;color:var(--mute)}
+.rating a{color:var(--ink);display:inline-block;padding:10px 0;margin:-10px 0}
+.people{margin-top:30px;display:grid;gap:0}
+.person{padding:22px 0;border-top:1px solid #E6E1E8;display:grid;gap:8px}
+.person h3{margin:0;font-size:28px;font-weight:800;line-height:1.1}
+.person h3 small{display:block;font-size:15px;font-weight:500;color:var(--mute);margin-top:4px}
+.person p{margin:0;font-size:19px;line-height:1.45;max-width:46ch}
+.person cite{font-style:normal;font-size:15px;color:var(--mute)}
+
+/* 7. Финал: вход, карта, контакты */
+.end{background:var(--board);color:var(--chalk);padding:64px 16px 28px}
+.end-in{display:grid;gap:30px}
+.facade{margin:0}
+.facade img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 30%}
+.end h2{margin:0;font:800 clamp(34px,8vw,64px)/1 'Commissioner',sans-serif;color:#fff;letter-spacing:-.02em}
+.facts{margin:18px 0 0;display:grid;gap:14px}
+.facts div{display:grid;gap:2px}
+.facts dt{font-size:14px;color:#A99FAB}
+.facts dd{margin:0;font-size:19px;color:#fff}
+.facts dd a{color:#fff;display:inline-block;padding:10px 0;margin:-10px 0}
+.end .acts .btn.line{color:#fff}
+.links{display:flex;flex-wrap:wrap;gap:0 22px;margin-top:8px;font-size:16px}
+.links a{color:#fff;text-underline-offset:4px;display:inline-flex;align-items:center;min-height:44px}
+.map{display:block;margin-top:26px;text-decoration:none;color:#fff}
+.map img{width:100%;aspect-ratio:65/45;object-fit:cover}
+.map span{display:inline-block;margin-top:8px;border-bottom:1px solid currentColor}
+.sign{margin:48px 0 0;font-size:clamp(40px,10vw,72px);line-height:1;color:#fff}
+.demo{margin:36px auto 0;font-size:13px;color:#8F8693}
+.demo a{color:#8F8693;display:inline-block;padding:14px 0;margin:-14px 0}
+
+@media (min-width:600px){
+  .wall h1{left:40px;top:44px;font-size:clamp(30px,4.6vw,40px)}
+  .logo{width:min(56vw,440px)}
+  .end h2{font-size:clamp(34px,5.4vw,64px)}
+  .grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,21vw,260px);gap:10px}
+  .grid .big{grid-column:1/3;grid-row:1/3;aspect-ratio:auto}
+  .grid .t{aspect-ratio:auto}
+  .grid .w{grid-column:3/5;aspect-ratio:auto}
+  .people{grid-template-columns:1fr 1fr;column-gap:40px}
+  .two figure{width:40%}
+  .sizes .hd,.sizes li{grid-template-columns:84px 1fr 90px 90px;gap:4px 16px}
+  .sizes .sz{grid-row:auto}
+  .sizes .what{grid-column:auto}
+  .sizes .hd span:first-child,.sizes .hd span:nth-child(2){display:block}
+  .sizes .hd span:nth-child(3),.sizes .hd span:nth-child(4){grid-column:auto}
+  .sizes .hd span:nth-child(n+3),.sizes .pr{text-align:right}
+  .end-in{grid-template-columns:1fr 1fr;gap:30px 40px;align-items:start}
+  .sign{grid-column:1/-1}
+}
+@media (min-width:900px){
+  .wall{min-height:0}
+  .wall h1{left:max(40px,calc((100vw - 1240px)/2));top:50%;transform:translateY(-58%);font-size:clamp(30px,3.4vw,52px)}
+  .logo{left:61%;top:50%;width:min(32vw,480px);transform:translate(-50%,-50%) rotate(-4deg)}
+  .cup{right:5vw;bottom:-46px;width:210px}
+  .desk-top{padding:28px 40px 28px;border-top-width:14px}
+  .desk-in{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px 48px}
+  .lead{font-size:21px;max-width:none}
+  .acts{margin:0}
+  .ribs{height:64px}
+  .board{padding:110px 40px}
+  .board-in{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:30px 90px;align-items:start}
+  .board .head{grid-column:1/-1}
+  .sizes .sz{font-size:44px}
+  .sizes .pr{font-size:19px}
+  .two{padding-top:24px}
+  .two figure{width:48%}
+  .drinks{padding:30px 34px 34px}
+  .free{padding:110px 40px 0}
+  .free-in{grid-template-columns:1fr 1fr;gap:40px 80px}
+  .free h2{grid-column:1/-1}
+  .drinks{grid-column:1}
+  .qs{grid-column:2;grid-row:2}
+  .cups{grid-column:1/-1;justify-content:flex-end;margin-top:-190px}
+  .cups .c1{width:260px}
+  .cups .c2{width:180px}
+  .room img{object-position:50% 50%}
+  .room figcaption{left:40px;bottom:28px;font-size:16px}
+  .works{padding:110px 40px 90px}
+  .grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:10px;margin-top:40px}
+  .grid .big{grid-column:1/3;grid-row:1/3;aspect-ratio:auto}
+  .grid .t{aspect-ratio:auto}
+  .grid .w{grid-column:3/5;aspect-ratio:auto}
+  .team{padding:20px 40px 110px}
+  .people{grid-template-columns:1fr 1fr;column-gap:72px}
+  .end{padding:110px 40px 32px}
+  .end-in{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px 80px;align-items:start}
+  .facade img{aspect-ratio:3/4}
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:28px}
+  .map{margin-top:0}
+  .sign{grid-column:1/-1;margin-top:20px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .cup{animation:sway 5s ease-in-out infinite}
+  @keyframes sway{0%,100%{transform:rotate(8deg)}50%{transform:rotate(4deg)}}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wall">
+    <h1><span class="l">#То самое</span> <span class="l l2">место,</span> <span class="l">где хорошо</span></h1>
+    <img class="logo" src="logo.webp" alt="Лак Ми" width="900" height="815">
+    <img class="cup" src="cup.webp" alt="Стакан с надписью мелом «С любовью, Лак Ми»" width="804" height="900">
+  </div>
+  <div class="desk">
+    <div class="desk-top">
+      <div class="wrap desk-in">
+        <p class="lead"><b>Лак Ми</b>, ногтевая студия и брови. Молодёжная, 3, каждый день с&nbsp;10&nbsp;до&nbsp;22.</p>
+        <div class="acts">
+          <a class="btn main" href="https://dikidi.ru/1569600" target="_blank" rel="noopener">Записаться</a>
+          <a class="btn dark" href="tel:+79776444523">Позвонить</a>
+        </div>
+      </div>
+    </div>
+    <div class="ribs" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section class="board" aria-labelledby="sizes-h">
+  <div class="wrap board-in">
+    <div class="head">
+      <h2 class="chalk" id="sizes-h">Маникюр по&nbsp;размерам</h2>
+      <p class="sub">Выбираете размер, как кофе: от простого лака до дизайна на всех ногтях.</p>
+    </div>
+    <div>
+      <ul class="sizes">
+        <li class="hd" aria-hidden="true"><span></span><span></span><span>мастер</span><span>топ-мастер</span></li>
+        <li><span class="sz">XS</span><span class="what">маникюр и обычный лак</span><span class="pr">1600 ₽</span><span class="pr top">1800 ₽</span></li>
+        <li><span class="sz">S</span><span class="what">маникюр, выравнивание, однотонное покрытие</span><span class="pr">2300 ₽</span><span class="pr top">2500 ₽</span></li>
+        <li><span class="sz">M</span><span class="what">снятие, выравнивание, маникюр, однотонное покрытие</span><span class="pr">2600 ₽</span><span class="pr top">2800 ₽</span></li>
+        <li><span class="sz">L</span><span class="what">то же и укрепление</span><span class="pr">3200 ₽</span><span class="pr top">3400 ₽</span></li>
+        <li><span class="sz">XL</span><span class="what">то же и простой дизайн всех ногтей</span><span class="pr">3600 ₽</span><span class="pr top">3800 ₽</span></li>
+      </ul>
+      <p class="more">Ещё у нас: <b>педикюр с покрытием</b> 3500 ₽, <b>мужской маникюр</b> от 2000 ₽, <b>наращивание</b> от 4500 ₽, <b>коррекция бровей</b> 1000 ₽, <b>ламинирование бровей</b> с окрашиванием и коррекцией 3000 ₽.</p>
+    </div>
+    <div class="two">
+      <figure><img src="work-red.jpg" alt="Красный глянцевый маникюр" width="750" height="1000" loading="lazy"></figure>
+      <figure><img src="work-marble.jpg" alt="Маникюр с мраморным дизайном" width="750" height="1000" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="free" aria-labelledby="free-h">
+  <div class="wrap free-in">
+    <h2 id="free-h">Меню FREE</h2>
+    <ul class="drinks">
+      <li>Вода</li>
+      <li>Чай зелёный</li>
+      <li>Чай чёрный</li>
+      <li>Кофе чёрный</li>
+      <li>Кофе со сливками</li>
+      <li>Кофе на классическом молоке</li>
+      <li>Кофе на безлактозном молоке</li>
+    </ul>
+    <div class="qs">
+      <blockquote><p>«тут не только чай и кофе, как в других салонах, а много интересных лимонадов и всего вкусненького»</p><cite>Эрика Т.</cite></blockquote>
+      <blockquote><p>«Еще здесь самые удобные кресла для педикюра и новые вкусные напитки каждый сезон»</p><cite>Ксения Н</cite></blockquote>
+    </div>
+    <div class="cups">
+      <img class="c1" src="cup.webp" alt="Стакан с надписью мелом" width="804" height="900" loading="lazy">
+      <img class="c2" src="ice.webp" alt="Айс кофе с наклейкой Лак Ми и статуэтка кота" width="511" height="900" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<figure class="room">
+  <img src="photo-reception.jpg" alt="Ресепшен Лак Ми: граффити на стене, розовые рейки, стойка с подсветкой, ромбы на полу" width="1600" height="1200" loading="lazy">
+  <figcaption>Молодёжная улица, 3</figcaption>
+</figure>
+
+<section class="works" aria-labelledby="works-h">
+  <div class="wrap">
+    <h2 id="works-h">Наши ноготочки</h2>
+    <div class="grid">
+      <img class="big" src="work-red2.jpg" alt="Красный глянцевый маникюр крупно" width="1050" height="1400" loading="lazy">
+      <img class="t" src="work-leopard.jpg" alt="Леопардовый дизайн" width="750" height="1000" loading="lazy">
+      <img class="t" src="work-cat.jpg" alt="Маникюр кошачий глаз" width="750" height="1000" loading="lazy">
+      <img class="w" src="work-wine.jpg" alt="Бордовый маникюр на фоне граффити Лак Ми" width="750" height="1000" loading="lazy">
+      <img class="t" src="work-black.jpg" alt="Чёрный и сиреневый маникюр" width="750" height="1000" loading="lazy">
+      <img class="t" src="work-blue.jpg" alt="Голубой маникюр" width="750" height="1000" loading="lazy">
+      <img class="t" src="work-sea.jpg" alt="Маникюр на фоне моря" width="562" height="1000" loading="lazy">
+      <img class="t" src="work-red3.jpg" alt="Красный маникюр" width="750" height="1000" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <h2 id="team-h">Мастера</h2>
+    <p class="rating">5,0 на Яндекс Картах, 297 оценок. <a href="https://yandex.ru/maps/org/lak_mi/172805982611/reviews/" target="_blank" rel="noopener">Все&nbsp;отзывы</a></p>
+    <div class="people">
+      <div class="person">
+        <h3>Мария<small>маникюр и педикюр</small></h3>
+        <p>«Так довольна ее работой, что прыгаю до потолка от счастья. Быстро, аккуратно с интересной беседой»</p>
+        <cite>Гузель К.</cite>
+      </div>
+      <div class="person">
+        <h3>Александра<small>маникюр и педикюр</small></h3>
+        <p>«Ручки Александры просто волшебные… Быстро, суперкачественно и кропотливо!»</p>
+        <cite>Alina Bruce</cite>
+      </div>
+      <div class="person">
+        <h3>Наталья<small>маникюр</small></h3>
+        <p>«замечательный мастер с золотыми руками (пишу спустя 3,5 недели носки) все на месте, сколов нет»</p>
+        <cite>Юлия</cite>
+      </div>
+      <div class="person">
+        <h3>Анастасия<small>маникюр и педикюр</small></h3>
+        <p>«обработка пальцев очень тщательная, это почему-то большая редкость»</p>
+        <cite>Мария Кольцова</cite>
+      </div>
+      <div class="person">
+        <h3>Брови<small>и мужчинам тоже</small></h3>
+        <p>«я мужик, пошел исправить заросшие брови, быстро все сделали»</p>
+        <cite>Петр Федоров</cite>
+      </div>
+      <div class="person">
+        <h3>Виктория<small>наращивание</small></h3>
+        <p>«Я очень капризный клиент и я более полугода искала мастера, который выполнит мой запрос. Виктория справилась на 100%»</p>
+        <cite>Catherine G</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="end" aria-labelledby="end-h">
+  <div class="wrap end-in">
+    <figure class="facade"><img src="photo-facade.jpg" alt="Вход в Лак Ми: чёрная световая вывеска и дверь с наклейкой «Студия маникюра»" width="944" height="1400" loading="lazy"></figure>
+    <div>
+      <h2 id="end-h">Молодёжная, 3</h2>
+      <div class="info-grid">
+        <dl class="facts">
+          <div><dt>Адрес</dt><dd>Красногорск, Молодёжная улица, 3. Вход с улицы, есть пандус и парковка</dd></div>
+          <div><dt>Часы</dt><dd>Каждый день с 10 до 22</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+79776444523">+7 977 644-45-23</a></dd></div>
+        </dl>
+        <a class="map" href="https://yandex.ru/maps/org/lak_mi/172805982611/" target="_blank" rel="noopener"><img src="map.png" alt="Лак Ми на карте, Молодёжная улица, 3" width="650" height="450" loading="lazy"><span>Открыть в Яндекс Картах</span></a>
+      </div>
+      <div class="acts" style="margin-top:28px">
+        <a class="btn main" href="https://dikidi.ru/1569600" target="_blank" rel="noopener">Записаться</a>
+        <a class="btn line" href="tel:+79776444523">Позвонить</a>
+      </div>
+      <div class="links">
+        <a href="https://wa.me/79776444523" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://vk.ru/luck_me_studio" target="_blank" rel="noopener">ВКонтакте</a>
+      </div>
+    </div>
+    <p class="sign chalk">С любовью, Лак Ми</p>
+  </div>
+  <p class="wrap demo">Демо-страница. Сделал Дамир, Павшинская пойма · +7&nbsp;925&nbsp;606-00-00 · <a href="https://t.me/youngdemiro" target="_blank" rel="noopener">t.me/youngdemiro</a></p>
+</footer>
+</body>
+</html>

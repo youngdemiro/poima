@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Нахмеле: бар во дворе на Красногорском бульваре, 4Д</title>
+<meta name="description" content="Нахмеле, бар во дворе в Красногорске. Среда игры, четверг кино с попкорном, суббота диджей. Красногорский бульвар, 4Д.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:dark;--night:#0C1210;--night2:#111916;--green:#0A8364;--neon:#6FF2B8;--white:#fff;--soft:#dfe9e5;--muted:#a9b8b2;--line:rgba(255,255,255,.18)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--night);color:var(--white)}
+body{font-family:'Jost',sans-serif;font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+h2,h3,p,figure,blockquote{margin:0}
+.hand{font-family:'Caveat',cursive}
+.wrap{max-width:1312px;margin:0 auto}
+
+/* ---------- первый экран ---------- */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr) 44%;gap:40px;padding:40px 56px 0;max-width:1440px;margin:0 auto;overflow:hidden}
+.hero h1{margin:0 0 52px;line-height:0}
+.hero h1 img{width:420px;max-width:100%;height:auto}
+.poem{font-family:'Caveat',cursive;font-weight:500;font-size:clamp(44px,4.4vw,66px);line-height:1.02;margin:0 0 36px;color:var(--soft)}
+.poem span{display:block}
+.poem .call-line{color:var(--neon);font-weight:700;font-size:1.3em;margin-top:.08em;text-shadow:0 0 18px rgba(111,242,184,.45)}
+.btn{display:inline-flex;align-items:baseline;gap:14px;background:var(--neon);color:var(--night);text-decoration:none;font-weight:700;font-size:21px;padding:16px 28px;border-radius:999px}
+.btn small{font-weight:500;font-size:17px}
+.btn:active{transform:translateY(1px)}
+.info{margin:24px 0 0;color:var(--soft);font-size:19px;max-width:34ch}
+.shot{align-self:end;position:relative;margin-bottom:-2px}
+.shot img{width:100%;height:min(80svh,720px);object-fit:cover;object-position:35% 50%;border-radius:300px 300px 0 0}
+.pulse{position:absolute;left:0;right:0;bottom:84px;height:150px;pointer-events:none;z-index:2}
+.pulse svg{width:100%;height:100%;overflow:visible}
+.pulse path,.end-pulse path{fill:none;stroke:var(--neon);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(111,242,184,.8))}
+.pulse path{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 3.2s ease-out .3s forwards}
+
+/* ---------- неделя: цветной блок ---------- */
+.week{background:var(--green);padding:96px 56px 88px}
+.week h2{font-weight:700;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.01em;margin-bottom:12px}
+.week .lead{font-size:20px;margin-bottom:40px;max-width:46ch}
+.ecg{width:100%;height:auto;display:block}
+.ecg path{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.4);margin-top:6px}
+.days>div{padding:16px 14px 0 0;min-width:0}
+.days .d{font-weight:500;font-size:16px;text-transform:uppercase;letter-spacing:.06em;color:#f7fcfa}
+.days .on .d{color:#fff;font-weight:700}
+.days .h{font-weight:700;font-size:24px;line-height:1.15;margin-top:8px}
+.days .on .h{font-weight:500;font-size:17px;color:#f7fcfa;margin-top:10px}
+.days .ev{display:block;font-family:'Caveat',cursive;font-weight:700;font-size:34px;line-height:1;margin:10px 0 4px}
+.days .on p{font-size:18px;line-height:1.35}
+.days figure{margin-top:16px;max-width:170px}
+.games{width:100%;max-width:240px;margin-top:14px;transform:rotate(-2deg)}
+.games img{width:100%}
+.booth img{width:100%;aspect-ratio:3/4;object-fit:cover;border:5px solid #fff;transform:rotate(2deg)}
+.every{margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.4);font-size:20px}
+.every b{font-weight:700}
+
+/* ---------- кино: бегущая строка ---------- */
+.films{background:var(--night);padding:44px 0 48px;border-bottom:1px solid var(--line)}
+.films .cap{padding:0 56px;font-size:20px;color:var(--soft);margin-bottom:16px}
+.films .cap b{color:var(--neon);font-weight:700}
+.reel{overflow:hidden;white-space:nowrap}
+.reel div{display:inline-block;animation:run 48s linear infinite}
+.reel span{font-weight:500;font-size:clamp(40px,5.2vw,76px);line-height:1.1;color:#eef5f2;padding-right:.6em}
+.reel span::after{content:"·";padding-left:.6em;color:var(--neon)}
+
+/* ---------- двор ---------- */
+.yard-top{position:relative;height:min(86svh,820px);min-height:460px;overflow:hidden}
+.yard-top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.yard-top::before{content:"";position:absolute;inset:0 0 auto 0;height:60%;background:linear-gradient(180deg,rgba(12,18,16,.85),rgba(12,18,16,0));z-index:1}
+.yard-top h2{position:relative;z-index:2;padding:72px 56px 0;max-width:980px;font-weight:700;font-size:clamp(32px,4.2vw,60px);line-height:1.08;letter-spacing:-.01em}
+.yard-grid{max-width:1440px;margin:0 auto;padding:12px 12px 96px;display:grid;grid-template-columns:5fr 4fr 4fr;grid-template-rows:minmax(220px,auto) 300px 300px;gap:12px;
+  grid-template-areas:"txt txt sun" "chr per sun" "chr per pul"}
+.yard-grid .txt{grid-area:txt;align-self:center;padding:36px 44px;font-size:clamp(24px,2vw,30px);line-height:1.35;color:var(--soft);max-width:38ch}
+.yard-grid figure{position:relative;overflow:hidden;min-height:0}
+.yard-grid figure img{width:100%;height:100%;object-fit:cover}
+.f-chr{grid-area:chr}.f-per{grid-area:per}.f-sun{grid-area:sun}.f-pul{grid-area:pul}
+.f-chr img{object-position:50% 70%}
+.f-pul figcaption{position:absolute;right:20px;bottom:10px;font-family:'Caveat',cursive;font-weight:700;font-size:56px;line-height:1;color:#fff}
+
+/* ---------- собака ---------- */
+.dog{background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:96px 56px}
+.dog .wrap{display:grid;grid-template-columns:400px minmax(0,1fr);gap:80px;align-items:center}
+.dog figure{border:8px solid #fff;transform:rotate(-3deg);width:360px;overflow:hidden}
+.dog figure img{width:100%;aspect-ratio:4/5;object-fit:cover;transform:scale(1.6);transform-origin:66% 74%}
+.dog h2{font-weight:700;font-size:clamp(36px,4.2vw,60px);line-height:1.05;margin-bottom:28px}
+.dog blockquote{font-size:32px;line-height:1.35;max-width:26ch}
+.dog cite{display:block;font-style:normal;font-size:17px;color:var(--muted);margin-top:12px}
+.dog .also{margin-top:36px;color:var(--soft);max-width:44ch}
+
+/* ---------- все свои ---------- */
+.own{padding:110px 56px 100px;background:#E8F0EC;color:var(--night)}
+.own h2{font-weight:700;font-size:clamp(40px,5.6vw,84px);line-height:1;letter-spacing:-.015em;max-width:14ch;margin-bottom:64px}
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.quotes figure{padding:0 36px 0 0;margin-right:36px;border-right:1px solid rgba(12,18,16,.2)}
+.quotes figure:last-child{border-right:0;margin-right:0}
+.quotes figure:nth-child(2){margin-top:56px}
+.quotes figure:nth-child(3){margin-top:112px}
+.quotes blockquote{font-size:24px;line-height:1.4}
+.quotes figcaption{margin-top:14px;font-size:16px;color:#4d5c56}
+.rating{margin-top:72px;font-size:18px;color:#2b3632}
+.rating a{color:#087058;font-weight:500;text-underline-offset:4px}
+
+/* ---------- как найти ---------- */
+.find{background:var(--night2);padding:96px 56px 0}
+.find .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}
+.find h2{font-weight:700;font-size:clamp(34px,3.6vw,52px);line-height:1.08;margin-bottom:18px}
+.motto{font-size:22px;color:var(--soft);margin-bottom:36px}
+.motto span{display:block}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;font-size:18px;margin-bottom:32px}
+.hours dt{color:var(--muted)}
+.hours dd{margin:0}
+.links{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:18px}
+.links a{display:inline-block;padding:9px 0;text-underline-offset:4px}
+.find .note{margin-top:28px;color:var(--muted);font-size:17px;max-width:40ch}
+.pics{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.pics img{width:100%;height:100%;object-fit:cover}
+.pics .map{display:block;position:relative}
+.pics .map span{position:absolute;left:12px;bottom:12px;background:var(--night);color:#fff;font-size:15px;padding:6px 12px}
+.final{position:relative;max-width:1312px;margin:80px auto 0;padding-bottom:110px;display:flex;justify-content:flex-end;align-items:center}
+.end-pulse{position:absolute;left:-56px;right:400px;top:-10px;height:110px}
+.end-pulse svg{width:100%;height:100%;overflow:visible}
+.final .btn{position:relative;z-index:2;flex-direction:column;align-items:center;gap:4px;padding:20px 36px;font-family:'Jost',sans-serif}
+.final .btn span{font-size:24px}
+.final .btn small{font-size:17px}
+
+footer{border-top:1px solid var(--line);padding:26px 56px 34px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);padding:12px 0}
+.lead a,.rating a{padding:9px 0}
+
+@media (min-width:1500px){.pulse{-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}}
+
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.pulse path{animation:none;stroke-dashoffset:0}.reel div{animation:none}}
+
+/* ---------- планшет ---------- */
+@media (max-width:1100px){
+  .days figure{max-width:130px}
+  .quotes figure{padding-right:24px;margin-right:24px}
+}
+/* ---------- телефон ---------- */
+@media (min-width:600px) and (max-width:860px){
+  .shot img{height:560px !important;object-position:35% 20% !important}
+}
+@media (max-width:860px){
+  body{font-size:17px}
+  .hero{grid-template-columns:1fr;gap:0;padding:24px 16px 0;min-height:0}
+  .hero h1{margin-bottom:26px}
+  .hero h1 img{width:250px}
+  .poem{font-size:40px;margin-bottom:24px}
+  .btn{width:100%;justify-content:center;font-size:20px;padding:15px 18px}
+  .info{font-size:17px;margin-top:16px}
+  .shot{margin-top:28px}
+  .shot img{height:430px;border-radius:190px 190px 0 0}
+  .pulse{position:relative;bottom:auto;height:90px;margin:-60px -16px 0;width:calc(100% + 32px)}
+
+  .week{padding:64px 16px 64px}
+  .week .lead{font-size:18px;margin-bottom:28px}
+  .ecg{display:none}
+  .days .on .d::after{content:"";display:block;width:72px;height:30px;margin-top:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 30'%3E%3Cpath d='M0 22H22L27 16L31 26L36 3L41 29L45 22H72' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat}
+  .days{grid-template-columns:1fr;border-top:0}
+  .days>div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:2px 14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.4)}
+  .days .d{grid-column:1;grid-row:1 / span 5;padding-top:4px}
+  .days>div>*:not(.d){grid-column:2}
+  .days .h,.days .on .h{margin-top:0;font-size:18px;font-weight:500;color:#fff}
+  .days .on .h{color:#f7fcfa;font-size:16px;margin-top:4px}
+  .days .ev{margin:0}
+  .days figure{max-width:150px;margin-top:10px}
+  .days figure.games,.days figure.games img{width:min(240px,100%);max-width:none}
+  .every{font-size:18px;margin-top:24px}
+
+  .films{padding:32px 0 36px}
+  .films .cap{padding:0 16px;font-size:17px}
+
+  .yard-top{height:72svh;min-height:420px}
+  .yard-top h2{padding:36px 16px 0;font-size:30px}
+  .yard-top::before{height:70%;background:linear-gradient(180deg,rgba(12,18,16,.92) 40%,rgba(12,18,16,0))}
+  .yard-top img{object-position:58% 70%}
+  .yard-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto 260px 200px 240px;gap:8px;padding:8px 8px 64px;
+    grid-template-areas:"txt txt" "chr pul" "per pul" "sun sun"}
+  .f-sun img{object-position:50% 87%}
+  .f-pul img{object-position:82% 50%}
+  .yard-grid .txt{padding:28px 8px 20px;font-size:22px}
+  .f-pul figcaption{font-size:40px;right:12px}
+
+  .dog{padding:64px 16px}
+  .dog .wrap{grid-template-columns:1fr;gap:44px}
+  .dog figure{width:min(300px,78vw);margin-left:8px}
+  .dog blockquote{font-size:23px}
+
+  .own{padding:72px 16px 64px}
+  .own h2{margin-bottom:40px}
+  .quotes{grid-template-columns:1fr;gap:28px}
+  .quotes figure,.quotes figure:nth-child(2),.quotes figure:nth-child(3){margin:0;padding:0 0 28px;border-right:0;border-bottom:1px solid rgba(12,18,16,.2)}
+  .quotes figure:last-child{border-bottom:0;padding-bottom:0}
+  .quotes blockquote{font-size:20px}
+  .rating{margin-top:40px}
+
+  .find{padding:64px 16px 0}
+  .find .wrap{grid-template-columns:1fr;gap:36px}
+  .pics{grid-template-columns:1fr}
+  .pics img{height:auto;aspect-ratio:4/3}
+  .final{margin-top:44px;padding-bottom:72px;justify-content:center;flex-direction:column}
+  .end-pulse{position:relative;left:auto;right:auto;top:auto;width:calc(100% + 32px);margin:0 -16px 8px;height:80px}
+  .final .btn{width:100%}
+  .final .btn{padding:18px 14px}
+  .final .btn span{font-size:20px;white-space:nowrap}
+  footer{padding:22px 16px 30px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div>
+    <h1><img src="logo.svg" alt="Нахмеле" width="1479" height="216"></h1>
+    <p class="poem"><span>Будешь рыбой, плыви.</span><span>Будешь птицей, лети.</span><span class="call-line">Будешь в Нахмеле,&nbsp;звони.</span></p>
+    <a class="btn" href="tel:+79939289427">Позвонить <small>+7 993 928-94-27</small></a>
+    <p class="info">Бар во дворе на Красногорском бульваре,&nbsp;4Д. Будни с 18, выходные с 16.</p>
+  </div>
+  <div class="shot"><img src="hero.jpg" alt="Неоновая вывеска Нахмеле в дыму под гирляндами" width="576" height="768"></div>
+  <div class="pulse" aria-hidden="true">
+    <svg viewBox="0 0 1440 150" preserveAspectRatio="none"><path vector-effect="non-scaling-stroke" d="M0 110 H560 L572 98 L582 110 H620 L636 24 L654 140 L668 74 L678 110 H930 C918 82 944 58 966 82 C988 58 1014 82 1002 110 L966 140 L930 110 M1002 110 H1440"/></svg>
+  </div>
+</header>
+
+<main>
+<section class="week" id="week">
+  <div class="wrap">
+    <h2>Неделя Нахмеле</h2>
+    <p class="lead">Вечера начинаются в 21:00, программа в нашем <a href="https://t.me/nahmele" target="_blank" rel="noopener">Telegram</a>.</p>
+    <svg class="ecg" viewBox="0 0 700 120" aria-hidden="true"><path d="M0 90 H232 L240 80 L246 98 L252 14 L260 110 L266 90 H332 L340 80 L346 98 L352 14 L360 110 L366 90 H532 L540 80 L546 98 L552 14 L560 110 L566 90 H700"/></svg>
+    <div class="days">
+      <div><div class="d">Пн</div><div class="h">с 18 до 2</div></div>
+      <div><div class="d">Вт</div><div class="h">с 18 до 2</div></div>
+      <div class="on"><div class="d">Среда</div><b class="ev">21:00 игры</b><p>Шляпа (крокодил с бумажками) и джек бокс (пати игра с телефонами)</p><div class="h">с 18 до 2</div>
+        <figure class="games"><img src="photo-games-h.jpg" alt="Надпись с постера: Игры Нахмеле" loading="lazy" width="800" height="142"></figure></div>
+      <div class="on"><div class="d">Четверг</div><b class="ev">21:00 кино</b><p>Фильм с попкорном</p><div class="h">с 18 до 2</div></div>
+      <div><div class="d">Пт</div><div class="h">с 18 до 3</div></div>
+      <div class="on"><div class="d">Суббота</div><b class="ev">21:00 диджей</b><p>Моднейшая концептуальная танцевальная музыка</p><div class="h">с 16 до 3</div>
+        <figure class="booth"><img src="photo-booth.jpg" alt="Диджейская будка KISSING BOOTH во дворе на закате" loading="lazy" width="960" height="1280"></figure></div>
+      <div><div class="d">Вс</div><div class="h">с 16 до 2</div></div>
+    </div>
+    <p class="every"><b>Каждый день:</b> настолки, приставки и трансляции на двух экранах.</p>
+  </div>
+</section>
+
+<section class="films" aria-label="Кино по четвергам">
+  <p class="cap"><b>Четверг, 21:00, кино с попкорном.</b> Попкорн нагрет. Что уже смотрели:</p>
+  <div class="reel"><div>
+    <span>Motley Crue</span><span>Большой Стэн</span><span>Реальные упыри</span><span>Братья из Гримсби</span><span>Терминатор 2</span><span>Чужие среди нас</span><span>Человек‑паук</span>
+    <span>Motley Crue</span><span>Большой Стэн</span><span>Реальные упыри</span><span>Братья из Гримсби</span><span>Терминатор 2</span><span>Чужие среди нас</span><span>Человек‑паук</span>
+  </div></div>
+</section>
+
+<section class="yard" id="yard">
+  <div class="yard-top">
+    <img src="photo-yard.jpg" alt="Дворик Нахмеле вечером: гирлянды, костровая чаша, шезлонги, вывеска Bottle shop" loading="lazy" width="1280" height="960">
+    <h2>Иногда (всегда) всё, что нам нужно, это посидеть во&nbsp;дворике Нахмеле</h2>
+  </div>
+  <div class="yard-grid">
+    <p class="txt">Во дворе костровая чаша, шезлонги и гирлянды, рядом веранда под перголой. С ноутбуком можно прийти к открытию, а вечером посидеть у огня.</p>
+    <figure class="f-chr"><img src="photo-chairs.jpg" alt="Шезлонги и костровая чаша во дворе на фоне высоток Павшинской поймы" loading="lazy" width="576" height="768"></figure>
+    <figure class="f-per"><img src="photo-pergola.jpg" alt="Веранда под перголой с цветами" loading="lazy" width="960" height="1280"></figure>
+    <figure class="f-sun"><img src="photo-sunset.jpg" alt="Баннер Нахмеле Bottle shop на закате" loading="lazy" width="600" height="800"></figure>
+    <figure class="f-pul"><img src="photo-pulse.jpg" alt="Синий неон пульса на стене двора вечером" loading="lazy" width="600" height="800"><figcaption>Скучали?</figcaption></figure>
+  </div>
+</section>
+
+<section class="dog" id="dog">
+  <div class="wrap">
+    <figure><img src="photo-dog.jpg" alt="Французский бульдог в сомбреро у барной стойки Нахмеле" loading="lazy" width="960" height="1280"></figure>
+    <div>
+      <h2>Можно с собакой</h2>
+      <blockquote>«Еще можно с собачками, за это отдельный лайк)»<cite>Анастаси Ч., июль 2026</cite></blockquote>
+      <p class="also">И вообще с любыми животными. Для велосипедов есть велопарковка.</p>
+    </div>
+  </div>
+</section>
+
+<section class="own" id="own">
+  <div class="wrap">
+    <h2>Чужих у нас кстати не бывает</h2>
+    <div class="quotes">
+      <figure><blockquote>«…такое ощущение что все гости давно знакомы друг с другом и я будучи там впервые был приятно удивлен новым знакомым…»</blockquote><figcaption>Андрей Burn</figcaption></figure>
+      <figure><blockquote>«Бармены улыбаются, шутят и даже советуют чего есть у них вкусненькое.»</blockquote><figcaption>Алексей Воронов</figcaption></figure>
+      <figure><blockquote>«Можно подружиться, а можно просто с улыбкой на лице соседствовать с прекрасными людьми!»</blockquote><figcaption>Levoncello</figcaption></figure>
+    </div>
+    <p class="rating">4,9 на Яндекс Картах, 277 оценок. <a href="https://yandex.ru/maps/org/nakhmele/148172470254/reviews/" target="_blank" rel="noopener">Все отзывы</a></p>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div>
+      <h2>Красногорский бульвар, 4Д</h2>
+      <p class="motto"><span>Вход свободный.</span><span>Настроение отличное.</span><span>Адрес старый.</span></p>
+      <dl class="hours">
+        <dt>Пн, вт, ср, чт</dt><dd>с 18 до 2 ночи</dd>
+        <dt>Пятница</dt><dd>с 18 до 3</dd>
+        <dt>Суббота</dt><dd>с 16 до 3</dd>
+        <dt>Воскресенье</dt><dd>с 16 до 2</dd>
+      </dl>
+      <div class="links">
+        <a href="https://t.me/nahmele" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://yandex.ru/maps/org/nakhmele/148172470254/" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+      </div>
+      <p class="note">Дни рождения и корпоративы обсуждаем по телефону. Парковка бесплатная.</p>
+    </div>
+    <div class="pics">
+      <img src="photo-facade.jpg" alt="Фасад Нахмеле днём: зелёные бочки‑столы и цветы" loading="lazy" width="1280" height="960">
+      <a class="map" href="https://yandex.ru/maps/org/nakhmele/148172470254/" target="_blank" rel="noopener"><img src="map.png" alt="Нахмеле на карте, Красногорский бульвар, 4Д" loading="lazy" width="650" height="450"><span>Открыть в Яндекс Картах</span></a>
+    </div>
+  </div>
+  <div class="final">
+    <div class="end-pulse" aria-hidden="true">
+      <svg viewBox="0 0 900 110" preserveAspectRatio="none"><path vector-effect="non-scaling-stroke" d="M0 70 H520 L532 58 L542 70 H580 L596 10 L614 100 L628 40 L638 70 H800 C788 42 814 18 836 42 C858 18 884 42 872 70 L836 100 L800 70 M872 70 H900"/></svg>
+    </div>
+    <a class="btn" href="tel:+79939289427"><span>Будешь в Нахмеле, звони.</span><small>+7 993 928-94-27</small></a>
+  </div>
+</section>
+</main>
+
+<footer>Демо-страница. Сделал Дамир, Павшинская пойма · <span style="white-space:nowrap">+7 925 606-00-00</span> · <a href="https://t.me/youngdemiro" target="_blank" rel="noopener">t.me/youngdemiro</a></footer>
+
+</body>
+</html>

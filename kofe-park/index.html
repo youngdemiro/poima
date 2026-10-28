@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Coffee & Park, кофейня у Павшинского моста</title>
+<meta name="description" content="Кофейня в круглом павильоне на набережной Москвы-реки у Павшинского моста, Красногорск. Каждый день с 9 до 22, в пятницу и субботу до 23.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:light;--bg:#e6e9ea;--paper:#f7f8f8;--ink:#2b3134;--soft:#596165;--line:#c3c8ca;--frame:#2b3134;--acc:#2e5a4c;--acc-soft:#dfe8e4}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font:17px/1.6 Manrope,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Unbounded,sans-serif;font-weight:600;letter-spacing:-.02em;margin:0;overflow-wrap:anywhere}
+h2{font-size:clamp(26px,5.6vw,46px);line-height:1.08}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.call{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:14px 28px;border-radius:999px}
+.call:active{transform:translateY(1px)}
+q{quotes:"«" "»"}
+.quote{margin:0}
+.quote p{margin:0;font-size:19px;line-height:1.45}
+.quote cite{display:block;font-style:normal;font-size:14px;color:var(--soft);margin-top:6px}
+
+/* Первый экран: крыша-диск и стеклянное кольцо */
+.hero{max-width:1400px;margin:0 auto;padding:14px 12px 30px}
+.roof{position:relative;z-index:2;height:74px;display:grid;place-items:center;
+  background:linear-gradient(180deg,#f2f3f4 0%,#dfe2e3 45%,#c8cbcd 100%);
+  border-radius:50% 50% 50% 50%/34px 34px 16px 16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -6px 0 #b9bdbf,0 10px 16px -8px rgba(30,36,38,.45)}
+.logo{width:150px;height:auto}
+.glass{height:min(350px,44svh);margin:-8px 3.5% 0;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:var(--frame);padding:8px 5px 5px;
+  border-radius:0 0 50% 50%/0 0 30px 30px;overflow:hidden}
+.glass img{width:100%;height:100%;object-fit:cover}
+.glass .w{display:none}
+.lead{padding:22px 8px 0}
+h1{font-size:clamp(27px,7.4vw,70px);line-height:1.05;font-weight:600;margin-bottom:12px}
+.sub{margin:0 0 18px;color:var(--soft);max-width:38ch;font-size:16px;line-height:1.5}
+
+/* Сезоны на изумрудной заливке */
+.seasons{background:var(--acc);color:#fff;padding:60px 0 70px;overflow:hidden}
+.seasons h2{max-width:20ch;margin-bottom:38px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:30px 16px}
+.card{background:#fff;color:var(--ink);padding:7px 7px 14px;position:relative;margin:0}
+.card:nth-child(odd){transform:rotate(-2.4deg)}
+.card:nth-child(even){transform:rotate(2deg)}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.card h3{font-size:18px;margin:10px 4px 2px;font-weight:500}
+.card p{margin:0 4px;font-size:14px;line-height:1.35;color:var(--soft)}
+.now{position:absolute;top:-13px;right:-6px;background:var(--ink);color:#fff;font:600 13px/1 Manrope,sans-serif;padding:7px 11px;transform:rotate(7deg)}
+.season-foot{display:grid;gap:40px;margin-top:64px;align-items:center}
+.stamp{position:relative;width:min(80vw,400px);aspect-ratio:1;margin:0 auto}
+.stamp .ph{position:absolute;inset:13%;border-radius:50%;overflow:hidden;border:4px solid #fff}
+.stamp .ph img{width:100%;height:100%;object-fit:cover}
+.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 44s linear infinite}
+.ring text{font:600 15.5px Unbounded,sans-serif;fill:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+.seasons .quote p{font-size:clamp(20px,3vw,26px);line-height:1.35}
+.seasons .quote cite{color:#cfe0d9}
+.board{background:#fbfbfa;color:var(--ink);padding:22px 22px 20px;margin-top:30px;transform:rotate(-1deg);max-width:440px}
+.board b{display:block;font:600 15px/1.2 Unbounded,sans-serif;letter-spacing:.22em;text-transform:uppercase;margin-bottom:10px}
+.board p{margin:0;font-size:15px;line-height:1.5;color:var(--soft)}
+.board strong{color:var(--acc)}
+
+/* У воды: ночная река на всю ширину */
+.water{padding:0 0 70px}
+.river{position:relative;margin:0;color:#fff;background:#14181a}
+.river img{width:100%;height:clamp(460px,58vw,780px);object-fit:cover;object-position:38% 62%}
+.river::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,14,.55) 0%,rgba(10,12,14,0) 34%,rgba(10,12,14,0) 62%,rgba(10,12,14,.45) 100%);pointer-events:none}
+.river h2{position:absolute;z-index:1;left:16px;bottom:10px;font-size:clamp(66px,16.5vw,250px);line-height:.92;letter-spacing:-.045em;font-weight:600}
+.river .quote{position:absolute;z-index:1;top:22px;left:20px;right:20px}
+.river .quote p{font:500 clamp(20px,2.3vw,32px)/1.25 Unbounded,sans-serif;letter-spacing:-.01em}
+.river .quote cite{color:rgba(255,255,255,.78)}
+.shore{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px;align-items:start}
+.shore .mid{grid-column:1/-1}
+.shore .txt{color:var(--soft);max-width:44ch;margin:0 0 26px}
+.shore img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.shore .p1{object-position:20% 50%}
+.shore .p2{margin-top:56px}
+.big-q{margin:0 0 22px;padding-top:18px;border-top:1px solid var(--line)}
+.big-q p{font:500 clamp(21px,2.4vw,30px)/1.28 Unbounded,sans-serif;letter-spacing:-.01em}
+.quotes{display:grid;gap:26px}
+
+/* Букеты: мозаика с цитатой */
+.flowers{padding:20px 0 80px}
+.flowers h2{margin-bottom:12px}
+.flowers .txt{max-width:46ch;color:var(--soft);margin:0 0 28px}
+.bq{display:grid;grid-template-columns:1fr 1fr;gap:10px;grid-template-rows:auto 210px 70px 210px auto;grid-template-areas:"q q" "f1 f2" "f3 f2" "f3 f4" "z z"}
+.bq img{width:100%;height:100%;object-fit:cover;min-height:0}
+.bq .f1{grid-area:f1}
+.bq .f2{grid-area:f2}
+.bq .f3{grid-area:f3}
+.bq .f4{grid-area:f4}
+.bq .tile{grid-area:q;background:var(--acc);color:#fff;padding:26px 22px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.bq .tile p{font:500 clamp(25px,3.3vw,46px)/1.12 Unbounded,sans-serif;letter-spacing:-.02em}
+.bq .tile cite{color:#cfe0d9}
+.bq .z{grid-area:z;align-self:end;padding:14px 0 0}
+.bq .z p{font:500 clamp(20px,2vw,26px)/1.3 Unbounded,sans-serif}
+
+/* Зимой и после прогулки: вечерний блок */
+.walk{background:var(--ink);color:#fff;padding:64px 0 70px;overflow:hidden}
+.walk .in{display:grid;gap:34px;align-items:start}
+.walk h2{margin-bottom:22px;font-size:clamp(30px,5.4vw,64px);max-width:13ch}
+.walk .quote p{font-size:clamp(19px,1.8vw,23px);line-height:1.45}
+.walk .quote cite{color:#aab2b5}
+.pics2{position:relative;padding-bottom:70px;max-width:560px;width:100%;margin-left:auto}
+.pics2 .big{width:86%;aspect-ratio:4/5;object-fit:cover;margin-left:auto}
+.pics2 .small{position:absolute;left:0;bottom:0;width:50%;aspect-ratio:1;object-fit:cover;object-position:50% 0;border:6px solid var(--ink)}
+.facts{list-style:none;margin:30px 0 0;padding:0;display:grid}
+.facts li{font:500 clamp(18px,1.9vw,24px)/1.2 Unbounded,sans-serif;padding:13px 0;border-top:1px solid rgba(255,255,255,.18);display:flex;align-items:center;gap:14px}
+.facts li::before{content:"";flex:none;width:11px;height:11px;border-radius:50%;border:2px solid #c8cbcd}
+
+/* Контакты */
+.find{padding:70px 0 50px}
+.find .in{display:grid;gap:34px}
+.find h2{margin-bottom:22px}
+.phone{display:inline-block;font:500 clamp(27px,4vw,50px)/1.1 Unbounded,sans-serif;letter-spacing:-.02em;text-decoration:none;padding:8px 0;margin:-8px 0 14px;white-space:nowrap}
+.find dl{margin:0 0 26px;display:grid;gap:14px;max-width:42ch}
+.find dt{font-size:14px;color:var(--soft)}
+.find dd{margin:0;font-size:18px;line-height:1.45}
+.map a{display:block;text-decoration:none}
+.map img{width:100%;height:auto;border:6px solid var(--frame)}
+.map span{display:inline-block;margin-top:10px;border-bottom:1px solid var(--ink);font-weight:600}
+.rate{margin:24px 0 0;font-size:15px;color:var(--soft)}
+.rate a,footer a{display:inline-block;padding:12px 0;margin:-12px 0}
+footer{border-top:1px solid var(--line);padding:22px 20px 30px;text-align:center;font-size:13px;color:var(--soft)}
+
+@media (min-width:700px){
+  .cards{grid-template-columns:repeat(4,1fr);gap:22px}
+}
+@media (min-width:960px){
+  .wrap{padding:0 40px}
+  .hero{padding:20px 40px 36px}
+  .roof{height:116px;border-radius:50% 50% 50% 50%/52px 52px 22px 22px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -9px 0 #b9bdbf,0 14px 22px -10px rgba(30,36,38,.45)}
+  .logo{width:220px}
+  .glass{height:auto;min-height:0;aspect-ratio:1260/440;max-height:calc(100svh - 360px);grid-template-columns:repeat(5,1fr);margin-top:-12px;padding:10px 6px 6px;gap:6px;border-radius:0 0 50% 50%/0 0 64px 64px}
+  .glass .w{display:block}
+  .lead{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;padding:30px 3.5% 0}
+  h1{margin:0;max-width:15ch;font-size:clamp(27px,4.8vw,70px)}
+  .lead>div{flex:none;width:330px}
+  .seasons{padding:90px 0 100px}
+  .seasons h2{margin-bottom:54px}
+  .season-foot{grid-template-columns:420px 1fr;gap:70px;margin-top:90px}
+  .water{padding:0 0 110px}
+  .river h2{left:36px;bottom:30px}
+  .river .quote{top:46px;left:auto;right:48px;width:min(34vw,500px)}
+  .shore{grid-template-columns:5fr 6fr 4fr;gap:44px;margin-top:70px}
+  .shore .mid{grid-column:auto;grid-row:1/2;grid-column:2/3;padding-top:30px}
+  .shore .p1{grid-column:1/2;grid-row:1/2}
+  .shore .p2{grid-column:3/4;grid-row:1/2;margin-top:160px}
+  .flowers{padding:10px 0 110px}
+  .bq{grid-template-columns:5fr 4fr 4fr;grid-template-rows:auto 300px 270px;gap:14px;grid-template-areas:"f1 q q" "f1 f2 f3" "z f2 f4"}
+  .bq .tile{padding:34px 34px 28px;min-height:270px}
+  .bq .z{align-self:start;padding:34px 20px 0 0}
+  .walk{padding:100px 0 110px}
+  .walk .in{grid-template-columns:6fr 5fr;gap:80px;align-items:center}
+  .find{padding:100px 0 70px}
+  .find .in{grid-template-columns:1fr 1.15fr;gap:60px;align-items:start}
+  .find h2{font-size:clamp(26px,4.1vw,46px)}
+}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="roof"><img class="logo" src="logo.png" alt="Coffee & Park" width="540" height="176"></div>
+  <div class="glass">
+    <img src="ring-1.jpg" alt="Осенние цветы под потолком павильона" style="object-position:0% 30%">
+    <img src="ring-2.jpg" alt="Павильон и гортензии на террасе" style="object-position:50% 40%" loading="lazy">
+    <img src="ring-3.jpg" alt="Герань на террасе, река и Дом правительства" style="object-position:28% 50%" loading="lazy">
+    <img class="w" src="ring-4.jpg" alt="Терраса из досок и ивы осенью" style="object-position:72% 50%" loading="lazy">
+    <img class="w" src="ring-5.jpg" alt="Осенний букет и тыквы на столе" style="object-position:22% 40%" loading="lazy">
+  </div>
+  <div class="lead">
+    <h1>Круглый павильон у&#160;Павшинского моста</h1>
+    <div>
+      <p class="sub">Набережная Москвы-реки, с видом на Дом правительства. Каждый день с&#160;9 до&#160;22, в&#160;пятницу и&#160;субботу до&#160;23.</p>
+      <a class="call" href="tel:+79771829670">Позвонить</a>
+    </div>
+  </div>
+</header>
+
+<section class="seasons">
+  <div class="wrap">
+    <h2>Наряжаем павильон к&#160;каждому сезону</h2>
+    <div class="cards">
+      <figure class="card"><img src="season-spring.jpg" alt="Ветки сакуры у входа в павильон" loading="lazy"><h3>Весной</h3><p>Сакура у входа и сирень на террасе.</p></figure>
+      <figure class="card"><img src="season-summer.jpg" alt="Пионы в вазе" loading="lazy"><h3>Летом</h3><p>Пионы на столах, веранда с навесом.</p></figure>
+      <figure class="card"><span class="now">сейчас</span><img src="ring-5.jpg" alt="Осенний букет с рябиной и тыквы" style="object-position:20% 35%" loading="lazy"><h3>Осенью</h3><p>Тыквы, рябина, осенние букеты.</p></figure>
+      <figure class="card"><img src="season-winter.jpg" alt="Павильон в снегу, ель с красным бантом" style="object-position:88% 50%" loading="lazy"><h3>Зимой</h3><p>Ель с красным бантом у входа.</p></figure>
+    </div>
+    <div class="season-foot">
+      <div class="stamp">
+        <div class="ph"><img src="stamp.jpg" alt="Букет бордовых хризантем на мраморном столе" loading="lazy"></div>
+        <svg class="ring" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="c" d="M150,150 m-132,0 a132,132 0 1,1 264,0 a132,132 0 1,1 -264,0"/></defs><text><textPath href="#c" textLength="826" lengthAdjust="spacing">COFFEE&amp;PARK&#160;&#160; COFFEE&amp;PARK&#160;&#160; COFFEE&amp;PARK&#160;&#160;</textPath></text></svg>
+      </div>
+      <div>
+        <blockquote class="quote"><p><q>Стильное оформление интерьера, которое меняют в&#160;соответствии с&#160;сезонами!</q></p><cite>Елена Модика</cite></blockquote>
+        <div class="board">
+          <b>Сезонное меню</b>
+          <p>Меню на доске у стойки меняем вместе с декором. В нём всегда есть <strong>НеЧай</strong>. Напитки можно на растительном молоке.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="water">
+  <figure class="river">
+    <img src="water.jpg" alt="Ночная Москва-река и огни Дома правительства" loading="lazy">
+    <h2>У воды</h2>
+    <blockquote class="quote"><p><q>вечером на закате посидеть тут очень приятно&#160;:)</q></p><cite>Julia</cite></blockquote>
+  </figure>
+  <div class="wrap shore">
+    <div class="mid">
+      <p class="txt">Терраса выходит на набережную. Летом работает веранда с навесом, а на улице можно сидеть в пледе.</p>
+      <blockquote class="quote big-q"><p><q>Можно посидеть на&#160;улице в&#160;пледе. Вид шикарный.</q></p><cite>Ольга Радугина</cite></blockquote>
+      <blockquote class="quote big-q"><p><q>Новая веранда с&#160;навесом идеальна для&#160;лета!</q></p><cite>Оксана Д.</cite></blockquote>
+    </div>
+    <img class="p1" src="terrace.jpg" alt="Терраса из досок, ивы и река в солнечный день" loading="lazy">
+    <img class="p2" src="laptop.jpg" alt="Ноутбук и стакан на столике у перил, ива и газон" loading="lazy">
+  </div>
+</section>
+
+<section class="flowers">
+  <div class="wrap">
+    <h2>Букеты на столах</h2>
+    <p class="txt">Свежие цветы в вазах на столах: пионы, подсолнухи, хризантемы.</p>
+    <div class="bq">
+      <img class="f1" src="flowers-1.jpg" alt="Коралловые пионы" loading="lazy">
+      <blockquote class="quote tile"><p><q>в кофейне круглый год свежие цветы</q></p><cite>Дарья В.</cite></blockquote>
+      <img class="f2" src="flowers-2.jpg" alt="Подсолнухи у бирюзовой стойки" loading="lazy">
+      <img class="f3" src="flowers-3.jpg" alt="Красные пионы вечером" loading="lazy">
+      <img class="f4" src="flowers-4.jpg" alt="Букет на мраморном столе" loading="lazy">
+      <blockquote class="quote z"><p><q>живые цветы это просто любовь.</q></p><cite>Жанылай Адамкулова</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="walk">
+  <div class="wrap in">
+    <div>
+      <h2>Зайти погреться после прогулки</h2>
+      <blockquote class="quote"><p><q>Зимой на каждой прогулке заходим погреться…</q></p><cite>Жанылай Адамкулова</cite></blockquote>
+      <ul class="facts">
+        <li>Можно с собакой</li>
+        <li>Можно с ноутбуком</li>
+        <li>Настольные игры</li>
+        <li>Велопарковка</li>
+        <li>Пандус</li>
+      </ul>
+    </div>
+    <div class="pics2">
+      <img class="big" src="winter.jpg" alt="Павильон зимним вечером, гирлянды на ивах" loading="lazy">
+      <img class="small" src="arch.jpg" alt="Еловая арка с золотыми шарами на террасе вечером" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap in">
+    <div>
+      <h2>Через реку от&#160;Дома правительства</h2>
+      <a class="phone" href="tel:+79771829670">+7 977 182-96-70</a>
+      <dl>
+        <dt>Адрес</dt><dd>Красногорск, Павшинский мост. Павильон на набережной Москвы-реки.</dd>
+        <dt>Часы</dt><dd>Каждый день с&#160;9 до&#160;22, в&#160;пятницу и&#160;субботу до&#160;23</dd>
+      </dl>
+      <a class="call" href="tel:+79771829670">Позвонить</a>
+      <p class="rate">4,8 на Яндекс Картах, 428 оценок. <a href="https://yandex.ru/maps/org/kofe_park/171207606300/reviews/" target="_blank" rel="noopener">Все отзывы</a></p>
+    </div>
+    <div class="map">
+      <a href="https://yandex.ru/maps/org/kofe_park/171207606300/" target="_blank" rel="noopener"><img src="map.png" alt="Кофе&Парк на карте у Павшинского моста" width="650" height="450" loading="lazy"><span>Открыть в Яндекс Картах</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>Демо-страница. Сделал Дамир, Павшинская пойма · <span style="white-space:nowrap">+7 925 606-00-00</span> · <a href="https://t.me/youngdemiro" target="_blank" rel="noopener">t.me/youngdemiro</a></footer>
+</body>
+</html>

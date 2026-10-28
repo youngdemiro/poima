@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Твой грумер, зоосалон в Митино</title>
+<meta name="description" content="Зоосалон «Твой грумер»: стрижём собак и кошек. Москва, улица Генерала Белобородова, 24. Каждый день с 10 до 20.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{color-scheme:light;--wall:#ecc9bc;--wall2:#e2bbac;--ink:#1f1b1e;--rubber:#2b2729;--rasp:#d4345f;--tile:#f6f2ef;--pad:clamp(16px,4vw,56px)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--wall);color:var(--ink)}
+body{font:400 18px/1.5 Nunito,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Unbounded,sans-serif;font-weight:800;letter-spacing:-.035em;margin:0;overflow-wrap:anywhere}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font:800 17px/1 Nunito,sans-serif;text-decoration:none;white-space:nowrap;background:var(--ink);color:#fff}
+.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.hot{background:var(--rasp)}
+.btn:active{transform:translateY(1px)}
+
+/* ===== комната: стена, стол, пол ===== */
+.room{position:relative;overflow:hidden;--h:520px;--wallh:640px;--band:160px;--floor:100px}
+.wall{position:relative;height:var(--wallh);background:linear-gradient(#efcfc3,var(--wall2));padding:0 var(--pad)}
+.top{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{display:block;background:#fff;border-radius:16px;padding:6px 10px;transform:rotate(-4deg);transform-origin:50% 0;box-shadow:0 3px 0 #c39484;animation:sway 5s ease-in-out infinite}
+.logo img{width:104px}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.words{position:relative;z-index:1;margin-top:clamp(8px,2vw,28px)}
+.room h1{font-size:clamp(58px,11.2vw,164px);line-height:.9;color:var(--rasp);white-space:nowrap}
+.sticker{position:absolute;z-index:3;left:var(--pad);bottom:44px;display:block;background:#fff;border-radius:22px;padding:12px 18px;box-shadow:0 4px 0 #c39484;transform:rotate(-5deg);transform-origin:50% 0;animation:sway2 6s ease-in-out infinite}
+.sticker img{width:clamp(170px,15vw,230px)}
+@keyframes sway2{50%{transform:rotate(-1deg)}}
+.top .logo{display:none}
+.top{justify-content:flex-end}
+.sub{margin:18px 0 0;font:800 clamp(19px,1.7vw,24px)/1.3 Nunito,sans-serif;max-width:14em}
+
+.table{position:relative;height:var(--band);background:
+ radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.6px) 0 0/7px 7px,
+ linear-gradient(#262224,var(--rubber) 30%,#322d2f);
+ border-top:4px solid #e9e4e1;color:#fff;display:flex;align-items:center;padding:0 var(--pad)}
+.table p{position:relative;z-index:3;margin:0;font:700 19px/1.4 Nunito,sans-serif;max-width:25em}
+.dog{position:absolute;z-index:2;left:58%;bottom:calc(var(--band) - .17 * var(--h));height:var(--h);transform:translateX(-50%)}
+.dog img{height:100%;width:auto;position:relative;z-index:1}
+.dog::after{content:"";position:absolute;left:4%;right:2%;bottom:-2%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent)}
+.leash{position:absolute;z-index:0;left:31%;bottom:60%;width:3px;height:1200px;background:#141113;border-radius:2px;transform-origin:50% 100%;transform:rotate(13deg)}
+
+.floor{height:var(--floor);overflow:hidden;perspective:260px;background:var(--tile)}
+.floor i{display:block;width:300%;height:400%;margin-left:-100%;transform-origin:50% 0;transform:rotateX(62deg);
+ background:repeating-conic-gradient(var(--ink) 0 25%,var(--tile) 0 50%) 0 0/90px 90px}
+
+/* ===== малиновый блок ===== */
+.praise{background:var(--rasp);color:#fff;padding:clamp(56px,7vw,100px) var(--pad) 0;overflow:hidden}
+.praise-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px;max-width:1320px;margin:0 auto}
+.praise h2{font-size:clamp(36px,6vw,86px);line-height:.98;max-width:11ch}
+.rating{margin:0 0 8px;font:700 17px/1.4 Nunito,sans-serif}
+.rating a{color:#fff}
+
+.pile{position:relative;max-width:1320px;margin:56px auto 0;aspect-ratio:1320/815}
+.pol{position:absolute;margin:0;background:#fff;color:var(--ink);padding:9px 9px 0;box-shadow:0 14px 30px rgba(80,10,35,.28);transform:rotate(var(--r))}
+.pol img{width:100%;object-fit:cover}
+.pol figcaption{font:600 clamp(14px,1.25vw,18px)/1 Unbounded,sans-serif;letter-spacing:-.02em;padding:12px 4px 14px}
+.pol .sm{display:block;margin-top:5px;font:700 13px/1.2 Nunito,sans-serif;letter-spacing:0;color:#6d5f64}
+.bub{position:absolute;z-index:2;background:#fff;color:var(--ink);border-radius:999px;padding:10px 18px;font:800 clamp(15px,1.3vw,19px)/1.15 Nunito,sans-serif;white-space:nowrap;box-shadow:0 0 0 2px var(--ink);transform:rotate(var(--br,-5deg))}
+.bub::after{content:"";position:absolute;bottom:-9px;left:var(--tail,26px);width:16px;height:16px;background:#fff;box-shadow:2px 2px 0 0 var(--ink);transform:rotate(45deg)}
+.p1{left:0;top:4%;width:31%;--r:-3deg}.p1 img{aspect-ratio:4/3}
+.p1 .bub{left:6%;top:-22px}
+.p2{left:29%;top:0;width:18%;--r:4deg;z-index:1}.p2 img{aspect-ratio:7/8}
+.p3{left:46%;top:9%;width:16%;--r:-2deg}.p3 img{aspect-ratio:3/4}
+.p4{left:61%;top:1%;width:18%;--r:3deg;z-index:1}.p4 img{aspect-ratio:1}
+.p4 .bub{right:-6%;top:-22px;--br:5deg;--tail:auto}
+.p4 .bub::after{left:auto;right:30px}
+.p5{left:80%;top:12%;width:19%;--r:-4deg}.p5 img{aspect-ratio:1}
+.p6{left:4%;top:55%;width:16%;--r:3deg}.p6 img{aspect-ratio:3/4}
+.p7{left:19%;top:60%;width:25%;--r:-2deg;z-index:1}.p7 img{aspect-ratio:4/3}
+.p8{left:45%;top:52%;width:15%;--r:4deg}.p8 img{aspect-ratio:3/4}
+.p9{left:59%;top:57%;width:16%;--r:-3deg;z-index:1}.p9 img{aspect-ratio:1}
+.say{position:absolute;left:77%;top:60%;width:23%;margin:0;transform:rotate(2deg)}
+.say blockquote{margin:0;background:#fff;color:var(--ink);border-radius:28px;padding:20px 22px;font:800 clamp(18px,1.6vw,23px)/1.25 Nunito,sans-serif;box-shadow:0 0 0 2px var(--ink);position:relative}
+.say blockquote::after{content:"";position:absolute;left:-8px;top:40%;width:18px;height:18px;background:#fff;box-shadow:-2px 2px 0 0 var(--ink);transform:rotate(45deg)}
+.say figcaption{margin:10px 0 0 6px;font:700 15px/1.3 Nunito,sans-serif}
+
+.names{overflow:hidden;margin:clamp(40px,5vw,72px) calc(-1 * var(--pad)) 0;border-top:2px solid rgba(255,255,255,.8);padding:18px 0 20px}
+.names div{display:flex;gap:46px;width:max-content;animation:run 42s linear infinite;font:600 clamp(22px,2.4vw,32px)/1 Unbounded,sans-serif;white-space:nowrap}
+.names b{font-weight:600;color:var(--ink)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* ===== зал ===== */
+.hall{display:grid;grid-template-columns:minmax(300px,.8fr) 1.2fr;background:var(--tile)}
+.plate{background:var(--wall);padding:clamp(48px,6vw,96px) var(--pad)}
+.plate>div{position:sticky;top:48px}
+.plate h2{font-size:clamp(32px,4.2vw,60px);line-height:1}
+.plate p{margin:22px 0 0;font-size:clamp(18px,1.5vw,21px);max-width:24em}
+.plate ul{margin:22px 0 0;padding:0;list-style:none;font:800 clamp(18px,1.5vw,21px)/1.35 Nunito,sans-serif}
+.plate li{padding:10px 0;border-top:1px solid rgba(31,27,30,.25)}
+.tiles{position:relative;overflow:hidden;padding:clamp(40px,5vw,72px) clamp(20px,3vw,48px);display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(16px,2vw,28px);align-items:start}
+.tiles::before{content:"";position:absolute;inset:-100%;transform:rotate(45deg);
+ background:repeating-conic-gradient(var(--ink) 0 25%,var(--tile) 0 50%) 0 0/clamp(70px,6vw,96px) clamp(70px,6vw,96px)}
+.ph{position:relative;margin:0;background:#fff;padding:9px 9px 0;box-shadow:0 0 0 2px var(--ink)}
+.ph img{width:100%;object-fit:cover}
+.ph figcaption{font:800 16px/1.2 Nunito,sans-serif;padding:10px 2px 12px}
+.ph.a{grid-row:span 2;transform:rotate(-2deg)}.ph.a img{aspect-ratio:4/5}
+.ph.b{transform:rotate(3deg)}.ph.b img{aspect-ratio:1}
+.ph.c{transform:rotate(-3deg);margin-top:8px}.ph.c img{aspect-ratio:4/3}
+.ph.d{grid-column:1/-1;width:44%;justify-self:start;margin-left:5%;transform:rotate(1.5deg);margin-top:-14%}.ph.d img{aspect-ratio:16/10}
+
+/* ===== мастера ===== */
+.masters{display:grid;grid-template-columns:1fr minmax(260px,.55fr);gap:clamp(32px,5vw,80px);align-items:center;padding:clamp(56px,7vw,110px) var(--pad) clamp(24px,3vw,40px);max-width:1440px;margin:0 auto}
+.masters h2{font-size:clamp(34px,5vw,72px);line-height:1;color:var(--rasp)}
+.m-lead{margin:14px 0 0;font:800 clamp(19px,1.6vw,22px)/1.35 Nunito,sans-serif}
+.q{margin:clamp(30px,4vw,48px) 0 0;padding-left:clamp(18px,2vw,28px);border-left:4px solid var(--rasp)}
+.q blockquote{margin:0;font:600 clamp(22px,2.3vw,34px)/1.2 Unbounded,sans-serif;letter-spacing:-.025em}
+.q figcaption{margin-top:12px;font-size:16px}
+.q.small blockquote{font:800 clamp(19px,1.6vw,23px)/1.35 Nunito,sans-serif;letter-spacing:0}
+.m-photo{margin:0;transform:rotate(2.5deg);background:#fff;padding:10px;box-shadow:0 0 0 2px var(--ink)}
+.m-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+
+/* ===== финал ===== */
+.end{position:relative;background:linear-gradient(var(--wall),var(--wall2));padding:clamp(56px,7vw,100px) var(--pad) clamp(40px,5vw,64px)}
+.masters+.end{padding-top:clamp(32px,4vw,56px)}
+.end-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);max-width:1320px;margin:0 auto;align-items:start}
+.end .logo{display:inline-block;animation:none;transform:rotate(-3deg);padding:10px 16px;border-radius:22px}
+.end .logo img{width:clamp(160px,15vw,220px)}
+.end h2{margin-top:32px;font-size:clamp(30px,3.6vw,52px);line-height:1.02}
+.addr{margin:16px 0 0;font:800 clamp(19px,1.6vw,23px)/1.35 Nunito,sans-serif}
+.what{margin:14px 0 0;max-width:28em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.links{display:flex;flex-wrap:wrap;gap:0 22px;margin-top:12px;font-weight:800}
+.links a,.rating a{display:inline-flex;align-items:center;min-height:44px}
+.map{display:block;background:#fff;padding:10px;box-shadow:0 0 0 2px var(--ink);transform:rotate(1.5deg);text-decoration:none}
+.map img{width:100%;aspect-ratio:650/450;object-fit:cover}
+.map span{display:block;padding:12px 4px 4px;font-weight:800}
+.minis{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.minis img{width:100%;aspect-ratio:1;object-fit:cover;box-shadow:0 0 0 2px var(--ink)}
+.minis img:first-child{transform:rotate(-3deg)}.minis img:last-child{transform:rotate(3deg)}
+.end-floor{height:110px}
+footer{background:var(--ink);color:#d9cfd2;font-size:14px;padding:18px var(--pad)}
+
+@media (max-width:1023px){
+ .room{--h:440px}
+ .dog{left:63%}
+ .p1 .bub{white-space:normal;max-width:11em}
+ .hall{grid-template-columns:1fr}
+ .masters{grid-template-columns:1fr}
+ .m-photo{max-width:340px}
+ .end-grid{grid-template-columns:1fr}
+}
+@media (max-width:767px){
+ body{font-size:17px}
+ .room{--h:350px;--wallh:540px;--band:140px;--floor:64px}
+ .logo img{width:80px}
+ .top .logo{display:block}
+ .top{justify-content:space-between}
+ .sticker{display:none}
+ .top .btn{min-height:46px;padding:0 20px;font-size:16px}
+ .words{display:flex;flex-direction:column-reverse;margin-top:4px}
+ .sub{margin:0 0 10px;font-size:18px;max-width:none}
+ .room h1{font-size:clamp(58px,17.5vw,76px);white-space:normal;line-height:.92}
+ .dog{left:50%}
+ .leash{display:none}
+ .table{align-items:flex-end;padding-bottom:16px}
+ .table p{font-size:16px;max-width:none}
+
+ .pile{aspect-ratio:auto;columns:2;column-gap:14px;margin-top:40px;padding-top:12px}
+ .pol,.say{position:relative;left:auto;top:auto;right:auto;width:auto}
+ .pol{break-inside:avoid;margin-bottom:26px}
+ .p1{column-span:all}
+ .p1 .bub{left:auto;right:6px;top:-18px}
+ .p4 .bub{right:-4px}
+ .bub{font-size:14px;padding:8px 13px;white-space:normal;max-width:12em}
+ .say{column-span:all;transform:rotate(-1deg)}
+ .say blockquote::after{display:none}
+
+ .tiles{grid-template-columns:1fr 1fr;padding:32px 16px}
+ .ph.a{grid-row:auto;grid-column:1/-1}
+ .ph.d{width:72%;margin:0 auto;grid-column:1/-1;justify-self:center}
+ .ph figcaption{font-size:14px}
+ .end-floor{height:64px}
+}
+@media (prefers-reduced-motion:reduce){.names div,.logo,.sticker{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="room">
+ <div class="wall">
+  <div class="top">
+   <a class="logo" href="#"><img src="logo-crop.jpg" alt="Твой грумер" width="600" height="470"></a>
+   <a class="btn" href="tel:+79932221856">Позвонить</a>
+  </div>
+  <div class="words">
+   <h1>Твой грумер</h1>
+   <p class="sub">Стрижём собак и&nbsp;кошек в&nbsp;Митино</p>
+  </div>
+  <span class="sticker" aria-hidden="true"><img src="logo-crop.jpg" alt="" width="600" height="470"></span>
+ </div>
+ <div class="table">
+  <div class="dog"><span class="leash"></span><img src="shiba.webp" alt="Сиба-ину на нашем столе после груминга" width="610" height="918"></div>
+  <p>Генерала Белобородова,&nbsp;24.<br>Каждый день с&nbsp;10&nbsp;до&nbsp;20</p>
+ </div>
+ <div class="floor" aria-hidden="true"><i></i></div>
+</header>
+
+<main>
+<section class="praise">
+ <div class="praise-head">
+  <h2>Собираем комплименты</h2>
+  <p class="rating"><a href="https://yandex.ru/maps/org/tvoy_grumer/66720369721/reviews/" target="_blank" rel="noopener">5,0 на Яндекс Картах, 98 оценок</a></p>
+ </div>
+ <div class="pile">
+  <figure class="pol p1"><span class="bub">Очаровательная мисс Нюся</span><img src="nyusya.jpg" width="1170" height="879" alt="Нюся после стрижки" loading="lazy"><figcaption>Нюся</figcaption></figure>
+  <figure class="pol p2"><img src="zaychik.jpg" width="800" height="800" alt="Рыжий шпиц после стрижки" loading="lazy"><figcaption>Улыбчивый зайчик</figcaption></figure>
+  <figure class="pol p3"><img src="toton.jpg" width="1119" height="1280" alt="Вестик Тотон" loading="lazy"><figcaption>Тотон<span class="sm">вестик</span></figcaption></figure>
+  <figure class="pol p4"><span class="bub">Тусенька-лапусенька</span><img src="tusya.jpg" width="800" height="800" alt="Тусенька после стрижки" loading="lazy"><figcaption>Тусенька<span class="sm">мордашка в азиатском стиле</span></figcaption></figure>
+  <figure class="pol p5"><img src="lux.jpg" width="768" height="768" alt="Шпиц Люкс" loading="lazy"><figcaption>Люкс<span class="sm">шпиц</span></figcaption></figure>
+  <figure class="pol p6"><img src="brut.jpg" width="960" height="1280" alt="Брют, мальтийская болонка" loading="lazy"><figcaption>Брют<span class="sm">мальтийская болонка</span></figcaption></figure>
+  <figure class="pol p7"><img src="cat.jpg" width="1280" height="960" alt="Кот после стрижки" loading="lazy"><figcaption>И кошки тоже</figcaption></figure>
+  <figure class="pol p8"><img src="lyalya.jpg" width="900" height="1200" alt="Йорк Ляля" loading="lazy"><figcaption>Ляля<span class="sm">йорк</span></figcaption></figure>
+  <figure class="pol p9"><img src="benya.jpg" width="762" height="768" alt="Беня после стрижки" loading="lazy"><figcaption>Беня</figcaption></figure>
+  <figure class="say"><blockquote>«Девчонки превратили двух той-пуделей в&nbsp;игрушки!»</blockquote><figcaption>ольга лазарева</figcaption></figure>
+ </div>
+ <div class="names" aria-hidden="true"><div>
+  <span>Тотон</span><b>Нюся</b><span>Брют</span><b>Люкс</b><span>Чили</span><b>Ляля</b><span>Беня</span><b>Бум</b><span>Кнопа</span><b>Тусенька</b><span>Пряня</span><b>Деля</b><span>Рокки</span><b>Юкас</b>
+  <span>Тотон</span><b>Нюся</b><span>Брют</span><b>Люкс</b><span>Чили</span><b>Ляля</b><span>Беня</span><b>Бум</b><span>Кнопа</span><b>Тусенька</b><span>Пряня</span><b>Деля</b><span>Рокки</span><b>Юкас</b>
+ </div></div>
+</section>
+
+<section class="hall">
+ <div class="plate"><div>
+  <h2>Можно остаться рядом</h2>
+  <p>Пока моем и стрижём, хозяин может подождать в салоне. Для этого у нас диван в зоне ожидания.</p>
+  <ul>
+   <li>Дверь закрывается на замок</li>
+   <li>Во дворе дома есть парковка</li>
+   <li>Вход с улицы, доступен для инвалидной коляски</li>
+  </ul>
+ </div></div>
+ <div class="tiles">
+  <figure class="ph a"><img src="bath.jpg" width="960" height="1280" alt="Фиолетовая ванна у шахматной стены" loading="lazy"><figcaption>Наша ванна</figcaption></figure>
+  <figure class="ph b"><img src="chili-bath.jpg" width="525" height="768" alt="Щенок чихуахуа Чили в пене" loading="lazy"><figcaption>Чили в пене</figcaption></figure>
+  <figure class="ph c"><img src="chili-towel.jpg" width="576" height="768" alt="Чили в полотенце после мытья" loading="lazy"><figcaption>Чили после мытья</figcaption></figure>
+  <figure class="ph d"><img src="sofa.jpg" width="960" height="1280" alt="Белый диван в зоне ожидания" loading="lazy"><figcaption>Диван для хозяев</figcaption></figure>
+ </div>
+</section>
+
+<section class="masters">
+ <div>
+  <h2>Светлана<br>и&nbsp;Мария</h2>
+  <p class="m-lead">Наши мастера. К ним ходят годами и с другого конца Москвы.</p>
+  <figure class="q"><blockquote>«Мастер с золотыми руками и большим сердцем.»</blockquote><figcaption>Ксения Дорофеева, про Светлану</figcaption></figure>
+  <figure class="q"><blockquote>«…единственный, кто смог влюбить в себя моего мелкого и строптивого американского кокера!»</blockquote><figcaption>Ольга Подсевалова, про Марию</figcaption></figure>
+  <figure class="q small"><blockquote>«У меня две собаки и обе проблемные… но грумер Светлана отлично с ними справляется.»</blockquote><figcaption>Антонина Козлова</figcaption></figure>
+ </div>
+ <figure class="m-photo"><img src="master-bath.jpg" width="637" height="768" alt="Мастер моет щенка у фиолетовой ванны" loading="lazy"></figure>
+</section>
+
+<section class="end">
+ <div class="end-grid">
+  <div>
+   <a class="logo" href="#"><img src="logo-crop.jpg" alt="Твой грумер" width="600" height="470" loading="lazy"></a>
+   <h2>Запишем по телефону или в&nbsp;мессенджере</h2>
+   <p class="addr">Москва, улица Генерала Белобородова, 24<br>Каждый день с 10 до 20</p>
+   <p class="what">Стрижка, тримминг, мытьё, вычёсывание, гигиена, когти. Собаки и кошки.</p>
+   <div class="btns">
+    <a class="btn" href="tel:+79932221856">Позвонить</a>
+    <a class="btn hot" href="https://wa.me/79932221856" target="_blank" rel="noopener">WhatsApp</a>
+   </div>
+   <div class="links">
+    <a href="tel:+79932221856">+7 993 222-18-56</a>
+    <a href="https://t.me/tvoy_groomer" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://vk.ru/tvoy_groomer" target="_blank" rel="noopener">ВКонтакте</a>
+   </div>
+  </div>
+  <div>
+   <a class="map" href="https://yandex.ru/maps/org/tvoy_grumer/66720369721/" target="_blank" rel="noopener"><img src="map.png" width="650" height="450" alt="Карта: улица Генерала Белобородова, 24" loading="lazy"><span>Открыть в Яндекс Картах</span></a>
+   <div class="minis">
+    <img src="golden.jpg" width="800" height="600" alt="Голден ретривер после комплекса" loading="lazy">
+    <img src="knopa.jpg" width="800" height="800" alt="Йорк Кнопа после модельной стрижки" loading="lazy">
+   </div>
+  </div>
+ </div>
+</section>
+<div class="floor end-floor" aria-hidden="true"><i></i></div>
+</main>
+
+<footer>Демо-страница. Сделал Дамир, Павшинская пойма · +7 925 606-00-00 · t.me/youngdemiro</footer>
+</body>
+</html>
